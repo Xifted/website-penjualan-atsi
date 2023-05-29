@@ -724,7 +724,7 @@
                   <i class="bi bi-geo-alt flex-shrink-0"></i>
                   <div>
                     <h4>Location:</h4>
-                    <p>Jakarta, Indonesia</p>
+                    <p>Jl. Iskandar Muda Raya No.7 | Kebayoran Lama Selatan, Kebayoran Lama | Kota Adm. Jakarta Selatan | DKI Jakarta - 12241</p>
                   </div>
                 </div>
                 <!-- End Info Item -->
@@ -742,7 +742,7 @@
                   <i class="bi bi-phone flex-shrink-0"></i>
                   <div>
                     <h4>For Any Inquiries Call Now :</h4>
-                    <p>(0251) 123456</p>
+                    <p>(+62) 2127099176</p>
                   </div>
                 </div>
                 <!-- End Info Item -->

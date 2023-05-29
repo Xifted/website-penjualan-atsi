@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categories;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     function index() {
-        return view('index');
+        $categories = Categories::all();
+        return view('index', [
+            'categories' => $categories
+        ]);
     }
 }
