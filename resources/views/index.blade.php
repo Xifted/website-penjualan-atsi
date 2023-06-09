@@ -72,11 +72,7 @@
           <div class="container">
             <div class="row justify-content-center gy-6">
               <div class="col-lg-5 col-md-8">
-                <img
-                  src="{{ asset('/assets/img/hero-carousel/hero-carousel-1.svg')}}"
-                  alt=""
-                  class="img-fluid img"
-                />
+                <div style="height: 400px; background: center no-repeat url('{{ asset('/assets/img/hero-carousel/hero-carousel-1.jpg')}}'); background-size: cover;"></div>
               </div>
 
               <div class="col-lg-12 text-center">
@@ -101,11 +97,7 @@
           <div class="container">
             <div class="row justify-content-center gy-6">
               <div class="col-lg-5 col-md-8">
-                <img
-                  src="{{ asset('/assets/img/hero-carousel/hero-carousel-2.svg')}}"
-                  alt=""
-                  class="img-fluid img"
-                />
+                <div style="height: 400px; background: center no-repeat url('{{ asset('/assets/img/hero-carousel/hero-carousel-2.jpg')}}'); background-size: cover;"></div>
               </div>
 
               <div class="col-lg-10 text-center">
@@ -128,11 +120,7 @@
           <div class="container">
             <div class="row justify-content-center gy-6">
               <div class="col-lg-5 col-md-8">
-                <img
-                  src="{{ asset('/assets/img/hero-carousel/hero-carousel-3.svg')}}"
-                  alt=""
-                  class="img-fluid img"
-                />
+                <div style="height: 400px; background: center no-repeat url('{{ asset('/assets/img/hero-carousel/hero-carousel-3.jpg')}}'); background-size: cover;"></div>
               </div>
 
               <div class="col-lg-9 text-center">
@@ -207,7 +195,7 @@
               <div class="service-item">
                 <div class="img">
                   <img
-                    src="{{ asset('/assets/img/services-1.jpg')}}"
+                    src="{{ asset('/assets/img/services/service-1.jpg')}}"
                     class="img-fluid"
                     alt=""
                   />
@@ -272,11 +260,7 @@
             >
               <div class="service-item">
                 <div class="img">
-                  <img
-                    src="{{ asset('/assets/img/services-2.jpg')}}"
-                    class="img-fluid"
-                    alt=""
-                  />
+                  <div style="height: 290px; background: center no-repeat url('{{ asset('/assets/img/services/service-2.jpg')}}'); background-size: cover;"></div>
                 </div>
                 <div class="details position-relative">
                   <div class="icon">
@@ -318,7 +302,7 @@
               <div class="service-item">
                 <div class="img">
                   <img
-                    src="{{ asset('/assets/img/services-3.jpg')}}"
+                    src="{{ asset('/assets/img/services/service-3.jpg')}}"
                     class="img-fluid"
                     alt=""
                   />
@@ -364,7 +348,7 @@
               <div class="service-item">
                 <div class="img">
                   <img
-                    src="{{ asset('/assets/img/services-4.jpg')}}"
+                    src="{{ asset('/assets/img/services/service-4.jpg')}}"
                     class="img-fluid"
                     alt=""
                   />
@@ -411,7 +395,7 @@
               <div class="service-item">
                 <div class="img">
                   <img
-                    src="{{ asset('/assets/img/services-5.jpg')}}"
+                    src="{{ asset('/assets/img/services/service-5.jpg')}}"
                     class="img-fluid"
                     alt=""
                   />
@@ -514,7 +498,8 @@
               class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center"
             >
               <div class="img">
-                <img src="{{ asset('/assets/img/cta.jpg')}}" alt="" class="img-fluid" />
+                {{-- <img src="{{ asset('/assets/img/cta/cta.jpg')}}" alt="" class="img-fluid" /> --}}
+                <div style="width: 300px; height: 450px; background: center no-repeat url('{{ asset('/assets/img/cta/cta.jpg')}}'); background-size: cover;"></div>
               </div>
             </div>
           </div>
@@ -542,7 +527,8 @@
           <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
             <div class="col-lg-5">
               <div class="about-img mt-0">
-                <img src="{{ asset('/assets/img/about.jpg')}}" class="img-fluid" alt="" />
+                {{-- <img src="{{ asset('/assets/img/about.jpg')}}" class="img-fluid" alt="" /> --}}
+                <div style="width: 400px; height: 560px; background: center no-repeat url('{{ asset('/assets/img/hero-carousel/hero-carousel-3.jpg')}}'); background-size: cover;"></div>
               </div>
             </div>
 

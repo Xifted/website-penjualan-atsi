@@ -1381,7 +1381,7 @@ section {
   transform: rotate(6deg);
 }
 
-.cta .img img {
+.cta .img img, .cta .img div {
   position: relative;
   z-index: 3;
   border-radius: 15px;
@@ -1670,7 +1670,7 @@ section {
   overflow: hidden;
 }
 
-.services .img img {
+.services .img img, .services .img div {
   transition: 0.6s;
 }
 
@@ -1732,7 +1732,7 @@ section {
   color: var(--color-primary);
 }
 
-.services .service-item:hover .img img {
+.services .service-item:hover .img img, .services .service-item:hover .img div  {
   transform: scale(1.2);
 }
 
