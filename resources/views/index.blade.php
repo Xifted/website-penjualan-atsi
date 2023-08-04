@@ -74,8 +74,7 @@
               <div class="col-lg-5 col-md-8">
                 <div style="height: 400px; background: center no-repeat url('{{ asset('/assets/img/hero-carousel/hero-carousel-1.jpg')}}'); background-size: cover;"></div>
               </div>
-
-              <div class="col-lg-12 text-center">
+              <div class="col-lg-12 text-center mt-4">
                 <h2>
                   Adaptively serve the quality of inspection beyond expectation.
                 </h2>
@@ -100,7 +99,7 @@
                 <div style="height: 400px; background: center no-repeat url('{{ asset('/assets/img/hero-carousel/hero-carousel-2.jpg')}}'); background-size: cover;"></div>
               </div>
 
-              <div class="col-lg-10 text-center">
+              <div class="col-lg-10 text-center mt-4">
                 <h2>
                   Upholds integrity and professional as core value as a service
                   and above all we are assuring the most reliable consultant we
@@ -123,7 +122,7 @@
                 <div style="height: 400px; background: center no-repeat url('{{ asset('/assets/img/hero-carousel/hero-carousel-3.jpg')}}'); background-size: cover;"></div>
               </div>
 
-              <div class="col-lg-9 text-center">
+              <div class="col-lg-9 text-center mt-4">
                 <h2>
                   No testing in between beside keep trust and be transparent in
                   all aspect for client and public
@@ -194,11 +193,7 @@
             >
               <div class="service-item">
                 <div class="img">
-                  <img
-                    src="{{ asset('/assets/img/services/service-1.jpg')}}"
-                    class="img-fluid"
-                    alt=""
-                  />
+                  <div style="height: 290px; background: center no-repeat url('{{ asset('/assets/img/services/service-1.jpg')}}'); background-size: cover;"></div>
                 </div>
                 <div class="details position-relative">
                   <div class="icon">
@@ -301,11 +296,7 @@
             >
               <div class="service-item">
                 <div class="img">
-                  <img
-                    src="{{ asset('/assets/img/services/service-3.jpg')}}"
-                    class="img-fluid"
-                    alt=""
-                  />
+                  <div style="height: 290px; background: center no-repeat url('{{ asset('/assets/img/services/service-3.jpg')}}'); background-size: cover;"></div>
                 </div>
                 <div class="details position-relative">
                   <div class="icon">
@@ -347,11 +338,7 @@
             >
               <div class="service-item">
                 <div class="img">
-                  <img
-                    src="{{ asset('/assets/img/services/service-4.jpg')}}"
-                    class="img-fluid"
-                    alt=""
-                  />
+                  <div style="height: 290px; background: center no-repeat url('{{ asset('/assets/img/services/service-4.jpg')}}'); background-size: cover;"></div>
                 </div>
                 <div class="details position-relative">
                   <div class="icon">
@@ -393,13 +380,9 @@
               data-aos-delay="600"
             >
               <div class="service-item">
-                <div class="img">
-                  <img
-                    src="{{ asset('/assets/img/services/service-5.jpg')}}"
-                    class="img-fluid"
-                    alt=""
-                  />
-                </div>
+                  <div class="img">
+                    <div style="height: 290px; background: center no-repeat url('{{ asset('/assets/img/services/service-5.jpg')}}'); background-size: cover;"></div>
+                  </div>
                 <div class="details position-relative">
                   <div class="icon">
                     <i class="bi bi-calendar4-week"></i>

@@ -34,6 +34,7 @@
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('/assets/css/main.css') }}" rel="stylesheet" />
+    <link href="{{ asset('/assets/css/products.css') }}" rel="stylesheet" />
     <title>ATSI - Products List</title>
 </head>
 
@@ -45,10 +46,10 @@
         <h1 class="text-muted fw-light text-center my-5 border-bottom" style="width: fit-content">
             {{ $currentCategory['category_name'] ?? 'Our Products' }}</h1>
         <div class="container-fluid d-flex justify-content-between">
-            <div class="position-absolute bg-primary rounded p-3 d-flex justify-content-center align-items-center py-2"
+            <button class="position-absolute bg-primary rounded p-3 d-flex justify-content-center align-items-center py-2"
                 style="display: none !important; height: fit-content; width: fit-content; left: 0; z-index: 99">
                 <i class="bi bi-sliders fs-3 color-green pb-1 px-1"></i>
-            </div>
+            </button>
             <div class="row w-25 py-5">
                 <div class="d-flex flex-column bg-white rounded-4 w-100 p-5 gap-3 border"
                     style="height: fit-content; box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.103);">
@@ -66,7 +67,7 @@
                                         @else
                                             <i class="bi bi-circle fs-4 color-primary"></i>
                                         @endif
-                                        <p class="text-muted h-100 fs-5 fw-light m-0">All Products</p>
+                                        <p class="text-muted h-100 fs-5 fw-light m-0 text-start">All Products</p>
                                     </a>
                                 </button>
                             </div>
@@ -80,7 +81,7 @@
                                             @else
                                                 <i class="bi bi-circle fs-4 color-primary"></i>
                                             @endif
-                                            <p class="text-muted h-100 fs-5 fw-light m-0">{{ $item->category_name }}
+                                            <p class="text-muted h-100 fs-5 fw-light m-0 text-start">{{ $item->category_name }}
                                             </p>
                                         </a>
                                     </button>
@@ -100,7 +101,7 @@
                                     <label for="min-price" class="form-label text-muted fw-light">Min Price</label>
                                     <div class="input-group mb-3">
                                         <span class="input-group-text">Rp</span>
-                                        <input onchange="priceFilter()" type="number" class="form-control" id="min-price">
+                                        <input oninput="formatPriceFilter()" onchange="priceFilter()" type="text" class="form-control" id="min-price">
                                         <span class="input-group-text">.00</span>
                                     </div>
                                 </div>
@@ -108,7 +109,7 @@
                                     <label for="min-price" class="form-label text-muted fw-light">Max Price</label>
                                     <div class="input-group mb-3">
                                         <span class="input-group-text">Rp</span>
-                                        <input onchange="priceFilter()" type="number" class="form-control" id="max-price">
+                                        <input oninput="formatPriceFilter()" onchange="priceFilter()" type="text" class="form-control" id="max-price">
                                         <span class="input-group-text">.00</span>
                                     </div>
                                 </div>

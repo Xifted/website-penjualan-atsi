@@ -13,11 +13,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
         );
 });
 
-function sortProducts(){
+function sortProducts() {
     let sortBy = document.getElementById('sortButton').value;
     let url = window.location.href;
     let searchParams = new URLSearchParams(window.location.search);
-    
+
     if (sortBy) {
         searchParams.set('sort', sortBy);
     } else {
@@ -29,9 +29,44 @@ function sortProducts(){
     window.location.href = newUrl;
 }
 
+function formatPriceFilter() {
+    const minPriceValue = document.getElementById("min-price");
+    const maxPriceValue = document.getElementById("max-price");
+    let formatMinPrice = minPriceValue.value.replace(/\D/g, ""); // Hanya angka saja, tanpa non-digit karakter
+    let formatMaxPrice = maxPriceValue.value.replace(/\D/g, ""); // Hanya angka saja, tanpa non-digit karakter
+
+    if (formatMinPrice.length > 0) {
+        // Konversi ke angka desimal
+        let minPrice = parseFloat(formatMinPrice);
+
+        // Memformat angka menjadi mata uang IDR
+        let formattedMinPrice = minPrice.toLocaleString("id-ID");
+
+        minPriceValue.value = formattedMinPrice;
+    }else{
+        minPriceValue.value = '';
+    }
+
+    if (formatMaxPrice.length > 0) {
+        // Konversi ke angka desimal
+        let maxPrice = parseFloat(formatMaxPrice);
+
+        // Memformat angka menjadi mata uang IDR
+        let formattedMaxPrice = maxPrice.toLocaleString("id-ID");
+
+        maxPriceValue.value = formattedMaxPrice;
+    }else{
+        maxPriceValue.value = '';
+    }
+}
+
 function priceFilter() {
-    let minPrice = document.getElementById("min-price").value;
-    let maxPrice = document.getElementById("max-price").value;
+    const minPriceValue = document.getElementById("min-price");
+    const maxPriceValue = document.getElementById("max-price");
+
+    let minPrice = parseInt(minPriceValue.value.replace(/\D/g, ""));
+    let maxPrice = parseInt(maxPriceValue.value.replace(/\D/g, ""));
+
     let url = window.location.href;
     let searchParams = new URLSearchParams(window.location.search);
 
@@ -54,7 +89,7 @@ function priceFilter() {
 }
 
 // Set selected option based on URL query parameter
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var searchParams = new URLSearchParams(window.location.search);
     var sortBy = searchParams.get('sort');
     var minPrice = searchParams.get('min_price');
@@ -68,9 +103,13 @@ document.addEventListener('DOMContentLoaded', function() {
         select.value = sortBy;
     }
     if (minPrice) {
-        minPriceValue.value = minPrice
+        let formatMinPrice = parseFloat(minPrice.replace(/\D/g, "")); // Hanya angka saja, tanpa non-digit karakter
+        let formattedMinPrice = formatMinPrice.toLocaleString("id-ID");
+        minPriceValue.value = formattedMinPrice;
     }
     if (maxPrice) {
-        maxPriceValue.value = maxPrice
+        let formatMaxPrice = parseFloat(maxPrice.replace(/\D/g, "")); // Hanya angka saja, tanpa non-digit karakter
+        let formattedMaxPrice = formatMaxPrice.toLocaleString("id-ID");
+        maxPriceValue.value = formattedMaxPrice
     }
 });
