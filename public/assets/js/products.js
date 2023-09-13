@@ -1,3 +1,12 @@
+// Responsive Filter Container
+const toggleSidebarBtn = document.getElementById('toggle-filter-btn');
+const sidebar = document.querySelector('.filter');
+
+toggleSidebarBtn.addEventListener('click', () => {
+  sidebar.classList.toggle('show-filter');
+});
+
+// Products Currency Format Function
 window.addEventListener("DOMContentLoaded", (event) => {
     // Harga
     let IDRRupiah = new Intl.NumberFormat("id-ID", {
@@ -13,6 +22,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         );
 });
 
+// Sort Button Function
 function sortProducts() {
     let sortBy = document.getElementById('sortButton').value;
     let url = window.location.href;
@@ -29,6 +39,7 @@ function sortProducts() {
     window.location.href = newUrl;
 }
 
+// Price Filter Format Function
 function formatPriceFilter() {
     const minPriceValue = document.getElementById("min-price");
     const maxPriceValue = document.getElementById("max-price");
@@ -60,6 +71,7 @@ function formatPriceFilter() {
     }
 }
 
+// Price Filter Function
 function priceFilter() {
     const minPriceValue = document.getElementById("min-price");
     const maxPriceValue = document.getElementById("max-price");
@@ -88,7 +100,7 @@ function priceFilter() {
     window.location.href = newUrl;
 }
 
-// Set selected option based on URL query parameter
+// Price Filter Value(if url exist) Function
 document.addEventListener('DOMContentLoaded', function () {
     var searchParams = new URLSearchParams(window.location.search);
     var sortBy = searchParams.get('sort');

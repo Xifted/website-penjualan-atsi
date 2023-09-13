@@ -46,12 +46,13 @@
         <h1 class="text-muted fw-light text-center my-5 border-bottom" style="width: fit-content">
             {{ $currentCategory['category_name'] ?? 'Our Products' }}</h1>
         <div class="container-fluid d-flex justify-content-between">
-            <button class="position-absolute bg-primary rounded p-3 d-flex justify-content-center align-items-center py-2"
-                style="display: none !important; height: fit-content; width: fit-content; left: 0; z-index: 99">
+            <button
+                class="btn btn-light shadow position-fixed rounded-0 p-3 d-none justify-content-center align-items-center py-2"
+                id="toggle-filter-btn">
                 <i class="bi bi-sliders fs-3 color-green pb-1 px-1"></i>
             </button>
-            <div class="row w-25 py-5">
-                <div class="d-flex flex-column bg-white rounded-4 w-100 p-5 gap-3 border"
+            <div class="filter row w-25 py-5">
+                <div class="filter-row d-flex flex-column bg-white rounded-4 w-100 p-5 gap-3 border"
                     style="height: fit-content; box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.103);">
                     <div class="d-flex filters-header align-content-center w-100" style="height: 15%;">
                         <h3 class="fw-4 text-muted" style="height: fit-content">Filters</h3>
@@ -81,7 +82,8 @@
                                             @else
                                                 <i class="bi bi-circle fs-4 color-primary"></i>
                                             @endif
-                                            <p class="text-muted h-100 fs-5 fw-light m-0 text-start">{{ $item->category_name }}
+                                            <p class="text-muted h-100 fs-5 fw-light m-0 text-start">
+                                                {{ $item->category_name }}
                                             </p>
                                         </a>
                                     </button>
@@ -101,7 +103,8 @@
                                     <label for="min-price" class="form-label text-muted fw-light">Min Price</label>
                                     <div class="input-group mb-3">
                                         <span class="input-group-text">Rp</span>
-                                        <input oninput="formatPriceFilter()" onchange="priceFilter()" type="text" class="form-control" id="min-price">
+                                        <input oninput="formatPriceFilter()" onchange="priceFilter()" type="text"
+                                            class="form-control" id="min-price">
                                         <span class="input-group-text">.00</span>
                                     </div>
                                 </div>
@@ -109,7 +112,8 @@
                                     <label for="min-price" class="form-label text-muted fw-light">Max Price</label>
                                     <div class="input-group mb-3">
                                         <span class="input-group-text">Rp</span>
-                                        <input oninput="formatPriceFilter()" onchange="priceFilter()" type="text" class="form-control" id="max-price">
+                                        <input oninput="formatPriceFilter()" onchange="priceFilter()" type="text"
+                                            class="form-control" id="max-price">
                                         <span class="input-group-text">.00</span>
                                     </div>
                                 </div>
@@ -118,7 +122,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row w-75 py-5 px-0 d-flex flex-column gap-4">
+            <div class="products-container row w-75 py-5 px-0 d-flex flex-column gap-4">
                 <div class="d-flex justify-content-between mb-0" style="height: fit-content;">
                     <h5 class="text-muted fw-light">Atsi / Products</h5>
                     <select onchange="sortProducts()" id="sortButton" class="form-select w-25">
@@ -130,12 +134,12 @@
                 </div>
                 <div class="products w-100 d-flex flex-column mt-0 gap-4">
                     @foreach ($products as $item)
-                        <div class="bg-white border rounded-4 d-flex justify-content-between align-items-center p-5 gap-3"
+                        <div class="product-item bg-white border rounded-4 d-flex justify-content-between align-items-center p-5 gap-3"
                             style="box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.103);">
                             <div class="col-md-3"
                                 style="width: 300px; height: 300px; background: center no-repeat url('{{ $item->product_image == null || '' ? 'https://www.figma.com/file/8W3dPdx2K2XtF3Lj1Xpv6J/image/c957e3732cc67a477e4e2d06b4adddd11c436044?fuid=1156448676563229939' : asset('storage/' . $item->product_image) }}'); background-size: cover;">
                             </div>
-                            <div class="col-md-5 d-flex flex-column justify-content-center">
+                            <div class="product-detail col-md-5 d-flex flex-column justify-content-center">
                                 <h4 class="fw-bold mb-0">{{ $item->product_name }}</h4>
                                 <p class="text-muted mt-0 mb-0">{{ $item->category_name }}</p>
                                 <div class="d-flex flex-row">

@@ -16,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Multi Language
+if(file_exists(app_path('Http/Controllers/LocalizationController.php'))){
+    Route::get('lang/{locale}', [App\Http\Controllers\LocalizationController::class , 'lang']);
+}
+
 // Landing Page
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/products', [ProductsController::class, 'index']);
