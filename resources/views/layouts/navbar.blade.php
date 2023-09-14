@@ -9,40 +9,44 @@
         <nav id="navbar" class="navbar">
             <ul>
                 <li>
-                    <a class="nav-link scrollto" href="/#hero">Home</a>
+                    <a class="nav-link scrollto"
+                        href="/#hero">{{ GoogleTranslate::trans('Home Page', app()->getLocale()) }}</a>
                 </li>
 
                 <li>
-                    <a class="nav-link scrollto" href="/#services">Services</a>
+                    <a class="nav-link scrollto text-capitalize"
+                        href="/#services">{{ GoogleTranslate::trans('Our Services', app()->getLocale()) }}</a>
                 </li>
                 <li>
-                    <a class="nav-link scrollto" href="/#about">About Us</a>
+                    <a class="nav-link scrollto"
+                        href="/#about">{{ GoogleTranslate::trans('About Us', app()->getLocale()) }}</a>
                 </li>
                 <li>
-                    <a class="nav-link scrollto" href="/#wch">Why Choose Us</a>
+                    <a class="nav-link scrollto"
+                        href="/#wch">{{ GoogleTranslate::trans('Why Choose Us?', app()->getLocale()) }}</a>
                 </li>
                 <li>
-                    <a class="nav-link scrollto" href="/#contact">Contact Us</a>
+                    <a class="nav-link scrollto"
+                        href="/#contact">{{ GoogleTranslate::trans('Contact Us', app()->getLocale()) }}</a>
                 </li>
                 <li>
-                    <a class="nav-link scrollto" href="/products#products">Products</a>
+                    <a class="nav-link scrollto"
+                        href="/products#products">{{ GoogleTranslate::trans('Products', app()->getLocale()) }}</a>
                 </li>
-                <li class="nav-item dropdown" style="list-style: none;">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        {{ strtoupper(Lang::locale()) }}
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="lang/id">ID</a></li>
-                        <li><a class="dropdown-item" href="lang/en">EN</a></li>
-                    </ul>
+                <li>
+                    <select class="form-select changeLang border-0" style="color: var(--color-primary)">
+                        <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
+                        <option value="id" {{ session()->get('locale') == 'id' ? 'selected' : '' }}>Indonesia</option>
+                        <option value="fr" {{ session()->get('locale') == 'fr' ? 'selected' : '' }}>France</option>
+                        <option value="es" {{ session()->get('locale') == 'es' ? 'selected' : '' }}>Spanish</option>
+                    </select>
                 </li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle d-none"></i>
         </nav>
         <!-- .navbar -->
 
-        <a class="btn-getstarted scrollto" href="index.html#about">Get Started</a>
-
+        <a class="btn-getstarted scrollto"
+            href="index.html#about">Get Started</a>
     </div>
 </header>

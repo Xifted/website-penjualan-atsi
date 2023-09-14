@@ -39,6 +39,8 @@
     <!-- Template Main CSS File -->
     <link href="{{ asset('/assets/css/main.css') }}" rel="stylesheet" />
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <!-- =======================================================
   * Template Name: HeroBiz - v2.4.0
   * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
@@ -71,7 +73,7 @@
                                 Melayani kualitas inspeksi di Luar Harapan secara adaptif
                             </h2>
                             <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
-                            <a href="#featured-services" class="btn-get-started scrollto">Learn More</a>
+                            <a href="#featured-services" class="btn-get-started scrollto">{{ GoogleTranslate::trans('Learn More About It', app()->getLocale())}}</a>
                         </div>
                     </div>
                 </div>
@@ -89,10 +91,14 @@
 
                         <div class="col-lg-10 text-center mt-4">
                             <h2>
-                                {{ __('general.hero-section-2') }}
+                                {{ GoogleTranslate::trans(
+                                    'Upholds integrity and professional as core value as a service and above all we are assuring the most reliable consultant we guarantee',
+                                    app()->getLocale(),
+                                ) }}
+
                             </h2>
                             <!-- <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p> -->
-                            <a href="#featured-services" class="btn-get-started scrollto">Learn More</a>
+                            <a href="#featured-services" class="btn-get-started scrollto">{{ GoogleTranslate::trans('Learn More About It', app()->getLocale())}}</a>
                         </div>
                     </div>
                 </div>
@@ -110,10 +116,10 @@
 
                         <div class="col-lg-9 text-center mt-4">
                             <h2>
-                                {{ __('general.hero-section-3') }}
+                              {{ GoogleTranslate::trans('No testing in between beside keep trust and be transparent in all aspect for client and public', app()->getLocale())}}
                             </h2>
                             <!-- <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p> -->
-                            <a href="#featured-services" class="btn-get-started scrollto">Learn More</a>
+                            <a href="#featured-services" class="btn-get-started scrollto">{{ GoogleTranslate::trans('Learn More About It', app()->getLocale())}}</a>
                         </div>
                     </div>
                 </div>
@@ -145,8 +151,8 @@
         ">
             <div class="container" data-aos="fade-up">
                 <div class="section-header">
-                    <h2>{{ __('general.services-title') }}</h2>
-                    <p>{{ __('general.services-sub') }}</p>
+                    <h2 class="text-capitalize">{{ GoogleTranslate::trans('Our Services', app()->getLocale())}}</h2>
+                    <p>{{ GoogleTranslate::trans('HIGH QUALITY SERVICES YOU NEED', app()->getLocale())}}</p>
                 </div>
 
                 <div class="row gy-5 d-flex justify-content-center">
@@ -162,30 +168,30 @@
                                     <i class="bi bi-activity"></i>
                                 </div>
                                 <a href="#" class="stretched-link">
-                                    <h3>{{ __('general.services-card-1-title') }}</h3>
+                                    <h3 class="text-capitalize">{{ GoogleTranslate::trans('In The Factory', app()->getLocale())}}</h3>
                                 </a>
 
                                 <ol class="list-group list-group-numbered">
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        {{ __('general.services-card-1-desc-1') }}
+                                        {{ GoogleTranslate::trans('Factory Assessment and Audit', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        {{ __('general.services-card-1-desc-2') }}
+                                        {{ GoogleTranslate::trans('Workshop and Warehouse Inspection', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        {{ __('general.services-card-1-desc-3') }}
+                                        {{ GoogleTranslate::trans('Production Inspection', app()->getLocale())}}
                                         <ol class="list-group">
                                             <li class="list-group-item border-0 text-start mb-0 py-0"
                                                 style="font-size: 14px">
-                                                {{ __('general.services-card-1-sub-1') }}
+                                                {{ GoogleTranslate::trans('• Initial Check', app()->getLocale())}}
                                             </li>
                                             <li class="list-group-item border-0 text-start mb-0 py-0"
                                                 style="font-size: 14px">
-                                                {{ __('general.services-card-1-sub-2') }}
+                                                {{ GoogleTranslate::trans('• During Production Inspection and', app()->getLocale())}}
                                             </li>
                                             <li class="list-group-item border-0 text-start mb-0 py-0"
                                                 style="font-size: 14px">
-                                                {{ __('general.services-card-1-sub-3') }}
+                                                {{ GoogleTranslate::trans('• Final Random Inspection', app()->getLocale())}}
                                             </li>
                                         </ol>
                                     </li>
@@ -207,17 +213,17 @@
                                     <i class="bi bi-broadcast"></i>
                                 </div>
                                 <a href="#" class="stretched-link">
-                                    <h3>{{ __('general.services-card-2-title') }}</h3>
+                                    <h3>{{ GoogleTranslate::trans('Inspection for Export of Products/Goods', app()->getLocale())}}</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        {{ __('general.services-card-2-desc-1') }}
+                                        {{ GoogleTranslate::trans('Inspection on Quantity and Quality of Products/Goods', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        {{ __('general.services-card-2-desc-2') }}
+                                        {{ GoogleTranslate::trans('Supervision of Stuffing (in to the Container)', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        {{ __('general.services-card-2-desc-3') }}
+                                        {{ GoogleTranslate::trans('Supervision of Loading (in to the Vessel)', app()->getLocale())}}
                                     </li>
                                 </ol>
                             </div>
@@ -237,17 +243,17 @@
                                     <i class="bi bi-easel"></i>
                                 </div>
                                 <a href="#" class="stretched-link">
-                                    <h3>{{ __('general.services-card-3-title') }}</h3>
+                                    <h3>{{ GoogleTranslate::trans('Inspection for Import of Products/Goods', app()->getLocale())}}</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        {{ __('general.services-card-3-desc-1') }}
+                                        {{ GoogleTranslate::trans('Supervision of Unloading (from the Ship)', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        {{ __('general.services-card-3-desc-2') }}
+                                        {{ GoogleTranslate::trans('Supervision of Unstuffing (from the Container)', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        {{ __('general.services-card-3-desc-3') }}
+                                        {{ GoogleTranslate::trans('Inspection on Quantity, Quality and Condition of Products/Goods', app()->getLocale())}}
                                     </li>
                                 </ol>
                             </div>
@@ -267,17 +273,17 @@
                                     <i class="bi bi-bounding-box-circles"></i>
                                 </div>
                                 <a href="#" class="stretched-link">
-                                    <h3>{{ __('general.services-card-4-title') }}</h3>
+                                    <h3>{{ GoogleTranslate::trans("Collateralx's Management Agreement/ CMA Service", app()->getLocale())}}</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                      {{ __('general.services-card-4-desc-1') }}
+                                        {{ GoogleTranslate::trans('Supervision of Unloading (from the Ship)', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                      {{ __('general.services-card-4-desc-2') }}
+                                        {{ GoogleTranslate::trans('Supervision of Unstuffing (from the Container)', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                      {{ __('general.services-card-4-desc-3') }}
+                                        {{ GoogleTranslate::trans('Inspection on Quantity, Quality and Condition of Products/Goods', app()->getLocale())}}
                                     </li>
                                 </ol>
                                 <a href="#" class="stretched-link"></a>
@@ -299,18 +305,18 @@
                                 </div>
                                 <a href="#" class="stretched-link">
                                     <h3>
-                                      {{ __('general.services-card-5-title') }}
+                                        {{ GoogleTranslate::trans('International Standards for Quality of Products/Goods', app()->getLocale())}}
                                     </h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                      {{ __('general.services-card-5-desc-1') }}
+                                        {{ GoogleTranslate::trans('Supervision of Unloading (from the Ship)', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                      {{ __('general.services-card-5-desc-2') }}
+                                        {{ GoogleTranslate::trans('Supervision of Unstuffing (from the Container)', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                      {{ __('general.services-card-5-desc-3') }}
+                                        {{ GoogleTranslate::trans('Inspection on Quantity, Quality and Condition of Products/Goods', app()->getLocale())}}
                                     </li>
                                 </ol>
                                 <a href="#" class="stretched-link"></a>
@@ -330,13 +336,20 @@
                     <div
                         class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-2 order-lg-1">
                         <div class="content px-xl-5">
-                            <h3>{{ __('general.about-us-title') }}</h3>
-                            <p>{{ __('general.about-us-sub') }}</p>
+                            <h3>{{ GoogleTranslate::trans('About Us', app()->getLocale())}}</h3>
+                            <p>{{ GoogleTranslate::trans('We Help You to Survey Everything You Needed', app()->getLocale())}}</p>
                         </div>
 
                         <div class="ms-5 pe-5 mt-3">
-                            <p class="text-wrap fs-5">
-                              {{ __('general.about-us-desc') }}
+                            <p class="text-wrap fs-5"> 
+                                {{ GoogleTranslate::trans('PT. ATLANTIS SERVICES INDONESIA (ASI) is a national private
+                                company which established in 2007. Well-engaged in inspection
+                                or verification services for various types of products/goods
+                                resulting from industry and also trade. ASI have experiences
+                                in inspection activities of manufactured industrial products
+                                in the form of raw materials and/or auxiliary materials,
+                                intermediate products (Intermediate Goods) and final
+                                products/finished goods/consumer goods (Consumers Goods).', app()->getLocale())}}
                             </p>
                         </div>
                     </div>
@@ -356,11 +369,11 @@
                 <div class="row g-5">
                     <div
                         class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
-                        <h3>{{ __('general.contact-us-title') }}</h3>
+                        <h3>{{ GoogleTranslate::trans('Interested?', app()->getLocale())}} <em>{{ GoogleTranslate::trans('Contact Us', app()->getLocale())}}</em> {{ GoogleTranslate::trans('Now', app()->getLocale())}}</h3>
                         <p>
-                          {{ __('general.contact-us-desc') }}
+                          {{ GoogleTranslate::trans("We are always ready to listen to you! Do you have questions, suggestions, or need help? Don't hesitate to contact our team. We are very happy to help you.", app()->getLocale())}}
                         </p>
-                        <a class="cta-btn align-self-start" href="#">{{ __('general.contact-us-btn') }}</a>
+                        <a class="cta-btn align-self-start" href="#">Contact Us</a>
                     </div>
 
                     <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
@@ -387,7 +400,7 @@
         ">
             <div class="container" data-aos="fade-up">
                 <div class="section-header">
-                    <h2>{{ __('general.wch-title') }}</h2>
+                    <h2>{{ GoogleTranslate::trans('Why Choose Us?', app()->getLocale())}}</h2>
                 </div>
 
                 <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
@@ -406,37 +419,61 @@
                             <div class="tab-pane fade show active" id="tab1">
                                 <div class="d-flex align-items-center mt-4">
                                     <i class="bi bi-check2" style="color: var(--color-green)"></i>
-                                    <h4 style="color: var(--color-primary)">{{ __('general.wch-p-1-title') }}</h4>
+                                    <h4 style="color: var(--color-primary)">{{ GoogleTranslate::trans('Impartiality', app()->getLocale())}}</h4>
                                 </div>
                                 <p>
-                                  {{ __('general.wch-p-1-desc') }}
+                                    {{ GoogleTranslate::trans('Always serve and give the best for client, put every effort
+                                    in improving competence, knowing priorities and doing good
+                                    coordination. Be polite and responsive yet friendly 2 ways
+                                    feedback. Still uphold the value of HIGH QUALITY and
+                                    SATISFYING services.', app()->getLocale())}}
                                 </p>
                             </div>
                             <div class="tab-pane fade show active" id="tab1">
                                 <div class="d-flex align-items-center mt-4">
                                     <i class="bi bi-check2" style="color: var(--color-green)"></i>
-                                    <h4 style="color: var(--color-primary)">{{ __('general.wch-p-2-title') }}</h4>
+                                    <h4 style="color: var(--color-primary)">{{ GoogleTranslate::trans('Credibility', app()->getLocale())}}</h4>
                                 </div>
                                 <p>
-                                  {{ __('general.wch-p-2-desc') }}
+                                    {{ GoogleTranslate::trans('Always serve and give the best for client, put every effort
+                                    in improving competence, knowing priorities and doing good
+                                    coordination. Be polite and responsive yet friendly 2 ways
+                                    feedback. Still uphold the value of HIGH QUALITY and
+                                    SATISFYING services.', app()->getLocale())}}
                                 </p>
                             </div>
                             <div class="tab-pane fade show active" id="tab1">
                                 <div class="d-flex align-items-center mt-4">
                                     <i class="bi bi-check2" style="color: var(--color-green)"></i>
-                                    <h4 style="color: var(--color-primary)">{{ __('general.wch-p-3-title') }}</h4>
+                                    <h4 style="color: var(--color-primary)">{{ GoogleTranslate::trans('Integrity', app()->getLocale())}}</h4>
                                 </div>
                                 <p>
-                                  {{ __('general.wch-p-3-desc') }}
+                                    {{ GoogleTranslate::trans('Be honest and dedicated in discipline work. Be loyal and
+                                    respect to the client and fully responsible to achieve
+                                    similar vision. As a respected consultant, ASI always be
+                                    adaptive, always be sensitive for facing the time-changes,
+                                    and be innovative in order to make the best improvements in
+                                    all areas by showing the best possible result and more of
+                                    that ASI still continuing to learn and developing
+                                    capabilities as well. Time result management is our next
+                                    level of better service we guarantee.', app()->getLocale())}}
                                 </p>
                             </div>
                             <div class="tab-pane fade show active" id="tab1">
                                 <div class="d-flex align-items-center mt-4">
                                     <i class="bi bi-check2" style="color: var(--color-green)"></i>
-                                    <h4 style="color: var(--color-primary)">{{ __('general.wch-p-4-title') }}</h4>
+                                    <h4 style="color: var(--color-primary)">{{ GoogleTranslate::trans('Professionalism', app()->getLocale())}}</h4>
                                 </div>
                                 <p>
-                                  {{ __('general.wch-p-4-desc') }}
+                                    {{ GoogleTranslate::trans('Be honest and dedicated in discipline work. Be loyal and
+                                    respect to the client and fully responsible to achieve
+                                    similar vision. As a respected consultant, ASI always be
+                                    adaptive, always be sensitive for facing the time-changes,
+                                    and be innovative in order to make the best improvements in
+                                    all areas by showing the best possible result and more of
+                                    that ASI still continuing to learn and developing
+                                    capabilities as well. Time result management is our next
+                                    level of better service we guarantee.', app()->getLocale())}}
                                 </p>
                             </div>
                         </div>
@@ -510,9 +547,9 @@
         <section id="contact" class="contact">
             <div class="container">
                 <div class="section-header">
-                    <h2>Contact Us</h2>
+                    <h2>{{ GoogleTranslate::trans('Contact Us', app()->getLocale())}}</h2>
                     <p>
-                        We Help You to Survey Everything You Needed
+                        {{ GoogleTranslate::trans('We Help You to Survey Everything You Needed', app()->getLocale())}}
                     </p>
                 </div>
             </div>
@@ -589,6 +626,13 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('/assets/js/main.js') }}"></script>
+    <script type="text/javascript">
+        var url = "{{ route('changeLang') }}";
+
+        $(".changeLang").change(function() {
+            window.location.href = url + "?lang=" + $(this).val();
+        });
+    </script>
 </body>
 
 </html>

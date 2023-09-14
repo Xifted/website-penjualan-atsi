@@ -61,6 +61,6 @@ return[
     'wch-p-3-title' => "Integritas",
     'wch-p-3-desc' => "Jujur dan berdedikasi dalam disiplin kerja. Setia dan menghormati klien serta bertanggung jawab penuh untuk mencapai visi serupa. Sebagai konsultan yang disegani, ASI selalu adaptif, selalu peka menghadapi perubahan zaman, dan inovatif untuk melakukan perbaikan terbaik di segala bidang dengan menunjukkan hasil terbaik dan lebih dari itu ASI masih terus belajar dan berkembang. kemampuan juga. Manajemen hasil waktu adalah jaminan layanan tingkat berikutnya yang lebih baik.",
 
-    'wch-p-3-title' => "Profesionalisme",
-    'wch-p-3-desc' => "Jujur dan berdedikasi dalam disiplin kerja. Setia dan menghormati klien serta bertanggung jawab penuh untuk mencapai visi serupa. Sebagai konsultan yang disegani, ASI selalu adaptif, selalu peka menghadapi perubahan zaman, dan inovatif untuk melakukan perbaikan terbaik di segala bidang dengan menunjukkan hasil terbaik dan lebih dari itu ASI masih terus belajar dan berkembang. kemampuan juga. Manajemen hasil waktu adalah jaminan layanan tingkat berikutnya yang lebih baik.",
+    'wch-p-4-title' => "Profesionalisme",
+    'wch-p-4-desc' => "Jujur dan berdedikasi dalam disiplin kerja. Setia dan menghormati klien serta bertanggung jawab penuh untuk mencapai visi serupa. Sebagai konsultan yang disegani, ASI selalu adaptif, selalu peka menghadapi perubahan zaman, dan inovatif untuk melakukan perbaikan terbaik di segala bidang dengan menunjukkan hasil terbaik dan lebih dari itu ASI masih terus belajar dan berkembang. kemampuan juga. Manajemen hasil waktu adalah jaminan layanan tingkat berikutnya yang lebih baik.",
 ];

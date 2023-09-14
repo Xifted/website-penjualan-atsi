@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LangController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,10 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Multi Language
-if(file_exists(app_path('Http/Controllers/LocalizationController.php'))){
-    Route::get('lang/{locale}', [App\Http\Controllers\LocalizationController::class , 'lang']);
-}
+// Multi Lang
+Route::get('/change', [LangController::class, 'change'])->name('changeLang');
 
 // Landing Page
 Route::get('/', [HomeController::class, 'index']);

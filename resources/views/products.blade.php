@@ -32,10 +32,12 @@
     <!-- <link href="assets/css/variables-red.css" rel="stylesheet"> -->
     <!-- <link href="assets/css/variables-pink.css" rel="stylesheet"> -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <!-- Template Main CSS File -->
     <link href="{{ asset('/assets/css/main.css') }}" rel="stylesheet" />
     <link href="{{ asset('/assets/css/products.css') }}" rel="stylesheet" />
-    <title>ATSI - Products List</title>
+    <title>ATSI - {{ GoogleTranslate::trans('HIGH QUALITY SERVICES YOU NEED', app()->getLocale())}}</title>
 </head>
 
 <body id="products" class="bg-light" style="overflow-y: auto !important;">
@@ -44,22 +46,21 @@
 
     <div class="container-fluid d-flex flex-column align-items-center justify-content-between mt-5 pt-5 px-5">
         <h1 class="text-muted fw-light text-center my-5 border-bottom" style="width: fit-content">
-            {{ $currentCategory['category_name'] ?? 'Our Products' }}</h1>
+            {{ GoogleTranslate::trans($currentCategory['category_name'] ?? 'Our Products', app()->getLocale()) }}</h1>
         <div class="container-fluid d-flex justify-content-between">
-            <button
-                class="btn btn-light shadow position-fixed rounded-0 p-3 d-none justify-content-center align-items-center py-2"
-                id="toggle-filter-btn">
+            <button class="position-absolute bg-primary rounded p-3 d-flex justify-content-center align-items-center py-2"
+                style="display: none !important; height: fit-content; width: fit-content; left: 0; z-index: 99">
                 <i class="bi bi-sliders fs-3 color-green pb-1 px-1"></i>
             </button>
-            <div class="filter row w-25 py-5">
-                <div class="filter-row d-flex flex-column bg-white rounded-4 w-100 p-5 gap-3 border"
+            <div class="row w-25 py-5">
+                <div class="d-flex flex-column bg-white rounded-4 w-100 p-5 gap-3 border"
                     style="height: fit-content; box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.103);">
                     <div class="d-flex filters-header align-content-center w-100" style="height: 15%;">
                         <h3 class="fw-4 text-muted" style="height: fit-content">Filters</h3>
                     </div>
                     <div class="d-flex filters-body flex-column" style="height: 85%;">
                         <div class="category d-flex flex-column border-top py-3 gap-1">
-                            <h5 class="text-muted fs-4 fw-light mb-3">Category</h5>
+                            <h5 class="text-muted fs-4 fw-light mb-3">{{ GoogleTranslate::trans('Category', app()->getLocale())}}</h5>
                             <div class="">
                                 <button class="btn p-0 m-0">
                                     <a href="{{ url('/products') }}" class="d-flex gap-3 align-items-center">
@@ -68,7 +69,7 @@
                                         @else
                                             <i class="bi bi-circle fs-4 color-primary"></i>
                                         @endif
-                                        <p class="text-muted h-100 fs-5 fw-light m-0 text-start">All Products</p>
+                                        <p class="text-muted h-100 fs-5 fw-light m-0 text-start">{{ GoogleTranslate::trans('All Products', app()->getLocale())}}</p>
                                     </a>
                                 </button>
                             </div>
@@ -82,8 +83,7 @@
                                             @else
                                                 <i class="bi bi-circle fs-4 color-primary"></i>
                                             @endif
-                                            <p class="text-muted h-100 fs-5 fw-light m-0 text-start">
-                                                {{ $item->category_name }}
+                                            <p class="text-muted h-100 fs-5 fw-light m-0 text-start">{{ GoogleTranslate::trans($item->category_name, app()->getLocale()) }}
                                             </p>
                                         </a>
                                     </button>
@@ -98,22 +98,20 @@
                         </div>
                         <div class="price d-flex flex-column py-3 pb-0">
                             <div class="category d-flex flex-column border-top py-3 pb-0 gap-1">
-                                <h5 class="text-muted fs-4 fw-light mb-3">Price</h5>
+                                <h5 class="text-muted fs-4 fw-light mb-3">{{ GoogleTranslate::trans('Price', app()->getLocale())}}</h5>
                                 <div class="d-flex gap-2 flex-column justify-content-center">
-                                    <label for="min-price" class="form-label text-muted fw-light">Min Price</label>
+                                    <label for="min-price" class="form-label text-muted fw-light">{{ GoogleTranslate::trans('Minimum Price', app()->getLocale())}}</label>
                                     <div class="input-group mb-3">
                                         <span class="input-group-text">Rp</span>
-                                        <input oninput="formatPriceFilter()" onchange="priceFilter()" type="text"
-                                            class="form-control" id="min-price">
+                                        <input oninput="formatPriceFilter()" onchange="priceFilter()" type="text" class="form-control" id="min-price">
                                         <span class="input-group-text">.00</span>
                                     </div>
                                 </div>
                                 <div class="d-flex gap-2 mt-2 flex-column justify-content-center">
-                                    <label for="min-price" class="form-label text-muted fw-light">Max Price</label>
+                                    <label for="min-price" class="form-label text-muted fw-light">{{ GoogleTranslate::trans('Maximum Price', app()->getLocale())}}</label>
                                     <div class="input-group mb-3">
                                         <span class="input-group-text">Rp</span>
-                                        <input oninput="formatPriceFilter()" onchange="priceFilter()" type="text"
-                                            class="form-control" id="max-price">
+                                        <input oninput="formatPriceFilter()" onchange="priceFilter()" type="text" class="form-control" id="max-price">
                                         <span class="input-group-text">.00</span>
                                     </div>
                                 </div>
@@ -122,26 +120,26 @@
                     </div>
                 </div>
             </div>
-            <div class="products-container row w-75 py-5 px-0 d-flex flex-column gap-4">
+            <div class="row w-75 py-5 px-0 d-flex flex-column gap-4">
                 <div class="d-flex justify-content-between mb-0" style="height: fit-content;">
-                    <h5 class="text-muted fw-light">Atsi / Products</h5>
+                    <h5 class="text-muted fw-light">Atsi / {{ GoogleTranslate::trans('Products', app()->getLocale())}}</h5>
                     <select onchange="sortProducts()" id="sortButton" class="form-select w-25">
                         <option value="" selected>Sort By</option>
                         {{-- <option value="price">Price</option> --}}
-                        <option value="ASC">Lowest Price</option>
-                        <option value="DESC">Highest Price</option>
+                        <option value="ASC">{{ GoogleTranslate::trans('Lowest Price', app()->getLocale())}}</option>
+                        <option value="DESC">{{ GoogleTranslate::trans('Highest Price', app()->getLocale())}}</option>
                     </select>
                 </div>
                 <div class="products w-100 d-flex flex-column mt-0 gap-4">
                     @foreach ($products as $item)
-                        <div class="product-item bg-white border rounded-4 d-flex justify-content-between align-items-center p-5 gap-3"
+                        <div class="bg-white border rounded-4 d-flex justify-content-between align-items-center p-5 gap-3"
                             style="box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.103);">
                             <div class="col-md-3"
                                 style="width: 300px; height: 300px; background: center no-repeat url('{{ $item->product_image == null || '' ? 'https://www.figma.com/file/8W3dPdx2K2XtF3Lj1Xpv6J/image/c957e3732cc67a477e4e2d06b4adddd11c436044?fuid=1156448676563229939' : asset('storage/' . $item->product_image) }}'); background-size: cover;">
                             </div>
-                            <div class="product-detail col-md-5 d-flex flex-column justify-content-center">
+                            <div class="col-md-5 d-flex flex-column justify-content-center">
                                 <h4 class="fw-bold mb-0">{{ $item->product_name }}</h4>
-                                <p class="text-muted mt-0 mb-0">{{ $item->category_name }}</p>
+                                <p class="text-muted mt-0 mb-0">{{ GoogleTranslate::trans($item->category_name, app()->getLocale())}}</p>
                                 <div class="d-flex flex-row">
                                     <div class="ratings me-2 d-flex gap-1">
                                         <i class="bi bi-star-fill text-warning fs-5"></i><i
@@ -188,7 +186,7 @@
                                     <h4 class="mr-1 fw-bold item-price">{{ $item->product_price }}</h4>
                                     <span class="strike-text text-muted"><strike>Rp 20000000,00</strike></span>
                                 </div>
-                                <h6 style="color: var(--color-green);">Free shipping</h6>
+                                <h6 style="color: var(--color-green);">{{ GoogleTranslate::trans('Free shipping', app()->getLocale())}}</h6>
                                 <p class="text-justify text-truncate para mb-0">
                                     {{ $item->product_description }}<br /><br />
                                 </p>
@@ -232,6 +230,13 @@
     <!-- Template Main JS File -->
     <script src="{{ asset('/assets/js/main.js') }}"></script>
     <script src="{{ asset('/assets/js/products.js') }}"></script>
+    <script type="text/javascript">
+        var url = "{{ route('changeLang') }}";
+
+        $(".changeLang").change(function() {
+            window.location.href = url + "?lang=" + $(this).val();
+        });
+    </script>
 </body>
 
 </html>

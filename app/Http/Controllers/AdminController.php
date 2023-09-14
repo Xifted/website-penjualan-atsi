@@ -168,6 +168,19 @@ class AdminController extends Controller
         return redirect('/admin/categories');
     }
 
+    public function actionEditCategory(Request $request, $id)
+    {
+            DB::table('categories')
+                ->where('category_id', '=', $id)
+                ->update([
+                    'category_name' => $request->input('categoryName'),
+                    'category_description' => $request->input('categoryDescription'),
+                    'updated_at' => now(),
+                ]);
+
+        return redirect('/admin/categories');
+    }
+
     public function profile($id)
     {
         if (Auth::guard('admin')->user()->admin_id == $id) {
