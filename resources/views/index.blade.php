@@ -276,14 +276,20 @@
                                     <h3>{{ GoogleTranslate::trans("Collateralx's Management Agreement/ CMA Service", app()->getLocale())}}</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
+                                    {{-- <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                        {{ GoogleTranslate::trans('Pengelolaan agunan bank atau pendana lain selain bank dibutuhkan guna memastikan detail dan kepastian pemasukan, persediaan, dan pengeluaran atas barang yang menjadi agunan tersebut', app()->getLocale())}}
+                                    </li> --}}
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        {{ GoogleTranslate::trans('Supervision of Unloading (from the Ship)', app()->getLocale())}}
+                                        {{ GoogleTranslate::trans('Inspeksi tempat penyimpanan barang(gudang)', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        {{ GoogleTranslate::trans('Supervision of Unstuffing (from the Container)', app()->getLocale())}}
+                                        {{ GoogleTranslate::trans('Managemen agunan/persediaan', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        {{ GoogleTranslate::trans('Inspection on Quantity, Quality and Condition of Products/Goods', app()->getLocale())}}
+                                        {{ GoogleTranslate::trans('Pemantauan agunan/persediaan', app()->getLocale())}}
+                                    </li>
+                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                        {{ GoogleTranslate::trans('Verifikasi/estimasi persediaan', app()->getLocale())}}
                                     </li>
                                 </ol>
                                 <a href="#" class="stretched-link"></a>
@@ -318,6 +324,38 @@
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
                                         {{ GoogleTranslate::trans('Inspection on Quantity, Quality and Condition of Products/Goods', app()->getLocale())}}
                                     </li>
+                                </ol>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Service Item -->
+                    <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="service-item">
+                            <div class="img">
+                                <div
+                                    style="height: 290px; background: center no-repeat url('{{ asset('/assets/img/services/service-5.jpg') }}'); background-size: cover;">
+                                </div>
+                            </div>
+                            <div class="details position-relative">
+                                <div class="icon">
+                                    <i class="bi bi-calendar4-week"></i>
+                                </div>
+                                <a href="#" class="stretched-link">
+                                    <h3>
+                                        {{ GoogleTranslate::trans('VPTI(Verifikasi Penelusuran Teknis Impor) Services', app()->getLocale())}}
+                                    </h3>
+                                </a>
+                                <ol class="list-group">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                        {{ GoogleTranslate::trans('Kami berfokus memberikan pelayanan verifikasi terhadap kesesuaian dan kebenaran barang impor sesuai dengan regulasi Kementerian Perdagangan Luar Negeri', app()->getLocale())}}
+                                    </li>
+                                    {{-- <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                        {{ GoogleTranslate::trans('Supervision of Unstuffing (from the Container)', app()->getLocale())}}
+                                    </li>
+                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                        {{ GoogleTranslate::trans('Inspection on Quantity, Quality and Condition of Products/Goods', app()->getLocale())}}
+                                    </li> --}}
                                 </ol>
                                 <a href="#" class="stretched-link"></a>
                             </div>
