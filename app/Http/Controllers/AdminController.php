@@ -211,4 +211,10 @@ class AdminController extends Controller
             return ("You Don't have access");
         }
     }
+
+    public function actionlogout()
+    {
+        Auth::guard('admin')->logout();
+        return redirect('/admin/login');
+    }
 }

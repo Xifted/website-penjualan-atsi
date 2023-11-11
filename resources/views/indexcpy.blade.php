@@ -41,6 +41,12 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <!-- =======================================================
+  * Template Name: HeroBiz - v2.4.0
+  * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
@@ -67,7 +73,7 @@
                                 Melayani kualitas inspeksi di Luar Harapan secara adaptif
                             </h2>
                             <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
-                            <a href="#featured-services" class="btn-get-started scrollto">Learn More About It</a>
+                            <a href="#featured-services" class="btn-get-started scrollto">{{ GoogleTranslate::trans('Learn More About It', app()->getLocale())}}</a>
                         </div>
                     </div>
                 </div>
@@ -84,9 +90,15 @@
                         </div>
 
                         <div class="col-lg-10 text-center mt-4">
-                            <h2>Upholds integrity and professional as core value as a service and above all we are assuring the most reliable consultant we guarantee</h2>
+                            <h2>
+                                {{ GoogleTranslate::trans(
+                                    'Upholds integrity and professional as core value as a service and above all we are assuring the most reliable consultant we guarantee',
+                                    app()->getLocale(),
+                                ) }}
+
+                            </h2>
                             <!-- <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p> -->
-                            <a href="#featured-services" class="btn-get-started scrollto">Learn More About It</a>
+                            <a href="#featured-services" class="btn-get-started scrollto">{{ GoogleTranslate::trans('Learn More About It', app()->getLocale())}}</a>
                         </div>
                     </div>
                 </div>
@@ -103,9 +115,11 @@
                         </div>
 
                         <div class="col-lg-9 text-center mt-4">
-                            <h2>No testing in between beside keep trust and be transparent in all aspect for client and public</h2>
+                            <h2>
+                              {{ GoogleTranslate::trans('No testing in between beside keep trust and be transparent in all aspect for client and public', app()->getLocale())}}
+                            </h2>
                             <!-- <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p> -->
-                            <a href="#featured-services" class="btn-get-started scrollto">Learn More About It</a>
+                            <a href="#featured-services" class="btn-get-started scrollto">{{ GoogleTranslate::trans('Learn More About It', app()->getLocale())}}</a>
                         </div>
                     </div>
                 </div>
@@ -137,8 +151,8 @@
         ">
             <div class="container" data-aos="fade-up">
                 <div class="section-header">
-                    <h2 class="text-capitalize">Our Services</h2>
-                    <p>HIGH QUALITY SERVICES YOU NEED</p>
+                    <h2 class="text-capitalize">{{ GoogleTranslate::trans('Our Services', app()->getLocale())}}</h2>
+                    <p>{{ GoogleTranslate::trans('HIGH QUALITY SERVICES YOU NEED', app()->getLocale())}}</p>
                 </div>
 
                 <div class="row gy-5 d-flex justify-content-center">
@@ -154,30 +168,30 @@
                                     <i class="bi bi-lightning-charge"></i>
                                 </div>
                                 <a href="#" class="stretched-link">
-                                    <h3 class="text-capitalize">In The Factory</h3>
+                                    <h3 class="text-capitalize">{{ GoogleTranslate::trans('In The Factory', app()->getLocale())}}</h3>
                                 </a>
 
                                 <ol class="list-group list-group-numbered">
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Factory Assessment and Audit
+                                        {{ GoogleTranslate::trans('Factory Assessment and Audit', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Workshop and Warehouse Inspection
+                                        {{ GoogleTranslate::trans('Workshop and Warehouse Inspection', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Production Inspection
+                                        {{ GoogleTranslate::trans('Production Inspection', app()->getLocale())}}
                                         <ol class="list-group">
                                             <li class="list-group-item border-0 text-start mb-0 py-0"
                                                 style="font-size: 14px">
-                                                • Initial Check
+                                                {{ GoogleTranslate::trans('• Initial Check', app()->getLocale())}}
                                             </li>
                                             <li class="list-group-item border-0 text-start mb-0 py-0"
                                                 style="font-size: 14px">
-                                                • During Production Inspection and
+                                                {{ GoogleTranslate::trans('• During Production Inspection and', app()->getLocale())}}
                                             </li>
                                             <li class="list-group-item border-0 text-start mb-0 py-0"
                                                 style="font-size: 14px">
-                                                • Final Random Inspection
+                                                {{ GoogleTranslate::trans('• Final Random Inspection', app()->getLocale())}}
                                             </li>
                                         </ol>
                                     </li>
@@ -199,17 +213,17 @@
                                     <i class="bi bi-list-check"></i>
                                 </div>
                                 <a href="#" class="stretched-link">
-                                    <h3>Inspection for Export of Products/Goods</h3>
+                                    <h3>{{ GoogleTranslate::trans('Inspection for Export of Products/Goods', app()->getLocale())}}</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Inspection on Quantity and Quality of Products/Goods
+                                        {{ GoogleTranslate::trans('Inspection on Quantity and Quality of Products/Goods', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Supervision of Stuffing (in to the Container)
+                                        {{ GoogleTranslate::trans('Supervision of Stuffing (in to the Container)', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Supervision of Loading (in to the Vessel)
+                                        {{ GoogleTranslate::trans('Supervision of Loading (in to the Vessel)', app()->getLocale())}}
                                     </li>
                                 </ol>
                             </div>
@@ -229,17 +243,17 @@
                                     <i class="bi bi-check2-circle"></i>
                                 </div>
                                 <a href="#" class="stretched-link">
-                                    <h3>Inspection for Import of Products/Goods</h3>
+                                    <h3>{{ GoogleTranslate::trans('Inspection for Import of Products/Goods', app()->getLocale())}}</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Supervision of Unloading (from the Ship)
+                                        {{ GoogleTranslate::trans('Supervision of Unloading (from the Ship)', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Supervision of Unstuffing (from the Container)
+                                        {{ GoogleTranslate::trans('Supervision of Unstuffing (from the Container)', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Inspection on Quantity, Quality and Condition of Products/Goods
+                                        {{ GoogleTranslate::trans('Inspection on Quantity, Quality and Condition of Products/Goods', app()->getLocale())}}
                                     </li>
                                 </ol>
                             </div>
@@ -263,19 +277,19 @@
                                 </a>
                                 <ol class="list-group list-group-numbered">
                                     {{-- <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Pengelolaan agunan bank atau pendana lain selain bank dibutuhkan guna memastikan detail dan kepastian pemasukan, persediaan, dan pengeluaran atas barang yang menjadi agunan tersebut
+                                        {{ GoogleTranslate::trans('Pengelolaan agunan bank atau pendana lain selain bank dibutuhkan guna memastikan detail dan kepastian pemasukan, persediaan, dan pengeluaran atas barang yang menjadi agunan tersebut', app()->getLocale())}}
                                     </li> --}}
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Inspeksi tempat penyimpanan barang(gudang)
+                                        {{ GoogleTranslate::trans('Inspeksi tempat penyimpanan barang(gudang)', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Managemen agunan/persediaan
+                                        {{ GoogleTranslate::trans('Managemen agunan/persediaan', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Pemantauan agunan/persediaan
+                                        {{ GoogleTranslate::trans('Pemantauan agunan/persediaan', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Verifikasi/estimasi persediaan
+                                        {{ GoogleTranslate::trans('Verifikasi/estimasi persediaan', app()->getLocale())}}
                                     </li>
                                 </ol>
                                 <a href="#" class="stretched-link"></a>
@@ -297,15 +311,15 @@
                                 </div>
                                 <a href="#" class="stretched-link">
                                     <h3>
-                                        International Standards for Quality of Products/Goods
+                                        {{ GoogleTranslate::trans('International Standards for Quality of Products/Goods', app()->getLocale())}}
                                     </h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Pemeriksaan kuantitas dan kualitas sesuai kesepakatan (ANZI, ASTM dan JIS)
+                                        {{ GoogleTranslate::trans('Pemeriksaan kuantitas dan kualitas sesuai kesepakatan (ANZI, ASTM dan JIS)', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Pengambilan sampel untuk analisa laboratorium
+                                        {{ GoogleTranslate::trans('Pengambilan sampel untuk analisa laboratorium', app()->getLocale())}}
                                     </li>
                                 </ol>
                                 <a href="#" class="stretched-link"></a>
@@ -326,21 +340,21 @@
                                 </div>
                                 <a href="#" class="stretched-link">
                                     <h3>
-                                        VPTI(Verifikasi Penelusuran Teknis Impor) Services
+                                        {{ GoogleTranslate::trans('VPTI(Verifikasi Penelusuran Teknis Impor) Services', app()->getLocale())}}
                                     </h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Pemeriksaan dan pemastian terhadap kesesuaian dokumen administrasi
+                                        {{ GoogleTranslate::trans('Pemeriksaan dan pemastian terhadap kesesuaian dokumen administrasi', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Identifikasi spesifikasi/kriteria Barang melalui analisa kualitatif dan/atau kuantitatif
+                                        {{ GoogleTranslate::trans('Identifikasi spesifikasi/kriteria Barang melalui analisa kualitatif dan/atau kuantitatif', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Pemastian jumlah dan/atau volume
+                                        {{ GoogleTranslate::trans('Pemastian jumlah dan/atau volume', app()->getLocale())}}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Pemastian negara muat, negara asal Barang dan/atau negara tujuan
+                                        {{ GoogleTranslate::trans('Pemastian negara muat, negara asal Barang dan/atau negara tujuan', app()->getLocale())}}
                                     </li>
                                 </ol>
                                 <a href="#" class="stretched-link"></a>
@@ -360,13 +374,13 @@
                     <div
                         class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-2 order-lg-1">
                         <div class="content px-xl-5">
-                            <h3>About Us</h3>
-                            <p>We Help You to Survey Everything You Needed</p>
+                            <h3>{{ GoogleTranslate::trans('About Us', app()->getLocale())}}</h3>
+                            <p>{{ GoogleTranslate::trans('We Help You to Survey Everything You Needed', app()->getLocale())}}</p>
                         </div>
 
                         <div class="ms-5 pe-5 mt-3">
                             <p class="text-wrap fs-5"> 
-                                PT. ATLANTIS SERVICES INDONESIA (ATSI) merupakan perusahaan nasional yang berdiri pada tahun 2007. Bergerak di bidang jasa inspeksi atau verifikasi berbagai jenis produk/barang hasil industri dan juga perdagangan. ATSI mempunyai pengalaman dalam kegiatan pemeriksaan produk industri manufaktur berupa bahan baku dan/atau bahan penolong, produk setengah jadi (Intermediate Goods), produk akhir/barang jadi/barang konsumsi (Consumers Goods) dan Pekerjaan Regulasi Pemerintah VPTI .
+                                {{ GoogleTranslate::trans('PT. ATLANTIS SERVICES INDONESIA (ATSI) merupakan perusahaan nasional yang berdiri pada tahun 2007. Bergerak di bidang jasa inspeksi atau verifikasi berbagai jenis produk/barang hasil industri dan juga perdagangan. ATSI mempunyai pengalaman dalam kegiatan pemeriksaan produk industri manufaktur berupa bahan baku dan/atau bahan penolong, produk setengah jadi (Intermediate Goods), produk akhir/barang jadi/barang konsumsi (Consumers Goods) dan Pekerjaan Regulasi Pemerintah VPTI .', app()->getLocale())}}
                             </p>
                         </div>
                     </div>
@@ -386,7 +400,7 @@
                 <div class="row g-5">
                     <div
                         class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
-                        <h3>Interested? <em>Contact Us</em> Now</h3>
+                        <h3>{{ GoogleTranslate::trans('Interested?', app()->getLocale())}} <em>{{ GoogleTranslate::trans('Contact Us', app()->getLocale())}}</em> {{ GoogleTranslate::trans('Now', app()->getLocale())}}</h3>
                         <p>
                           {{ GoogleTranslate::trans("We are always ready to listen to you! Do you have questions, suggestions, or need help? Don't hesitate to contact our team. We are very happy to help you.", app()->getLocale())}}
                         </p>
@@ -417,7 +431,7 @@
         ">
             <div class="container" data-aos="fade-up">
                 <div class="section-header">
-                    <h2>Why Choose Us?</h2>
+                    <h2>{{ GoogleTranslate::trans('Why Choose Us?', app()->getLocale())}}</h2>
                 </div>
 
                 <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
@@ -436,36 +450,36 @@
                             <div class="tab-pane fade show active" id="tab1">
                                 <div class="d-flex align-items-center mt-4">
                                     <i class="bi bi-check2" style="color: var(--color-green)"></i>
-                                    <h4 style="color: var(--color-primary)">Impartiality</h4>
+                                    <h4 style="color: var(--color-primary)">{{ GoogleTranslate::trans('Impartiality', app()->getLocale())}}</h4>
                                 </div>
                                 <p>
-                                    Always serve and give the best for client, put every effort
+                                    {{ GoogleTranslate::trans('Always serve and give the best for client, put every effort
                                     in improving competence, knowing priorities and doing good
                                     coordination. Be polite and responsive yet friendly 2 ways
                                     feedback. Still uphold the value of HIGH QUALITY and
-                                    SATISFYING services.
+                                    SATISFYING services.', app()->getLocale())}}
                                 </p>
                             </div>
                             <div class="tab-pane fade show active" id="tab1">
                                 <div class="d-flex align-items-center mt-4">
                                     <i class="bi bi-check2" style="color: var(--color-green)"></i>
-                                    <h4 style="color: var(--color-primary)">Credibility</h4>
+                                    <h4 style="color: var(--color-primary)">{{ GoogleTranslate::trans('Credibility', app()->getLocale())}}</h4>
                                 </div>
                                 <p>
-                                    Always serve and give the best for client, put every effort
+                                    {{ GoogleTranslate::trans('Always serve and give the best for client, put every effort
                                     in improving competence, knowing priorities and doing good
                                     coordination. Be polite and responsive yet friendly 2 ways
                                     feedback. Still uphold the value of HIGH QUALITY and
-                                    SATISFYING services.
+                                    SATISFYING services.', app()->getLocale())}}
                                 </p>
                             </div>
                             <div class="tab-pane fade show active" id="tab1">
                                 <div class="d-flex align-items-center mt-4">
                                     <i class="bi bi-check2" style="color: var(--color-green)"></i>
-                                    <h4 style="color: var(--color-primary)">Integrity</h4>
+                                    <h4 style="color: var(--color-primary)">{{ GoogleTranslate::trans('Integrity', app()->getLocale())}}</h4>
                                 </div>
                                 <p>
-                                    Be honest and dedicated in discipline work. Be loyal and
+                                    {{ GoogleTranslate::trans('Be honest and dedicated in discipline work. Be loyal and
                                     respect to the client and fully responsible to achieve
                                     similar vision. As a respected consultant, ATSI always be
                                     adaptive, always be sensitive for facing the time-changes,
@@ -473,16 +487,16 @@
                                     all areas by showing the best possible result and more of
                                     that ATSI still continuing to learn and developing
                                     capabilities as well. Time result management is our next
-                                    level of better service we guarantee.
+                                    level of better service we guarantee.', app()->getLocale())}}
                                 </p>
                             </div>
                             <div class="tab-pane fade show active" id="tab1">
                                 <div class="d-flex align-items-center mt-4">
                                     <i class="bi bi-check2" style="color: var(--color-green)"></i>
-                                    <h4 style="color: var(--color-primary)">Professionalism</h4>
+                                    <h4 style="color: var(--color-primary)">{{ GoogleTranslate::trans('Professionalism', app()->getLocale())}}</h4>
                                 </div>
                                 <p>
-                                    Be honest and dedicated in discipline work. Be loyal and
+                                    {{ GoogleTranslate::trans('Be honest and dedicated in discipline work. Be loyal and
                                     respect to the client and fully responsible to achieve
                                     similar vision. As a respected consultant, ATSI always be
                                     adaptive, always be sensitive for facing the time-changes,
@@ -490,7 +504,7 @@
                                     all areas by showing the best possible result and more of
                                     that ATSI still continuing to learn and developing
                                     capabilities as well. Time result management is our next
-                                    level of better service we guarantee.
+                                    level of better service we guarantee.', app()->getLocale())}}
                                 </p>
                             </div>
                         </div>
@@ -564,9 +578,9 @@
         <section id="contact" class="contact">
             <div class="container">
                 <div class="section-header">
-                    <h2>Contact Us</h2>
+                    <h2>{{ GoogleTranslate::trans('Contact Us', app()->getLocale())}}</h2>
                     <p>
-                        We Help You to Survey Everything You Needed
+                        {{ GoogleTranslate::trans('We Help You to Survey Everything You Needed', app()->getLocale())}}
                     </p>
                 </div>
             </div>

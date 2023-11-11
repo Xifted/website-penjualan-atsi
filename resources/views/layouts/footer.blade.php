@@ -5,14 +5,14 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-info">
                         <div style="width: 75px; height: 75px;">
-                            <img class="img-fluid" src="{{ asset('/assets/img/logo.jpeg') }}" alt="logo">
+                            <img class="img-fluid" src="{{ asset('/assets/img/logo.png') }}" alt="logo">
                         </div>
                         <p class="mt-3">
                             <strong>Location:</strong> Jl. Iskandar Muda Raya No.7 | Kebayoran Lama Selatan, Kebayoran
                             Lama | Kota Adm. Jakarta Selatan | DKI Jakarta - 12241<br />
                             <!-- NY 535022, USA<br /><br /> -->
                             <strong>Phone:</strong> (+62) 2127099176<br />
-                            <strong>Email:</strong> info@example.com<br />
+                            <strong>Email:</strong> customerservice@atsi.co.id<br />
                         </p>
                     </div>
                 </div>
@@ -21,15 +21,15 @@
                     <h4>Useful Links</h4>
                     <ul>
                         <li>
-                            <i class="bi bi-chevron-right"></i> 
+                            <i class="bi bi-chevron-right"></i>
                             <a href="/#hero">Home</a>
                         </li>
                         <li>
-                            <i class="bi bi-chevron-right"></i> 
+                            <i class="bi bi-chevron-right"></i>
                             <a href="/#services">Services</a>
                         </li>
                         <li>
-                            <i class="bi bi-chevron-right"></i> 
+                            <i class="bi bi-chevron-right"></i>
                             <a href="/#about">About Us</a>
                         </li>
                         <li>
@@ -44,11 +44,38 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="#">Pemeriksaan ekspor Produk/Barang</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="#">Pemeriksaan impor Produk/Barang</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="#">Perjanjian Manajemen/Layanan CMA Collateralx</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="#">Standar Internasional Mutu Produk/Barang</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="#">VPTI (Verifikasi Penelusuran Teknis Impor) Services</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
                     <h4>Our Products</h4>
                     <ul>
                         @foreach ($categories as $item)
                             <li>
-                                <i class="bi bi-chevron-right"></i> <a href="{{url('/products?category='. $item->category_id)}}">{{ $item->category_name }}</a>
+                                <i class="bi bi-chevron-right"></i> <a
+                                    href="{{ url('/products?category=' . $item->category_id) }}">{{ $item->category_name }}</a>
                             </li>
                         @endforeach
                     </ul>

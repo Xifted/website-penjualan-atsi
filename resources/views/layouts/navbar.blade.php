@@ -2,7 +2,7 @@
     <div class="container-fluid d-flex align-items-center justify-content-between px-5">
         <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0 ps-5">
             <!-- Uncomment the line below if you also wish to use an image logo -->
-            <img src="{{ asset('/assets/img/logo.jpeg') }}" alt="logo" />
+            <img src="{{ asset('/assets/img/logo.png') }}" alt="logo" />
             <!-- <h1>HeroBiz<span>.</span></h1> -->
         </a>
 

@@ -46,4 +46,5 @@ Route::post('/admin/profile/actionEdit/{id}', [AdminController::class, 'profileE
 
 // Login/Logout
 Route::get('/admin/login', [AdminController::class, 'login'])->name('loginAdmin');
-Route::post('admin/login/action', [AdminController::class, 'actionLoginAdmin'])->name('actionLoginAdmin');
+Route::post('/admin/login/action', [AdminController::class, 'actionLoginAdmin'])->name('actionLoginAdmin');
+Route::get('/admin/logout', [AdminController::class, 'actionLogout'])->name('actionLogout');
