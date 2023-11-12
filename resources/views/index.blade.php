@@ -48,82 +48,41 @@
     @include('layouts/navbar')
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="hero carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="container">
-                    <div class="row justify-content-center gy-6">
-                        <div class="col-lg-5 col-md-8">
-                            <div
-                                style="height: 400px; background: center no-repeat url('{{ asset('/assets/img/hero-carousel/hero-carousel-1.jpg') }}'); background-size: cover;">
-                            </div>
-                        </div>
-                        <div class="col-lg-12 text-center mt-4">
-                            <h2>
-                                Adaptively serve the quality of inspection beyond expectation.
-                            </h2>
-                            <hr />
-                            <h2>
-                                Melayani kualitas inspeksi di Luar Harapan secara adaptif
-                            </h2>
-                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
-                            <a href="#featured-services" class="btn-get-started scrollto">Learn More About It</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    {{-- <section id="hero" class="hero carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000"> --}}
+    <section id="hero" class="hero carousel carousel-fade vh-100" data-bs-ride="carousel">
+        <div class="carousel-inner border" style="overflow: visible">
+            @include('layouts/carousel-item', [
+                'active' => true,
+                'image' => 'hero-carousel-1.jpg',
+                'indonesia' =>
+                    'Memberikan layanan kebutuhan inspeksi dengan kualitas yang melampaui harapan secara adaptif',
+                'english' => 'Adaptively providing inspection services with quality beyond expectation',
+            ])
             <!-- End Carousel Item -->
 
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="row justify-content-center gy-6">
-                        <div class="col-lg-5 col-md-8">
-                            <div
-                                style="height: 400px; background: center no-repeat url('{{ asset('/assets/img/hero-carousel/hero-carousel-2.jpg') }}'); background-size: cover;">
-                            </div>
-                        </div>
-
-                        <div class="col-lg-10 text-center mt-4">
-                            <h2>Upholds integrity and professional as core value as a service and above all we are assuring the most reliable consultant we guarantee</h2>
-                            <!-- <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p> -->
-                            <a href="#featured-services" class="btn-get-started scrollto">Learn More About It</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @include('layouts/carousel-item', [
+                'image' => 'hero-carousel-2.jpg',
+                'indonesia' =>
+                    'Kami menjunjung tinggi integritas dan profesionalisme sebagai nilai inti dalam memberikan layanan terbaik, serta menempatkan team yang handal dan berpengalaman luas',
+                'english' =>
+                    'We put integrity & professionalism as our highest values in providing only the best services, by developing reliable & expert team',
+            ])
             <!-- End Carousel Item -->
 
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="row justify-content-center gy-6">
-                        <div class="col-lg-5 col-md-8">
-                            <div
-                                style="height: 400px; background: center no-repeat url('{{ asset('/assets/img/hero-carousel/hero-carousel-3.jpg') }}'); background-size: cover;">
-                            </div>
-                        </div>
-
-                        <div class="col-lg-9 text-center mt-4">
-                            <h2>No testing in between beside keep trust and be transparent in all aspect for client and public</h2>
-                            <!-- <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p> -->
-                            <a href="#featured-services" class="btn-get-started scrollto">Learn More About It</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @include('layouts/carousel-item', [
+                'image' => 'hero-carousel-3.jpg',
+                'indonesia' =>
+                    'Dalam melakukan inspeksi, supervisi & verifikasi kami menjalankan azaz transapransi dalam segala aspek guna menjaga kualitas serta kepercayaan klien & publik',
+                'english' =>
+                    'We conduct inspection, supervision & verification with transparent principles, in order to maintain quality and the trustworthiness from customer as well as from public',
+            ])
             <!-- End Carousel Item -->
         </div>
-
-        <a class="carousel-control-prev" href="#hero" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-        </a>
-
-        <a class="carousel-control-next" href="#hero" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-        </a>
 
         <ol class="carousel-indicators"></ol>
     </section>
     <!-- End Hero Section -->
+    </div>
 
     <main id="main">
         <!-- ======= Services Section ======= -->
@@ -259,7 +218,8 @@
                                     <i class="bi bi-bounding-box-circles"></i>
                                 </div>
                                 <a href="#" class="stretched-link">
-                                    <h3>{{ GoogleTranslate::trans("Collateralx's Management Agreement/ CMA Service", app()->getLocale())}}</h3>
+                                    <h3>{{ GoogleTranslate::trans("Collateralx's Management Agreement/ CMA Service", app()->getLocale()) }}
+                                    </h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
                                     {{-- <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
@@ -334,7 +294,8 @@
                                         Pemeriksaan dan pemastian terhadap kesesuaian dokumen administrasi
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Identifikasi spesifikasi/kriteria Barang melalui analisa kualitatif dan/atau kuantitatif
+                                        Identifikasi spesifikasi/kriteria Barang melalui analisa kualitatif dan/atau
+                                        kuantitatif
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
                                         Pemastian jumlah dan/atau volume
@@ -365,8 +326,13 @@
                         </div>
 
                         <div class="ms-5 pe-5 mt-3">
-                            <p class="text-wrap fs-5"> 
-                                PT. ATLANTIS SERVICES INDONESIA (ATSI) merupakan perusahaan nasional yang berdiri pada tahun 2007. Bergerak di bidang jasa inspeksi atau verifikasi berbagai jenis produk/barang hasil industri dan juga perdagangan. ATSI mempunyai pengalaman dalam kegiatan pemeriksaan produk industri manufaktur berupa bahan baku dan/atau bahan penolong, produk setengah jadi (Intermediate Goods), produk akhir/barang jadi/barang konsumsi (Consumers Goods) dan Pekerjaan Regulasi Pemerintah VPTI .
+                            <p class="text-wrap fs-5">
+                                PT. ATLANTIS SERVICES INDONESIA (ATSI) merupakan perusahaan nasional yang berdiri pada
+                                tahun 2007. Bergerak di bidang jasa inspeksi atau verifikasi berbagai jenis
+                                produk/barang hasil industri dan juga perdagangan. ATSI mempunyai pengalaman dalam
+                                kegiatan pemeriksaan produk industri manufaktur berupa bahan baku dan/atau bahan
+                                penolong, produk setengah jadi (Intermediate Goods), produk akhir/barang jadi/barang
+                                konsumsi (Consumers Goods) dan Pekerjaan Regulasi Pemerintah VPTI .
                             </p>
                         </div>
                     </div>
@@ -388,7 +354,7 @@
                         class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
                         <h3>Interested? <em>Contact Us</em> Now</h3>
                         <p>
-                          {{ GoogleTranslate::trans("We are always ready to listen to you! Do you have questions, suggestions, or need help? Don't hesitate to contact our team. We are very happy to help you.", app()->getLocale())}}
+                            {{ GoogleTranslate::trans("We are always ready to listen to you! Do you have questions, suggestions, or need help? Don't hesitate to contact our team. We are very happy to help you.", app()->getLocale()) }}
                         </p>
                         <a class="cta-btn align-self-start" href="#">Contact Us</a>
                     </div>
