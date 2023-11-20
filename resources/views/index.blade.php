@@ -50,32 +50,14 @@
     <!-- ======= Hero Section ======= -->
     {{-- <section id="hero" class="hero carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000"> --}}
     <section id="hero" class="hero carousel carousel-fade vh-100" data-bs-ride="carousel">
-        <div class="carousel-inner border" style="overflow: visible">
-            @include('layouts/carousel-item', [
-                'active' => true,
-                'image' => 'hero-carousel-1.jpg',
-                'indonesia' =>
-                    'Memberikan layanan kebutuhan inspeksi dengan kualitas yang melampaui harapan secara adaptif',
-                'english' => 'Adaptively providing inspection services with quality beyond expectation',
-            ])
+        <div class="carousel-inner" style="overflow: visible">
+            @include('layouts/carousel-item', ['active' => true, 'image' => '1.png'])
             <!-- End Carousel Item -->
 
-            @include('layouts/carousel-item', [
-                'image' => 'hero-carousel-2.jpg',
-                'indonesia' =>
-                    'Kami menjunjung tinggi integritas dan profesionalisme sebagai nilai inti dalam memberikan layanan terbaik, serta menempatkan team yang handal dan berpengalaman luas',
-                'english' =>
-                    'We put integrity & professionalism as our highest values in providing only the best services, by developing reliable & expert team',
-            ])
+            @include('layouts/carousel-item', ['image' => '2.png'])
             <!-- End Carousel Item -->
 
-            @include('layouts/carousel-item', [
-                'image' => 'hero-carousel-3.jpg',
-                'indonesia' =>
-                    'Dalam melakukan inspeksi, supervisi & verifikasi kami menjalankan azaz transapransi dalam segala aspek guna menjaga kualitas serta kepercayaan klien & publik',
-                'english' =>
-                    'We conduct inspection, supervision & verification with transparent principles, in order to maintain quality and the trustworthiness from customer as well as from public',
-            ])
+            @include('layouts/carousel-item', ['image' => '3.png'])
             <!-- End Carousel Item -->
         </div>
 
