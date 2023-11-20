@@ -50,10 +50,10 @@
     <!-- ======= Hero Section ======= -->
     {{-- <section id="hero" class="hero carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000"> --}}
     <section id="hero" class="hero carousel carousel-fade vh-100" data-bs-ride="carousel">
-        <div class="carousel-inner border" style="overflow: visible">
+        <div class="carousel-inner" style="overflow: visible">
             @include('layouts/carousel-item', [
                 'active' => true,
-                'image' => 'hero-carousel-1.jpg',
+                'image' => '1.png',
                 'indonesia' =>
                     'Memberikan layanan kebutuhan inspeksi dengan kualitas yang melampaui harapan secara adaptif',
                 'english' => 'Adaptively providing inspection services with quality beyond expectation',
@@ -61,7 +61,7 @@
             <!-- End Carousel Item -->
 
             @include('layouts/carousel-item', [
-                'image' => 'hero-carousel-2.jpg',
+                'image' => '2.png',
                 'indonesia' =>
                     'Kami menjunjung tinggi integritas dan profesionalisme sebagai nilai inti dalam memberikan layanan terbaik, serta menempatkan team yang handal dan berpengalaman luas',
                 'english' =>
@@ -70,7 +70,7 @@
             <!-- End Carousel Item -->
 
             @include('layouts/carousel-item', [
-                'image' => 'hero-carousel-3.jpg',
+                'image' => '3.png',
                 'indonesia' =>
                     'Dalam melakukan inspeksi, supervisi & verifikasi kami menjalankan azaz transapransi dalam segala aspek guna menjaga kualitas serta kepercayaan klien & publik',
                 'english' =>
