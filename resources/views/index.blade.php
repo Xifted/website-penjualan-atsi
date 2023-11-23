@@ -494,6 +494,17 @@
             </div>
         </section>
         <!-- End Contact Section -->
+
+        <!-- Thank You Page -->
+        <section class="min-vh-100 d-flex justify-content-center align-items-center position-relative"
+            style="background: center / cover no-repeat url({{ asset('/assets/img/thankyou-bg.png') }})">
+            <img src="{{ asset('/assets/img/thankyou-fg.png') }}" class="w-75">
+            <div class="position-absolute top-50 left-0 translate-middle-y w-100 text-center p-3"
+                style="background-color: rgba(100,100,100,0.5)">
+                <span class="fw-bold text-light h1">Thank You For Choosing ATSI As Your Business Partner</span>
+            </div>
+        </section>
+        <!-- End Thank You Page -->
     </main>
     <!-- End #main -->
 
