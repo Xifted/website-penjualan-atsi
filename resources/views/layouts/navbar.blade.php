@@ -9,36 +9,29 @@
         <nav id="navbar" class="navbar">
             <ul>
                 <li>
-                    <a class="nav-link scrollto"
-                        href="/#hero">{{ GoogleTranslate::trans('Home Page', app()->getLocale()) }}</a>
+                    <a class="nav-link scrollto" href="/#hero">{{ 'Home Page' }}</a>
                 </li>
 
                 <li>
-                    <a class="nav-link scrollto text-capitalize"
-                        href="/#services">{{ GoogleTranslate::trans('Our Services', app()->getLocale()) }}</a>
+                    <a class="nav-link scrollto text-capitalize" href="/#services">{{ 'Our Services' }}</a>
                 </li>
                 <li>
-                    <a class="nav-link scrollto"
-                        href="/#about">{{ GoogleTranslate::trans('About Us', app()->getLocale()) }}</a>
+                    <a class="nav-link scrollto" href="/#about">{{ 'About Us' }}</a>
                 </li>
                 <li>
-                    <a class="nav-link scrollto"
-                        href="/#wch">{{ GoogleTranslate::trans('Why Choose Us?', app()->getLocale()) }}</a>
+                    <a class="nav-link scrollto" href="/#wch">{{ 'Why Choose Us?' }}</a>
                 </li>
                 <li>
-                    <a class="nav-link scrollto"
-                        href="/#contact">{{ GoogleTranslate::trans('Contact Us', app()->getLocale()) }}</a>
+                    <a class="nav-link scrollto" href="/#contact">{{ 'Contact Us' }}</a>
                 </li>
                 <li>
-                    <a class="nav-link scrollto"
-                        href="/products#products">{{ GoogleTranslate::trans('Products', app()->getLocale()) }}</a>
+                    <a class="nav-link scrollto" href="/products#products">{{ 'Products' }}</a>
                 </li>
                 <li>
                     <select class="form-select changeLang border-0" style="color: var(--color-primary)">
                         <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
-                        <option value="id" {{ session()->get('locale') == 'id' ? 'selected' : '' }}>Indonesia</option>
-                        <option value="fr" {{ session()->get('locale') == 'fr' ? 'selected' : '' }}>France</option>
-                        <option value="es" {{ session()->get('locale') == 'es' ? 'selected' : '' }}>Spanish</option>
+                        <option value="id" {{ session()->get('locale') == 'id' ? 'selected' : '' }}>Indonesia
+                        </option>
                     </select>
                 </li>
             </ul>
@@ -46,7 +39,6 @@
         </nav>
         <!-- .navbar -->
 
-        <a class="btn-getstarted scrollto"
-            href="index.html#about">Get Started</a>
+        <a class="btn-getstarted scrollto" href="index.html#about">Get Started</a>
     </div>
 </header>

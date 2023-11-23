@@ -49,7 +49,7 @@
 
     <!-- ======= Hero Section ======= -->
     {{-- <section id="hero" class="hero carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000"> --}}
-    <section id="hero" class="hero carousel carousel-fade vh-100" data-bs-ride="carousel">
+    <section id="hero" class="hero carousel carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner" style="overflow: visible">
             @include('layouts/carousel-item', ['active' => true, 'image' => '1.png'])
             <!-- End Carousel Item -->
@@ -59,27 +59,21 @@
 
             @include('layouts/carousel-item', ['image' => '3.png'])
             <!-- End Carousel Item -->
+            <ol class="carousel-indicators"></ol>
         </div>
-
-        <ol class="carousel-indicators"></ol>
     </section>
     <!-- End Hero Section -->
-    </div>
+    <br />
 
     <main id="main">
         <!-- ======= Services Section ======= -->
         <section id="services" class="services"
-            style="
-          background: linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 1) 50%,
-            rgba(233, 255, 235, 1) 100%
-          );
-        ">
+            style="background: top / cover no-repeat url({{ asset('/assets/img/our-service-bg.png') }}) fixed;">
             <div class="container" data-aos="fade-up">
                 <div class="section-header">
-                    <h2 class="text-capitalize">Our Services</h2>
-                    <p>HIGH QUALITY SERVICES YOU NEED</p>
+                    <h2 class="text-capitalize text-light">Layanan Kami</h2>
+                    <div style="height: 0.2rem; width: 15rem;" class="bg-white mx-auto"></div>
+                    <h2 class="text-capitalize text-light">Our Services</h2>
                 </div>
 
                 <div class="row gy-5 d-flex justify-content-center">
@@ -95,30 +89,30 @@
                                     <i class="bi bi-lightning-charge"></i>
                                 </div>
                                 <a href="#" class="stretched-link">
-                                    <h3 class="text-capitalize">In The Factory</h3>
+                                    <h3 class="text-capitalize">{{ __('service.services-1-title') }}</h3>
                                 </a>
 
                                 <ol class="list-group list-group-numbered">
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Factory Assessment and Audit
+                                        {{ __('service.services-1-1') }}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Workshop and Warehouse Inspection
+                                        {{ __('service.services-1-2') }}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Production Inspection
+                                        {{ __('service.services-1-3') }}
                                         <ol class="list-group">
                                             <li class="list-group-item border-0 text-start mb-0 py-0"
                                                 style="font-size: 14px">
-                                                • Initial Check
+                                                • {{ __('service.services-1-3-1') }}
                                             </li>
                                             <li class="list-group-item border-0 text-start mb-0 py-0"
                                                 style="font-size: 14px">
-                                                • During Production Inspection and
+                                                • {{ __('service.services-1-3-2') }}
                                             </li>
                                             <li class="list-group-item border-0 text-start mb-0 py-0"
                                                 style="font-size: 14px">
-                                                • Final Random Inspection
+                                                • {{ __('service.services-1-3-3') }}
                                             </li>
                                         </ol>
                                     </li>
@@ -140,17 +134,17 @@
                                     <i class="bi bi-list-check"></i>
                                 </div>
                                 <a href="#" class="stretched-link">
-                                    <h3>Inspection for Export of Products/Goods</h3>
+                                    <h3>{{ __('service.services-2-title') }}</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Inspection on Quantity and Quality of Products/Goods
+                                        {{ __('service.services-2-1') }}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Supervision of Stuffing (in to the Container)
+                                        {{ __('service.services-2-2') }}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Supervision of Loading (in to the Vessel)
+                                        {{ __('service.services-2-3') }}
                                     </li>
                                 </ol>
                             </div>
@@ -170,17 +164,17 @@
                                     <i class="bi bi-check2-circle"></i>
                                 </div>
                                 <a href="#" class="stretched-link">
-                                    <h3>Inspection for Import of Products/Goods</h3>
+                                    <h3>{{ __('service.services-3-title') }}</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Supervision of Unloading (from the Ship)
+                                        {{ __('service.services-3-1') }}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Supervision of Unstuffing (from the Container)
+                                        {{ __('service.services-3-2') }}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Inspection on Quantity, Quality and Condition of Products/Goods
+                                        {{ __('service.services-3-3') }}
                                     </li>
                                 </ol>
                             </div>
@@ -200,27 +194,16 @@
                                     <i class="bi bi-bounding-box-circles"></i>
                                 </div>
                                 <a href="#" class="stretched-link">
-                                    <h3>{{ GoogleTranslate::trans("Collateralx's Management Agreement/ CMA Service", app()->getLocale()) }}
-                                    </h3>
+                                    <h3>{{ __('service.services-4-title') }}</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
-                                    {{-- <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Pengelolaan agunan bank atau pendana lain selain bank dibutuhkan guna memastikan detail dan kepastian pemasukan, persediaan, dan pengeluaran atas barang yang menjadi agunan tersebut
-                                    </li> --}}
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Inspeksi tempat penyimpanan barang(gudang)
+                                        {{ __('service.services-4-1') }}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Managemen agunan/persediaan
-                                    </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Pemantauan agunan/persediaan
-                                    </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Verifikasi/estimasi persediaan
+                                        {{ __('service.services-4-2') }}
                                     </li>
                                 </ol>
-                                <a href="#" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>
@@ -238,19 +221,16 @@
                                     <i class="bi bi-hand-thumbs-up"></i>
                                 </div>
                                 <a href="#" class="stretched-link">
-                                    <h3>
-                                        International Standards for Quality of Products/Goods
-                                    </h3>
+                                    <h3>{{ __('service.services-5-title') }}</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Pemeriksaan kuantitas dan kualitas sesuai kesepakatan (ANZI, ASTM dan JIS)
+                                        {{ __('service.services-5-1') }}
                                     </li>
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Pengambilan sampel untuk analisa laboratorium
+                                        {{ __('service.services-5-2') }}
                                     </li>
                                 </ol>
-                                <a href="#" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>
@@ -267,26 +247,13 @@
                                     <i class="bi bi-calendar4-week"></i>
                                 </div>
                                 <a href="#" class="stretched-link">
-                                    <h3>
-                                        VPTI(Verifikasi Penelusuran Teknis Impor) Services
-                                    </h3>
+                                    <h3>{{ __('service.services-6-title') }}</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
                                     <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Pemeriksaan dan pemastian terhadap kesesuaian dokumen administrasi
-                                    </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Identifikasi spesifikasi/kriteria Barang melalui analisa kualitatif dan/atau
-                                        kuantitatif
-                                    </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Pemastian jumlah dan/atau volume
-                                    </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
-                                        Pemastian negara muat, negara asal Barang dan/atau negara tujuan
+                                        {{ __('service.services-6-1') }}
                                     </li>
                                 </ol>
-                                <a href="#" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>
@@ -296,37 +263,28 @@
         </section>
         <!-- End Services Section -->
 
+        <br />
+
         <!-- ======= About Us Section ======= -->
-        <section id="about" class="faq">
-            <div class="container-fluid" data-aos="fade-up">
-                <div class="row gy-4">
+        <section id="about" class="faq position-relative m-0 p-0">
+            <img src="{{ asset('/assets/img/about-us.png') }}" class="img-fluid">
+            <div class="container bg-white rounded-2 overflow-hidden p-0 position-absolute bottom-0 start-50 translate-middle-x mb-5"
+                data-aos="fade-up">
+                <div class="position-relative text-center p-1" style="background-color: #DCD6D6">
                     <div
-                        class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-2 order-lg-1">
-                        <div class="content px-xl-5">
-                            <h3>About Us</h3>
-                            <p>We Help You to Survey Everything You Needed</p>
-                        </div>
-
-                        <div class="ms-5 pe-5 mt-3">
-                            <p class="text-wrap fs-5">
-                                PT. ATLANTIS SERVICES INDONESIA (ATSI) merupakan perusahaan nasional yang berdiri pada
-                                tahun 2007. Bergerak di bidang jasa inspeksi atau verifikasi berbagai jenis
-                                produk/barang hasil industri dan juga perdagangan. ATSI mempunyai pengalaman dalam
-                                kegiatan pemeriksaan produk industri manufaktur berupa bahan baku dan/atau bahan
-                                penolong, produk setengah jadi (Intermediate Goods), produk akhir/barang jadi/barang
-                                konsumsi (Consumers Goods) dan Pekerjaan Regulasi Pemerintah VPTI .
-                            </p>
-                        </div>
+                        class="position-absolute top-50 ms-2 translate-middle-y d-flex flex-row gap-2 fs-5 fw-semibold">
+                        <div style="height: 20px; width: 20px; border-radius: 100%; background-color: #EE6A5E;"></div>
+                        <div style="height: 20px; width: 20px; border-radius: 100%; background-color: #F6BD4E;"></div>
+                        <div style="height: 20px; width: 20px; border-radius: 100%; background-color: #62C455;"></div>
                     </div>
-
-                    <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img"
-                        style="background-image: url('{{ asset('/assets/img/faq.jpg') }}')">
-                        &nbsp;
-                    </div>
+                    <h3 class="fs-3 fw-bold">{{ __('about.title') }}</h3>
                 </div>
+                <p class="text-wrap p-3">{{ __('about.paragraph') }}</p>
             </div>
         </section>
         <!-- End About Us Section -->
+
+        <br>
 
         <!-- ======= Call To Action Section ======= -->
         <section id="cta" class="cta">
@@ -336,7 +294,7 @@
                         class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
                         <h3>Interested? <em>Contact Us</em> Now</h3>
                         <p>
-                            {{ GoogleTranslate::trans("We are always ready to listen to you! Do you have questions, suggestions, or need help? Don't hesitate to contact our team. We are very happy to help you.", app()->getLocale()) }}
+                            {{ "We are always ready to listen to you! Do you have questions, suggestions, or need help? Don't hesitate to contact our team. We are very happy to help you." }}
                         </p>
                         <a class="cta-btn align-self-start" href="#">Contact Us</a>
                     </div>
@@ -354,6 +312,8 @@
         </section>
         <!-- End Call To Action Section -->
 
+        <br>
+
         <!-- ======= wch Section ======= -->
         <section id="wch" class="about"
             style="
@@ -365,7 +325,7 @@
         ">
             <div class="container" data-aos="fade-up">
                 <div class="section-header">
-                    <h2>Why Choose Us?</h2>
+                    <h2>{{ __('experience.title') }}</h2>
                 </div>
 
                 <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
@@ -384,62 +344,30 @@
                             <div class="tab-pane fade show active" id="tab1">
                                 <div class="d-flex align-items-center mt-4">
                                     <i class="bi bi-check2" style="color: var(--color-green)"></i>
-                                    <h4 style="color: var(--color-primary)">Impartiality</h4>
+                                    <h4 style="color: var(--color-primary)">{{ __('experience.title-1') }}</h4>
                                 </div>
-                                <p>
-                                    Always serve and give the best for client, put every effort
-                                    in improving competence, knowing priorities and doing good
-                                    coordination. Be polite and responsive yet friendly 2 ways
-                                    feedback. Still uphold the value of HIGH QUALITY and
-                                    SATISFYING services.
-                                </p>
+                                <p>{{ __('experience.paragraph-1') }}</p>
                             </div>
                             <div class="tab-pane fade show active" id="tab1">
                                 <div class="d-flex align-items-center mt-4">
                                     <i class="bi bi-check2" style="color: var(--color-green)"></i>
-                                    <h4 style="color: var(--color-primary)">Credibility</h4>
+                                    <h4 style="color: var(--color-primary)">{{ __('experience.title-2') }}</h4>
                                 </div>
-                                <p>
-                                    Always serve and give the best for client, put every effort
-                                    in improving competence, knowing priorities and doing good
-                                    coordination. Be polite and responsive yet friendly 2 ways
-                                    feedback. Still uphold the value of HIGH QUALITY and
-                                    SATISFYING services.
-                                </p>
+                                <p>{{ __('experience.paragraph-2') }}</p>
                             </div>
                             <div class="tab-pane fade show active" id="tab1">
                                 <div class="d-flex align-items-center mt-4">
                                     <i class="bi bi-check2" style="color: var(--color-green)"></i>
-                                    <h4 style="color: var(--color-primary)">Integrity</h4>
+                                    <h4 style="color: var(--color-primary)">{{ __('experience.title-3') }}</h4>
                                 </div>
-                                <p>
-                                    Be honest and dedicated in discipline work. Be loyal and
-                                    respect to the client and fully responsible to achieve
-                                    similar vision. As a respected consultant, ATSI always be
-                                    adaptive, always be sensitive for facing the time-changes,
-                                    and be innovative in order to make the best improvements in
-                                    all areas by showing the best possible result and more of
-                                    that ATSI still continuing to learn and developing
-                                    capabilities as well. Time result management is our next
-                                    level of better service we guarantee.
-                                </p>
+                                <p>{{ __('experience.paragraph-3') }}</p>
                             </div>
                             <div class="tab-pane fade show active" id="tab1">
                                 <div class="d-flex align-items-center mt-4">
                                     <i class="bi bi-check2" style="color: var(--color-green)"></i>
-                                    <h4 style="color: var(--color-primary)">Professionalism</h4>
+                                    <h4 style="color: var(--color-primary)">{{ __('experience.title-4') }}</h4>
                                 </div>
-                                <p>
-                                    Be honest and dedicated in discipline work. Be loyal and
-                                    respect to the client and fully responsible to achieve
-                                    similar vision. As a respected consultant, ATSI always be
-                                    adaptive, always be sensitive for facing the time-changes,
-                                    and be innovative in order to make the best improvements in
-                                    all areas by showing the best possible result and more of
-                                    that ATSI still continuing to learn and developing
-                                    capabilities as well. Time result management is our next
-                                    level of better service we guarantee.
-                                </p>
+                                <p>{{ __('experience.paragraph-4') }}</p>
                             </div>
                         </div>
                     </div>
@@ -509,20 +437,18 @@
         <!-- End Featured Services Section -->
 
         <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Contact Us</h2>
-                    <p>
-                        We Help You to Survey Everything You Needed
-                    </p>
-                </div>
+        <section id="contact" class="contact"
+            style="background: center / cover no-repeat url({{ asset('/assets/img/contact-bg.png') }})">
+            <div class="container d-flex justify-content-end">
+                <button class="btn btn-dark" style="background-color: var(--color-primary)">Contact Us</button>
             </div>
+
+            <br>
 
             <div class="container">
                 <div class="row gy-5 gx-lg-5">
                     <div class="col-lg-4">
-                        <div class="info">
+                        <div class="info bg-white rounded">
                             <h3>Get In Touch</h3>
                             <p>
                                 We Help You to Survey Everything You Needed
@@ -561,7 +487,7 @@
                     <div class="col-lg-8 map">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.87995324115198!2d106.78172993833786!3d-6.253288657897372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f18308bbf15b%3A0x7cdb3177b122531b!2sPT.%20ATLANTIS%20SERVICES%20INDONESIA!5e0!3m2!1sid!2sid!4v1695917303680!5m2!1sid!2sid"
-                            frameborder="0" allowfullscreen></iframe>
+                            frameborder="0" allowfullscreen class="rounded"></iframe>
                     </div>
                     <!-- End Contact Form -->
                 </div>
