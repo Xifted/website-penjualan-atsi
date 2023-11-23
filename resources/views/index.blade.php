@@ -63,12 +63,11 @@
         </div>
     </section>
     <!-- End Hero Section -->
-    <br />
 
     <main id="main">
         <!-- ======= Services Section ======= -->
         <section id="services" class="services"
-            style="background: top / cover no-repeat url({{ asset('/assets/img/our-service-bg.png') }}) fixed;">
+            style="background: top / cover no-repeat url('{{ asset('/assets/img/our-service-bg.png') }}') fixed;">
             <div class="container" data-aos="fade-up">
                 <div class="section-header">
                     <h2 class="text-capitalize text-light">Layanan Kami</h2>
@@ -78,7 +77,8 @@
 
                 <div class="row gy-5 d-flex justify-content-center">
                     <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="service-item">
+                        <div class="service-item changeLangBtn"
+                            data-lang="{{ session()->get('locale') == 'en' ? 'id' : 'en' }}">
                             <div class="img">
                                 <div
                                     style="height: 290px; background: center no-repeat url('{{ asset('/assets/img/services/service-1.jpg') }}'); background-size: cover;">
@@ -123,7 +123,8 @@
                     <!-- End Service Item -->
 
                     <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="service-item">
+                        <div class="service-item changeLangBtn"
+                            data-lang="{{ session()->get('locale') == 'en' ? 'id' : 'en' }}">
                             <div class="img">
                                 <div
                                     style="height: 290px; background: center no-repeat url('{{ asset('/assets/img/services/service-2.jpg') }}'); background-size: cover;">
@@ -153,7 +154,8 @@
                     <!-- End Service Item -->
 
                     <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="service-item">
+                        <div class="service-item changeLangBtn"
+                            data-lang="{{ session()->get('locale') == 'en' ? 'id' : 'en' }}">
                             <div class="img">
                                 <div
                                     style="height: 290px; background: center no-repeat url('{{ asset('/assets/img/services/service-3.jpg') }}'); background-size: cover;">
@@ -183,7 +185,8 @@
                     <!-- End Service Item -->
 
                     <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
-                        <div class="service-item">
+                        <div class="service-item changeLangBtn"
+                            data-lang="{{ session()->get('locale') == 'en' ? 'id' : 'en' }}">
                             <div class="img">
                                 <div
                                     style="height: 290px; background: center no-repeat url('{{ asset('/assets/img/services/service-4.jpg') }}'); background-size: cover;">
@@ -210,7 +213,8 @@
                     <!-- End Service Item -->
 
                     <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
-                        <div class="service-item">
+                        <div class="service-item changeLangBtn"
+                            data-lang="{{ session()->get('locale') == 'en' ? 'id' : 'en' }}">
                             <div class="img">
                                 <div
                                     style="height: 290px; background: center no-repeat url('{{ asset('/assets/img/services/service-5.jpg') }}'); background-size: cover;">
@@ -236,7 +240,8 @@
                     </div>
                     <!-- End Service Item -->
                     <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
-                        <div class="service-item">
+                        <div class="service-item changeLangBtn"
+                            data-lang="{{ session()->get('locale') == 'en' ? 'id' : 'en' }}">
                             <div class="img">
                                 <div
                                     style="height: 290px; background: center no-repeat url('{{ asset('/assets/img/services/service-6.jpg') }}'); background-size: cover;">
@@ -263,14 +268,13 @@
         </section>
         <!-- End Services Section -->
 
-        <br />
 
         <!-- ======= About Us Section ======= -->
         <section id="about" class="faq position-relative m-0 p-0">
             <img src="{{ asset('/assets/img/about-us.png') }}" class="img-fluid">
-            <div class="container bg-white rounded-2 overflow-hidden p-0 position-absolute bottom-0 start-50 translate-middle-x mb-5"
+            <div class="container bg-white rounded-2 rounded p-0 position-absolute bottom-0 start-50 translate-middle-x mb-5"
                 data-aos="fade-up">
-                <div class="position-relative text-center p-1" style="background-color: #DCD6D6">
+                <div class="position-relative text-center p-1 rounded-top" style="background-color: #DCD6D6">
                     <div
                         class="position-absolute top-50 ms-2 translate-middle-y d-flex flex-row gap-2 fs-5 fw-semibold">
                         <div style="height: 20px; width: 20px; border-radius: 100%; background-color: #EE6A5E;"></div>
@@ -280,11 +284,20 @@
                     <h3 class="fs-3 fw-bold">{{ __('about.title') }}</h3>
                 </div>
                 <p class="text-wrap p-3">{{ __('about.paragraph') }}</p>
+                <button
+                    class="changeLangBtn px-4 btn btn-primary rounded-pill fs-4 fw-bold position-absolute start-0 ms-5"
+                    style="top: -3em; border: transparent; background-color: #52A347;"
+                    {{ session()->get('locale') == 'id' ? 'disabled' : '' }} data-lang="id">BAHASA</button>
+                <button
+                    class="changeLangBtn px-4 btn btn-primary rounded-pill fs-4 fw-bold position-absolute end-0 me-5"
+                    style="top: -3em; border: transparent; background-color: #52749F;"
+                    {{ session()->get('locale') == 'en' ? 'disabled' : '' }} data-lang="en">ENGLISH</button>
             </div>
+            <button class="label-btn">
+                About Us
+            </button>
         </section>
         <!-- End About Us Section -->
-
-        <br>
 
         <!-- ======= Call To Action Section ======= -->
         <section id="cta" class="cta">
@@ -312,24 +325,23 @@
         </section>
         <!-- End Call To Action Section -->
 
-        <br>
-
         <!-- ======= wch Section ======= -->
-        <section id="wch" class="about"
-            style="
-          background: linear-gradient(
-            180deg,
-            rgba(186, 215, 255, 1) 0%,
-            rgba(253, 254, 255, 1) 50%
-          );
-        ">
+        <section id="wch" class="about position-relative"
+            style="background: center / cover no-repeat url('{{ asset('/assets/img/experience-bg.png') }}')">
             <div class="container" data-aos="fade-up">
                 <div class="section-header">
-                    <h2>{{ __('experience.title') }}</h2>
+                    <button class="btn text-btn changeLangBtn"
+                        data-lang="en"{{ session()->get('locale') == 'en' ? 'disabled' : '' }}>
+                        <img src="{{ asset('/assets/img/language-btn/en.png') }}" style="height: 7em">
+                    </button>
+                    <button class="btn text-btn changeLangBtn"
+                        data-lang="id"{{ session()->get('locale') == 'id' ? 'disabled' : '' }}>
+                        <img src="{{ asset('/assets/img/language-btn/id.png') }}" style="height: 7em">
+                    </button>
                 </div>
 
                 <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 order-{{ session()->get('locale') == 'en' ? '2' : '1' }}">
                         <div class="about-img mt-0">
                             {{-- <img src="{{ asset('/assets/img/about.jpg')}}" class="img-fluid" alt="" /> --}}
                             <div
@@ -337,42 +349,54 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-7">
+                    <div class="col-lg-7 order-{{ session()->get('locale') == 'en' ? '1' : '2' }}">
                         <!-- Tab Content -->
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="tab1">
-                                <div class="d-flex align-items-center mt-4">
+                                <div
+                                    class="d-flex {{ session()->get('locale') == 'en' ? 'justify-content-end' : '' }} align-items-center mt-4">
                                     <i class="bi bi-check2" style="color: var(--color-green)"></i>
-                                    <h4 style="color: var(--color-primary)">{{ __('experience.title-1') }}</h4>
+                                    <h4 style="color: var(--color-primary)">
+                                        {{ __('experience.title-1') }}</h4>
                                 </div>
-                                <p>{{ __('experience.paragraph-1') }}</p>
+                                <p class="{{ session()->get('locale') == 'en' ? 'text-end' : '' }}">
+                                    {{ __('experience.paragraph-1') }}</p>
                             </div>
                             <div class="tab-pane fade show active" id="tab1">
-                                <div class="d-flex align-items-center mt-4">
+                                <div
+                                    class="d-flex {{ session()->get('locale') == 'en' ? 'justify-content-end' : '' }} align-items-center mt-4">
                                     <i class="bi bi-check2" style="color: var(--color-green)"></i>
-                                    <h4 style="color: var(--color-primary)">{{ __('experience.title-2') }}</h4>
+                                    <h4 style="color: var(--color-primary)">
+                                        {{ __('experience.title-2') }}</h4>
                                 </div>
-                                <p>{{ __('experience.paragraph-2') }}</p>
+                                <p class="{{ session()->get('locale') == 'en' ? 'text-end' : '' }}">
+                                    {{ __('experience.paragraph-2') }}</p>
                             </div>
                             <div class="tab-pane fade show active" id="tab1">
-                                <div class="d-flex align-items-center mt-4">
+                                <div
+                                    class="d-flex {{ session()->get('locale') == 'en' ? 'justify-content-end' : '' }} align-items-center mt-4">
                                     <i class="bi bi-check2" style="color: var(--color-green)"></i>
-                                    <h4 style="color: var(--color-primary)">{{ __('experience.title-3') }}</h4>
+                                    <h4 style="color: var(--color-primary)">
+                                        {{ __('experience.title-3') }}</h4>
                                 </div>
-                                <p>{{ __('experience.paragraph-3') }}</p>
+                                <p class="{{ session()->get('locale') == 'en' ? 'text-end' : '' }}">
+                                    {{ __('experience.paragraph-3') }}</p>
                             </div>
                             <div class="tab-pane fade show active" id="tab1">
-                                <div class="d-flex align-items-center mt-4">
+                                <div
+                                    class="d-flex {{ session()->get('locale') == 'en' ? 'justify-content-end' : '' }} align-items-center mt-4">
                                     <i class="bi bi-check2" style="color: var(--color-green)"></i>
-                                    <h4 style="color: var(--color-primary)">{{ __('experience.title-4') }}</h4>
+                                    <h4 style="color: var(--color-primary)">
+                                        {{ __('experience.title-4') }}</h4>
                                 </div>
-                                <p>{{ __('experience.paragraph-4') }}</p>
+                                <p class="{{ session()->get('locale') == 'en' ? 'text-end' : '' }}">
+                                    {{ __('experience.paragraph-4') }}</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <button class="label-btn">Experience</button>
         </section>
         <!-- End wch Section -->
 
@@ -437,13 +461,9 @@
         <!-- End Featured Services Section -->
 
         <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact"
-            style="background: center / cover no-repeat url({{ asset('/assets/img/contact-bg.png') }})">
-            <div class="container d-flex justify-content-end">
-                <button class="btn btn-dark" style="background-color: var(--color-primary)">Contact Us</button>
-            </div>
-
-            <br>
+        <section id="contact" class="contact vh-100 d-flex flex-column justify-content-end position-relative"
+            style="background: center / cover no-repeat url('{{ asset('/assets/img/contact-bg.png') }}')">
+            <button class="label-btn">Contact Us</button>
 
             <div class="container">
                 <div class="row gy-5 gx-lg-5">
@@ -495,9 +515,9 @@
         </section>
         <!-- End Contact Section -->
 
-        <!-- Thank You Page -->
+        <!-- ======= Thank You Page ======= -->
         <section class="min-vh-100 d-flex justify-content-center align-items-center position-relative"
-            style="background: center / cover no-repeat url({{ asset('/assets/img/thankyou-bg.png') }})">
+            style="background: center / cover no-repeat url('{{ asset('/assets/img/thankyou-bg.png') }}')">
             <img src="{{ asset('/assets/img/thankyou-fg.png') }}" class="w-75">
             <div class="position-absolute top-50 left-0 translate-middle-y w-100 text-center p-3"
                 style="background-color: rgba(100,100,100,0.5)">
@@ -534,6 +554,9 @@
         $(".changeLang").change(function() {
             window.location.href = url + "?lang=" + $(this).val();
         });
+        $(".changeLangBtn").click(function() {
+            window.location.href = `${url}?lang=${$(this).data('lang')}`
+        })
     </script>
 </body>
 
