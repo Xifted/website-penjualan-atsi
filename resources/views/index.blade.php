@@ -49,7 +49,7 @@
 
     <!-- ======= Hero Section ======= -->
     {{-- <section id="hero" class="hero carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000"> --}}
-    <section id="hero" class="hero carousel carousel-fade" data-bs-ride="carousel">
+    <section id="hero" class="hero carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner" style="overflow: visible">
             @include('layouts/carousel-item', ['active' => true, 'image' => '1.png'])
             <!-- End Carousel Item -->
@@ -330,11 +330,11 @@
             style="background: center / cover no-repeat url('{{ asset('/assets/img/experience-bg.png') }}')">
             <div class="container" data-aos="fade-up">
                 <div class="section-header">
-                    <button class="btn text-btn changeLangBtn"
+                    <button class="btn text-btn changeLangBtn" style="border: transparent"
                         data-lang="en"{{ session()->get('locale') == 'en' ? 'disabled' : '' }}>
                         <img src="{{ asset('/assets/img/language-btn/en.png') }}" style="height: 7em">
                     </button>
-                    <button class="btn text-btn changeLangBtn"
+                    <button class="btn text-btn changeLangBtn" style="border: transparent"
                         data-lang="id"{{ session()->get('locale') == 'id' ? 'disabled' : '' }}>
                         <img src="{{ asset('/assets/img/language-btn/id.png') }}" style="height: 7em">
                     </button>
@@ -548,15 +548,16 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('/assets/js/main.js') }}"></script>
-    <script type="text/javascript">
-        var url = "{{ route('changeLang') }}";
+    <script type="text/javascript"></script>
+    var url = `{{ route('changeLang') }}`;
 
-        $(".changeLang").change(function() {
-            window.location.href = url + "?lang=" + $(this).val();
-        });
-        $(".changeLangBtn").click(function() {
-            window.location.href = `${url}?lang=${$(this).data('lang')}`
-        })
+    $(".changeLang").change(function() {
+    window.location.href = `${url}?lang=${$(this).val()}&prev=${window.location.hash.replace('#', '')}`;
+    });
+    $(".changeLangBtn").click(function() {
+    window.location.href =
+    `${url}?lang=${$(this).data('lang')}&prev=${window.location.hash.replace('#', '')}`;
+    })
     </script>
 </body>
 

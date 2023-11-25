@@ -1,4 +1,4 @@
-<header id="header" class="header fixed-top" data-scrollto-offset="0">
+<header id="header" class="header fixed-top bg-white" data-scrollto-offset="0">
     <div class="container-fluid d-flex align-items-center justify-content-between px-5">
         <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0 ps-5">
             <!-- Uncomment the line below if you also wish to use an image logo -->
@@ -9,23 +9,23 @@
         <nav id="navbar" class="navbar">
             <ul>
                 <li>
-                    <a class="nav-link scrollto" href="/#hero">{{ 'Home Page' }}</a>
+                    <a class="nav-link" href="/#hero">{{ 'Home Page' }}</a>
                 </li>
 
                 <li>
-                    <a class="nav-link scrollto text-capitalize" href="/#services">{{ 'Our Services' }}</a>
+                    <a class="nav-link text-capitalize" href="/#services">{{ 'Our Services' }}</a>
                 </li>
                 <li>
-                    <a class="nav-link scrollto" href="/#about">{{ 'About Us' }}</a>
+                    <a class="nav-link" href="/#about">{{ 'About Us' }}</a>
                 </li>
                 <li>
-                    <a class="nav-link scrollto" href="/#wch">{{ 'Why Choose Us?' }}</a>
+                    <a class="nav-link" href="/#wch">{{ 'Why Choose Us?' }}</a>
                 </li>
                 <li>
-                    <a class="nav-link scrollto" href="/#contact">{{ 'Contact Us' }}</a>
+                    <a class="nav-link" href="/#contact">{{ 'Contact Us' }}</a>
                 </li>
                 <li>
-                    <a class="nav-link scrollto" href="/products#products">{{ 'Products' }}</a>
+                    <a class="nav-link" href="/products#products">{{ 'Products' }}</a>
                 </li>
                 <li>
                     <select class="form-select changeLang border-0" style="color: var(--color-primary)">
