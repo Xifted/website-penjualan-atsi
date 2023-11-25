@@ -11,7 +11,11 @@ class LangController extends Controller
     {
         App::setLocale($request->lang);
         session()->put('locale', $request->lang);
-  
+
+        if ($request->prev) {
+            return redirect()->to(url()->previous() . '#' . $request->prev);
+        }
+
         return redirect()->back();
     }
 }
