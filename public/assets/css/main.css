@@ -1705,6 +1705,11 @@ section {
     box-shadow: 0px 0 25px rgba(var(--color-black-rgb), 0.1);
     z-index: 3;
 }
+
+.hidden {
+    display: none;
+}
+
 .services .details::after {
     content: "";
     height: 400px;
