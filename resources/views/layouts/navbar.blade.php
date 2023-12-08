@@ -3,7 +3,7 @@
         <a href="/" class="logo d-flex align-items-center scrollto me-auto me-lg-0 ps-5">
             <!-- Uncomment the line below if you also wish to use an image logo -->
             <img src="{{ asset('/assets/img/logo.png') }}" alt="logo" />
-            <img src="{{ asset('/assets/img/logo2.jpg') }}" alt="logo" />
+            <img src="{{ asset('/assets/img/logo2.png') }}" alt="logo" />
             <!-- <h1>HeroBiz<span>.</span></h1> -->
         </a>
 

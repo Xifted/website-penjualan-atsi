@@ -4,9 +4,9 @@
             <div class="row d-flex justify-content-around">
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-info">
-                        <div style="width: 150px; height: 75px; display:flex">
-                            <img class="img-fluid" src="{{ asset('/assets/img/logo.png') }}" alt="logo">
-                            <img class="img-fluid" src="{{ asset('/assets/img/logo2.jpg') }}" alt="logo" />
+                        <div class="d-flex gap-2" style="width: 150px; height: 75px;">
+                            <img class="img-fluid" src="{{ asset('/assets/img/logo-white.png') }}" alt="logo">
+                            <img class="img-fluid" src="{{ asset('/assets/img/logo2-transparent.png') }}" alt="logo" />
                         </div>
                         <p class="mt-3">
                             <strong>{{ session()->get('locale') == 'en' ? 'Address:' : 'Lokasi:' }}</strong> Jl. Iskandar Muda Raya No.7 | Kebayoran Lama Selatan, Kebayoran

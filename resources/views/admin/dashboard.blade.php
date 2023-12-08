@@ -44,7 +44,7 @@
                 aria-hidden="true" id="iconSidenav"></i>
             <a class="navbar-brand m-0" href="/admin-dashboard">
                 <img src="{{ asset('/assets/img/logo.png') }}" class="img-fluid navbar-brand-img" alt="main_logo">
-                <img src="{{ asset('/assets/img/logo2.jpg') }}" class="img-fluid navbar-brand-img" alt="main_logo2">
+                <img src="{{ asset('/assets/img/logo2.png') }}" class="img-fluid navbar-brand-img" alt="main_logo2">
             </a>
         </div>
         <hr class="horizontal dark mt-0">

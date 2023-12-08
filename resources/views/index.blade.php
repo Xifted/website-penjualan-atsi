@@ -704,8 +704,8 @@
             <button class="label-btn" style="top: 5em !important">Contact Us</button>
 
             <div class="container">
-                <div class="row gy-5 gx-lg-5">
-                    <div class="col-lg-4">
+                <div class="row gy-6 gx-lg-5 d-flex justify-content-between">
+                    <div class="col-lg-5">
                         <div class="info bg-white rounded">
                             <h3>{{ session()->get('locale') == 'en' ? 'Get In Touch' : 'Hubungi Kami' }}</h3>
                             <p>
@@ -734,8 +734,10 @@
                             <div class="info-item d-flex">
                                 <i class="bi bi-phone flex-shrink-0"></i>
                                 <div>
-                                    <h4>{{ session()->get('locale') == 'en' ? 'Phone:' : 'Telepon:' }}</h4>
-                                    <p>(+62) 2127099176</p>
+                                    <h4>{{ session()->get('locale') == 'en' ? 'For Any Requests, Contact:' : 'Untuk Setiap Permintaan Hubungi:' }}</h4>
+                                    <p>Phone: (+62) 2127099176</p>
+                                    <p>Mobile: <a href="tel:+6288708874455">(+62) 88708874455</a></p>
+                                    <p>WhatsApp me: <a href="http://wa.me/6288708874455" target="_blank" rel="noopener noreferrer">http://wa.me/6288708874455</a></p>
                                 </div>
                             </div>
                             <!-- End Info Item -->
@@ -746,7 +748,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-8 map">
+                    <div class="col-lg-7 map">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.87995324115198!2d106.78172993833786!3d-6.253288657897372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f18308bbf15b%3A0x7cdb3177b122531b!2sPT.%20ATLANTIS%20SERVICES%20INDONESIA!5e0!3m2!1sid!2sid!4v1695917303680!5m2!1sid!2sid"
                             frameborder="0" allowfullscreen class="rounded"></iframe>
@@ -760,18 +762,18 @@
                 style="display: none; position: fixed; height: 100vw; width:100vw !important; top:0; left:0; background-color: #00000077; z-index: 1000000;">
                 <div class="d-flex flex-column w-75 bg-white mt-3"
                     style="border-radius: 10px 10px 10px 10px; overflow:hidden; height:fit-content;">
-                    <header class="d-flex flex-row-reverse justify-content-between bg-secondary align-items-center overflow-hidden">
+                    <header class="d-flex flex-row-reverse justify-content-between bg-primary align-items-center overflow-hidden">
                         <span onclick="document.getElementById('modal').style.display='none'"
-                            class="d-flex justify-content-center align-items-center fs-3 bg-success text-white"
+                            class="d-flex justify-content-center align-items-center fs-3 bg-green text-white"
                             style="width: 85px; height: 75px; cursor: pointer;">&times;</span>
-                        <h6 class="text-white p-3 pt-4">Order Form</h6>
+                        <h5 class="text-white p-3 pt-4">Order Form</h5>
                     </header>
                     <form action="{{ route('actionOrders') }}" enctype="multipart/form-data" method="POST">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="p-3 pt-4 w-75">{{ session()->get('locale') == 'en' ? 'If you would like us to contact you, please leave information by filling in the form below' : 'Jika anda ingin kami hubungi, silahkan tinggalkan informasi dengan mengisi form dibawah ini' }}</h6>
-                            <div class="d-flex align-items-center justify-content-center w-25">
-                                <img class="img-fluid" style="width: 50px" src="{{ asset('/assets/img/logo.png') }}" alt="logo" />
-                                <img class="img-fluid" style="width: 50px" src="{{ asset('/assets/img/logo2.jpg') }}" alt="logo" />
+                        <div class="d-flex justify-content-between align-items-end">
+                            <h6 class="p-3 pt-4" style="width: 80%">{{ session()->get('locale') == 'en' ? 'If you would like us to contact you, please leave information by filling in the form below' : 'Jika anda ingin kami hubungi, silahkan tinggalkan informasi dengan mengisi form dibawah ini' }}</h6>
+                            <div class="d-flex align-items-center justify-content-center pr-3" style="width: 17%">
+                                <img class="img-fluid" style="width: 70px" src="{{ asset('/assets/img/logo.png') }}" alt="logo" />
+                                <img class="img-fluid" style="width: 100px" src="{{ asset('/assets/img/logo2.png') }}" alt="logo" />
                             </div>
                         </div>
                         @csrf
