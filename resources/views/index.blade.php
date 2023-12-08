@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>Atlantis Service Indonesia</title>
+    <title>Atlantis Services Indonesia</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
@@ -29,12 +29,6 @@
 
     <!-- Variables CSS Files. Uncomment your preferred color scheme -->
     <link href="{{ asset('/assets/css/variables.css') }}" rel="stylesheet" />
-    <!-- <link href="assets/css/variables-blue.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/variables-green.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/variables-orange.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/variables-purple.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/variables-red.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/variables-pink.css" rel="stylesheet"> -->
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('/assets/css/main.css') }}" rel="stylesheet" />
@@ -65,9 +59,182 @@
     <!-- End Hero Section -->
 
     <main id="main">
+        <!-- ======= about Section ======= -->
+        <section id="about" class="features d-flex justify-content-center">
+            <div class="container" style="margin-inline: 0; padding-inline: 0;" data-aos="fade-up">
+
+                <ul class="nav nav-tabs row gy-4 d-flex justify-content-evenly">
+
+                    <li class="nav-item col-lg-2 h-100">
+                        <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+                            <h4 class="text-center m-0">
+                                {{ session()->get('locale') == 'en' ? 'About Us' : 'Tentang Kami' }}</h4>
+                        </a>
+                    </li><!-- End Tab 1 Nav -->
+
+                    <li class="nav-item col-lg-2 h-75">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+                            <h4 class="text-center m-0">
+                                {{ session()->get('locale') == 'en' ? 'Organization Structure' : 'Struktur Organisasi' }}
+                            </h4>
+                        </a>
+                    </li><!-- End Tab 2 Nav -->
+
+                    <li class="nav-item col-lg-2 h-100">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+                            <h4 class="text-center m-0">
+                                {{ session()->get('locale') == 'en' ? 'Branch Office' : 'Kantor Cabang' }}</h4>
+                        </a>
+                    </li><!-- End Tab 3 Nav -->
+                </ul>
+
+                <div class="tab-content">
+
+                    <div class="tab-pane active show w" id="tab-1">
+                        <div class="row gy-4">
+                            <img src="{{ asset('/assets/img/about-us/about-us.png') }}" class="img-fluid">
+                            <div class="container bg-white w-75 rounded-2 rounded p-0 position-absolute bottom-0 start-50 translate-middle-x mb-5"
+                                data-aos="fade-up">
+                                <div class="position-relative text-center p-1 rounded-top"
+                                    style="background-color: #DCD6D6">
+                                    <div
+                                        class="position-absolute top-50 ms-2 translate-middle-y d-flex flex-row gap-2 fs-5 fw-semibold">
+                                        <div
+                                            style="height: 20px; width: 20px; border-radius: 100%; background-color: #EE6A5E;">
+                                        </div>
+                                        <div
+                                            style="height: 20px; width: 20px; border-radius: 100%; background-color: #F6BD4E;">
+                                        </div>
+                                        <div
+                                            style="height: 20px; width: 20px; border-radius: 100%; background-color: #62C455;">
+                                        </div>
+                                    </div>
+                                    <h3
+                                        class="fs-3 fw-bold en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
+                                        THE
+                                        INSIGHT OF OUR SURVEY SERVICES</h3>
+                                    <h3
+                                        class="fs-3 fw-bold id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
+                                        KEUNGGULAN JASA SURVEY KAMI</h3>
+                                </div>
+                                <p
+                                    class="text-wrap p-3 en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
+                                    PT. ATLANTIS
+                                    SERVICES INDONESIA (ATSI) is a national company that
+                                    was established in 2007. Accredited ISO 17020 and ISO 27001. Focus in field of
+                                    inspection or
+                                    verification services for various types of products/goods produced from industry and
+                                    trade. ATSI has
+                                    experience in inspection activities for manufacturing industrial products in the
+                                    form of
+                                    raw
+                                    materials and/or auxiliary materials, Semi-Finished Products (Intermediate Goods),
+                                    Final
+                                    Products/Finished Goods/Consumer Goods and Import Verification Program (VPTI) Work
+                                    of
+                                    Goverment
+                                    Regulation</p>
+                                <p
+                                    class="text-wrap p-3 id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
+                                    PT. ATLANTIS
+                                    SERVICES INDONESIA (ATSI) merupakan perusahaan nasional
+                                    yang berdiri pada tahun 2007. Terakreditasi ISO 17020 dan ISO 27001. Berfokus dalam
+                                    bidang jasa
+                                    inspeksi atau verifikasi berbagai jenis produk/barang yang dihasilkan dari industri
+                                    dan
+                                    juga
+                                    perdagangan. ATSI memiliki pengalaman dalam kegiatan pemeriksaan produk industri
+                                    manufaktur berupa
+                                    bahan baku dan/atau bahan pembantu, produk setengah jadi (Intermediate Goods),
+                                    produk
+                                    akhir/barang
+                                    jadi/barang konsumsi (Consumers Goods) dan Pekerjaan Regulasi Pemerintah (VPTI)</p>
+                                <button
+                                    class="langToggleBtn changeLangBtn px-4 btn btn-primary rounded-pill fs-4 fw-bold position-absolute start-0 ms-5 {{ session()->get('locale') == 'id' ? 'disabled' : '' }}"
+                                    style="top: -3em; border: transparent; background-color: #52A347;">INDONESIA</button>
+                                <button
+                                    class="langToggleBtn changeLangBtn px-4 btn btn-primary rounded-pill fs-4 fw-bold position-absolute end-0 me-5 {{ session()->get('locale') == 'en' ? 'disabled' : '' }}"
+                                    style="top: -3em; border: transparent; background-color: #52749F;">ENGLISH</button>
+                            </div>
+                            <button class="label-btn">
+                                About Us
+                            </button>
+                        </div>
+                    </div><!-- End Tab Content 1 -->
+
+                    <div class="tab-pane" id="tab-2">
+                        <div class="row gy-4">
+                            <div class="container">
+                                <img class="img-fluid" src="assets/img/about-us/organization-structure.jpg"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div><!-- End Tab Content 2 -->
+
+                    <div class="tab-pane" id="tab-3">
+                        <div class="row gy-4">
+                            <div
+                                class="container-fluid d-flex justify-content-center gap-3 mt-4 bg-primary p-4 rounded py-5">
+                                <div class="row gy-4 d-flex flex-column w-50 justify-content-between">
+                                    <h2 class="color-white">ATLANTIS SERVICES INDONESIA<br>(HONG KONG) LIMITED</h2>
+                                    <div>
+                                        <p class="color-white">
+                                            <strong>{{ session()->get('locale') == 'en' ? 'Location:' : 'Lokasi:' }}
+                                            </strong>UNIT 2302, 23/F, NEW WORLD TOWER 1, 18 QUEEN'S ROAD CENTRAL,
+                                            CENTRAL, HONG KONG.</p>
+                                        <p class="color-white">
+                                            <strong>{{ session()->get('locale') == 'en' ? 'Phone:' : 'Telepon:' }}
+                                            </strong>(+852) 60725630</p>
+                                        <p class="color-white"><strong>Fax: </strong>(+852) 26683288</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <img src="assets/img/about-us/hk-1.jpg" alt="office" class="img fluid"
+                                            style="width: 44%">
+                                        <div class="d-flex flex-column justify-content-between" style="width: 55%">
+                                            <img src="assets/img/about-us/hk-2.jpg" alt="office" class="img fluid"
+                                                style="height: 49%">
+                                            <img src="assets/img/about-us/hk-3.jpg" alt="office" class="img fluid"
+                                                style="height: 49%">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row gy-4 d-flex flex-column w-50 justify-content-between">
+                                    <h2 class="color-white">ATLANTIS SERVICES INDONESIA<br>(XIAMEN) LIMITED</h2>\
+                                    <div>
+                                        <p class="color-white">
+                                            <strong>{{ session()->get('locale') == 'en' ? 'Location:' : 'Lokasi:' }}
+                                            </strong>FREE TRADE TIMES SQUARE, Unit 211-2, No.35 Xiangxing 4 Road, (Free
+                                            Trade Zone), XIAMEN AREA OF CHINA (FUJIAN) PILOT FREE TRADE ZONE, XIAMEN,
+                                            CHINA.</p>
+                                        <p class="color-white">
+                                            <strong>{{ session()->get('locale') == 'en' ? 'Phone:' : 'Telepon:' }}
+                                            </strong>(+86 592) 5662136</p>
+                                        <p class="color-white"><strong>Fax: </strong>(+86 592) 5662138</p>
+                                    </div>
+                                    <div class="d-flex flex-row-reverse justify-content-between">
+                                        <img src="assets/img/about-us/xm-3.jpg" alt="office" class="img fluid"
+                                            style="width: 44%">
+                                        <div class="d-flex flex-column justify-content-between" style="width: 55%">
+                                            <img src="assets/img/about-us/xm-1.jpg" alt="office" class="img fluid"
+                                                style="height: 49%">
+                                            <img src="assets/img/about-us/xm-2.jpg" alt="office" class="img fluid"
+                                                style="height: 49%">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div><!-- End Tab Content 3 -->
+
+                </div>
+
+            </div>
+        </section><!-- End Features Section -->
+
         <!-- ======= Services Section ======= -->
         <section id="services" class="services"
-            style="background: top / cover no-repeat url('{{ asset('/assets/img/our-service-bg.png') }}') fixed;">
+            style="background: top / cover no-repeat url('{{ asset('/assets/img/services/service-bg.jpg') }}') fixed;">
             <div class="container" data-aos="fade-up">
                 <div class="section-header">
                     <h2 class="text-capitalize text-light">Layanan Kami</h2>
@@ -88,7 +255,7 @@
                                     <i class="bi bi-lightning-charge"></i>
                                 </div>
                                 <a class="stretched-link">
-                                    <h3 class="text-capitalize">At Factory Services</h3>
+                                    <h3 class="text-capitalize">Inspection Goods at Factory</h3>
                                 </a>
 
                                 <ol class="list-group list-group-numbered">
@@ -103,15 +270,15 @@
                                         <ol class="list-group">
                                             <li class="list-group-item border-0 text-start mb-0 py-0"
                                                 style="font-size: 14px">
-                                                • Initial Check
+                                                - Initial Check
                                             </li>
                                             <li class="list-group-item border-0 text-start mb-0 py-0"
                                                 style="font-size: 14px">
-                                                • During Production Inspection and
+                                                - During Production Inspection and
                                             </li>
                                             <li class="list-group-item border-0 text-start mb-0 py-0"
                                                 style="font-size: 14px">
-                                                • Final Random Inspection
+                                                - Final Random Inspection
                                             </li>
                                         </ol>
                                     </li>
@@ -123,7 +290,7 @@
                                     <i class="bi bi-lightning-charge"></i>
                                 </div>
                                 <a class="stretched-link">
-                                    <h3 class="text-capitalize">Di Pabrik</h3>
+                                    <h3 class="text-capitalize">Pemeriksaan Barang di Pabrik</h3>
                                 </a>
 
                                 <ol class="list-group list-group-numbered">
@@ -138,15 +305,15 @@
                                         <ol class="list-group">
                                             <li class="list-group-item border-0 text-start mb-0 py-0"
                                                 style="font-size: 14px">
-                                                • Pemeriksaan Awal
+                                                - Pemeriksaan Awal
                                             </li>
                                             <li class="list-group-item border-0 text-start mb-0 py-0"
                                                 style="font-size: 14px">
-                                                • Selama Inspeksi Produksi dan
+                                                - Selama Inspeksi Produksi dan
                                             </li>
                                             <li class="list-group-item border-0 text-start mb-0 py-0"
                                                 style="font-size: 14px">
-                                                • Inspeksi Acak Akhir
+                                                - Inspeksi Acak Akhir
                                             </li>
                                         </ol>
                                     </li>
@@ -388,80 +555,6 @@
         </section>
         <!-- End Services Section -->
 
-
-        <!-- ======= About Us Section ======= -->
-        <section id="about" class="faq position-relative m-0 p-0">
-            <img src="{{ asset('/assets/img/about-us.png') }}" class="img-fluid">
-            <div class="container bg-white rounded-2 rounded p-0 position-absolute bottom-0 start-50 translate-middle-x mb-5"
-                data-aos="fade-up">
-                <div class="position-relative text-center p-1 rounded-top" style="background-color: #DCD6D6">
-                    <div
-                        class="position-absolute top-50 ms-2 translate-middle-y d-flex flex-row gap-2 fs-5 fw-semibold">
-                        <div style="height: 20px; width: 20px; border-radius: 100%; background-color: #EE6A5E;"></div>
-                        <div style="height: 20px; width: 20px; border-radius: 100%; background-color: #F6BD4E;"></div>
-                        <div style="height: 20px; width: 20px; border-radius: 100%; background-color: #62C455;"></div>
-                    </div>
-                    <h3 class="fs-3 fw-bold en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">THE
-                        INSIGHT OF OUR SURVEY SERVICES</h3>
-                    <h3 class="fs-3 fw-bold id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
-                        KEUNGGULAN JASA SURVEY KAMI</h3>
-                </div>
-                <p class="text-wrap p-3 en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">PT. ATLANTIS
-                    SERVICES INDONESIA (ATSI) is a national company that
-                    was established in 2007. Accredited ISO 17020 and ISO 27001. Focus in field of inspection or
-                    verification services for various types of products/goods produced from industry and trade. ATSI has
-                    experience in inspection activities for manufacturing industrial products in the form of raw
-                    materials and/or auxiliary materials, Semi-Finished Products (Intermediate Goods), Final
-                    Products/Finished Goods/Consumer Goods and Import Verification Program (VPTI) Work of Goverment
-                    Regulation</p>
-                <p class="text-wrap p-3 id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">PT. ATLANTIS
-                    SERVICES INDONESIA (ATSI) merupakan perusahaan nasional
-                    yang berdiri pada tahun 2007. Terakreditasi ISO 17020 dan ISO 27001. Berfokus dalam bidang jasa
-                    inspeksi atau verifikasi berbagai jenis produk/barang yang dihasilkan dari industri dan juga
-                    perdagangan. ATSI memiliki pengalaman dalam kegiatan pemeriksaan produk industri manufaktur berupa
-                    bahan baku dan/atau bahan pembantu, produk setengah jadi (Intermediate Goods), produk akhir/barang
-                    jadi/barang konsumsi (Consumers Goods) dan Pekerjaan Regulasi Pemerintah (VPTI)</p>
-                <button
-                    class="langToggleBtn changeLangBtn px-4 btn btn-primary rounded-pill fs-4 fw-bold position-absolute start-0 ms-5 {{ session()->get('locale') == 'id' ? 'disabled' : '' }}"
-                    style="top: -3em; border: transparent; background-color: #52A347;">BAHASA</button>
-                <button
-                    class="langToggleBtn changeLangBtn px-4 btn btn-primary rounded-pill fs-4 fw-bold position-absolute end-0 me-5 {{ session()->get('locale') == 'en' ? 'disabled' : '' }}"
-                    style="top: -3em; border: transparent; background-color: #52749F;">ENGLISH</button>
-            </div>
-            <button class="label-btn">
-                About Us
-            </button>
-        </section>
-        <!-- End About Us Section -->
-
-        <br>
-        <br>
-        <!-- ======= Call To Action Section ======= -->
-        <section id="cta" class="cta">
-            <div class="container" data-aos="zoom-out">
-                <div class="row g-5">
-                    <div
-                        class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
-                        <h3>Interested? <em>Contact Us</em> Now</h3>
-                        <p>
-                            {{ "We are always ready to listen to you! Do you have questions, suggestions, or need help? Don't hesitate to contact our team. We are very happy to help you." }}
-                        </p>
-                        <a class="cta-btn align-self-start" href="#">Contact Us</a>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
-                        <div class="img">
-                            {{-- <img src="{{ asset('/assets/img/cta/cta.jpg')}}" alt="" class="img-fluid" /> --}}
-                            <div
-                                style="width: 300px; height: 450px; background: center no-repeat url('{{ asset('/assets/img/cta/cta.jpg') }}'); background-size: cover;">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Call To Action Section -->
-
         <!-- ======= wch Section ======= -->
         <section id="wch" class="about position-relative"
             style="background: center / cover no-repeat url('{{ asset('/assets/img/experience-bg.png') }}')">
@@ -598,88 +691,28 @@
                     </div>
                 </div>
             </div>
-            <button class="label-btn">Experience</button>
+            <button class="label-btn" style="top: 5em !important">Experience</button>
         </section>
         <!-- End wch Section -->
-
-        <!-- ======= Featured Services Section ======= -->
-        {{-- <section id="featured-services" class="featured-services">
-            <div class="container">
-                <div class="row gy-4">
-                    <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out">
-                        <div class="service-item position-relative">
-                            <div class="icon"><i class="bi bi-activity icon"></i></div>
-                            <h4><a href="" class="stretched-link">Lorem Ipsum</a></h4>
-                            <p>
-                                Voluptatum deleniti atque corrupti quos dolores et quas
-                                molestias excepturi
-                            </p>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-
-                    <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="200">
-                        <div class="service-item position-relative">
-                            <div class="icon">
-                                <i class="bi bi-bounding-box-circles icon"></i>
-                            </div>
-                            <h4><a href="" class="stretched-link">Sed ut perspici</a></h4>
-                            <p>
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore
-                            </p>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-
-                    <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
-                        <div class="service-item position-relative">
-                            <div class="icon">
-                                <i class="bi bi-calendar4-week icon"></i>
-                            </div>
-                            <h4><a href="" class="stretched-link">Magni Dolores</a></h4>
-                            <p>
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                                qui officia
-                            </p>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-
-                    <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="600">
-                        <div class="service-item position-relative">
-                            <div class="icon"><i class="bi bi-broadcast icon"></i></div>
-                            <h4><a href="" class="stretched-link">Nemo Enim</a></h4>
-                            <p>
-                                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                                blanditiis
-                            </p>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-                </div>
-            </div>
-        </section> --}}
-        <!-- End Featured Services Section -->
 
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact vh-100 d-flex flex-column justify-content-end position-relative"
             style="background: center / cover no-repeat url('{{ asset('/assets/img/contact-bg.png') }}')">
-            <button class="label-btn">Contact Us</button>
+            <button class="label-btn" style="top: 5em !important">Contact Us</button>
 
             <div class="container">
                 <div class="row gy-5 gx-lg-5">
                     <div class="col-lg-4">
                         <div class="info bg-white rounded">
-                            <h3>Get In Touch</h3>
+                            <h3>{{ session()->get('locale') == 'en' ? 'Get In Touch' : 'Hubungi Kami' }}</h3>
                             <p>
-                                We Help You to Survey Everything You Needed
+                                {{ session()->get('locale') == 'en' ? 'We Help You to Survey Everything You Needed' : 'Kami Membantu Anda Mensurvei Semua yang Anda Butuhkan' }}
                             </p>
 
                             <div class="info-item d-flex">
                                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                                 <div>
-                                    <h4>Location:</h4>
+                                    <h4>{{ session()->get('locale') == 'en' ? 'Location:' : 'Lokasi:' }}</h4>
                                     <p>Jl. Iskandar Muda Raya No.7 | Kebayoran Lama Selatan, Kebayoran Lama | Kota Adm.
                                         Jakarta Selatan | DKI Jakarta - 12241</p>
                                 </div>
@@ -698,9 +731,13 @@
                             <div class="info-item d-flex">
                                 <i class="bi bi-phone flex-shrink-0"></i>
                                 <div>
-                                    <h4>For Any Inquiries Call Now :</h4>
+                                    <h4>{{ session()->get('locale') == 'en' ? 'Phone:' : 'Telepon:' }}</h4>
                                     <p>(+62) 2127099176</p>
                                 </div>
+                            </div>
+                            <!-- End Info Item -->
+                            <div class="info-item d-flex justify-content-center">
+                                <button onclick="document.getElementById('modal').style.display='flex'" class="order-btn position-relative"><i class="bi bi-file-earmark-arrow-up color-white"></i>Order Now</button>
                             </div>
                             <!-- End Info Item -->
                         </div>
@@ -716,14 +753,93 @@
             </div>
         </section>
         <!-- End Contact Section -->
+        <div id="modal"
+                style="display: none; position: fixed; height: 100vw; width:100vw !important; top:0; left:0; background-color: #00000077; z-index: 1000000;">
+                <div class="d-flex flex-column w-50 bg-white mt-3"
+                    style="margin-left: 25%; border-radius: 10px 10px 10px 10px; overflow:hidden; height:fit-content;">
+                    <header class="d-flex flex-row-reverse justify-content-between bg-secondary align-items-center">
+                        <span onclick="document.getElementById('modal').style.display='none'"
+                            class="d-flex justify-content-center align-items-center fs-3 bg-success h-100 text-white"
+                            style="width: 85px; cursor: pointer;">&times;</span>
+                        <h6 class="text-white p-3 pt-4">Order Form</h6>
+                    </header>
+                    <form action="{{ route('actionAddProduct') }}" enctype="multipart/form-data" method="POST">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="p-3 pt-4 w-75">{{ session()->get('locale') == 'en' ? 'If you would like us to contact you, please leave information by filling in the form below' : 'Jika anda ingin kami hubungi, silahkan tinggalkan informasi dengan mengisi form dibawah ini' }}</h6>
+                            <div class="d-flex align-items-center justify-content-center w-25">
+                                <img class="img-fluid" style="width: 50px" src="{{ asset('/assets/img/logo.png') }}" alt="logo" />
+                                <img class="img-fluid" style="width: 50px" src="{{ asset('/assets/img/logo2.jpg') }}" alt="logo" />
+                            </div>
+                        </div>
+                        @csrf
+                        <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                            <div class="input-group">
+                                <input type="text" name="companyName" class="form-control"
+                                    placeholder="{{ session()->get('locale') == 'en' ? 'Company Name' : 'Nama Perusahaan' }}" value="" required>
+                            </div>
+                        </div>
+                        <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                            <div class="input-group">
+                                <input type="text" name="picName" class="form-control"
+                                    placeholder="{{ session()->get('locale') == 'en' ? 'PIC Name' : 'Nama PIC' }}" value="" required>
+                            </div>
+                        </div>
+                        <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                            <div class="input-group">
+                                <input type="text" name="serviceType" class="form-control"
+                                    placeholder="{{ session()->get('locale') == 'en' ? 'Type of Services' : 'Jenis Jasa yang Dibutuhkan' }}" value="" required>
+                            </div>
+                        </div>
+                        <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                            <div class="input-group">
+                                <input type="text" name="companyPhone" class="form-control"
+                                    placeholder="{{ session()->get('locale') == 'en' ? 'Company Phone Number' : 'No. Telp Perusahaan' }}" value="" required>
+                            </div>
+                        </div>
+                        <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                            <div class="input-group">
+                                <input type="text" name="phoneNumber" class="form-control"
+                                    placeholder="{{ session()->get('locale') == 'en' ? 'Phone Number/WhatsApp' : 'No. Handphone/WhatsApp' }}" value="" required>
+                            </div>
+                        </div>
+                        <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                            <div class="input-group">
+                                <input type="email" name="phoneNumber" class="form-control"
+                                    placeholder="{{ session()->get('locale') == 'en' ? 'Email' : 'Alamat Email' }}" value="" required>
+                            </div>
+                        </div>
+                        <div class="ms-md-auto pe-md-3 d-flex w-100 p-3 pe-5">
+                            <div class="input-group">
+                                <textarea name="companyAddress" id="" class="form-control" placeholder="{{ session()->get('locale') == 'en' ? 'Company Address' : 'Alamat Lengkap Perusahaan' }}"></textarea>
+                            </div>
+                        </div>
+                        <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                            <div class="input-group">
+                                <select name="categoryName" class="form-select" required>
+                                    <option value="" selected>Choose Category</option>
+                                    @foreach ($categories as $item)
+                                        <option value="{{ $item->category_id }}">{{ $item->category_name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                            <div class="input-group d-flex justify-content-center">
+                                <button type="submit" class="order-btn"><i class="bi bi-file-earmark-arrow-up color-white"></i>Order Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
 
         <!-- ======= Thank You Page ======= -->
-        <section class="min-vh-100 d-flex justify-content-center align-items-center position-relative"
+        <section class="min-vh-100 d-flex flex-column justify-content-center align-items-center position-relative"
             style="background: center / cover no-repeat url('{{ asset('/assets/img/thankyou-bg.png') }}')">
             <img src="{{ asset('/assets/img/thankyou-fg.png') }}" class="w-75">
-            <div class="position-absolute top-50 left-0 translate-middle-y w-100 text-center p-3"
-                style="background-color: rgba(100,100,100,0.5)">
-                <span class="fw-bold text-light h1">Thank You For Choosing ATSI As Your Business Partner</span>
+            <div class="top-50 left-0 translate-middle-y w-75 text-center p-3"
+                style="background-color: rgb(100, 100, 100)">
+                <span
+                    class="fw-bold text-light h1">{{ session()->get('locale') == 'en' ? 'Thank You For Choosing ATSI As Your Business Partner' : 'Terima Kasih Telah Memilih ATSI Sebagai Mitra Bisnis Anda' }}</span>
             </div>
         </section>
         <!-- End Thank You Page -->
@@ -770,7 +886,7 @@
             $('.wch-columns .d-flex').toggleClass('justify-content-end')
             // $('.wch-columns p').toggleClass('text-end')
             $('.langToggleBtn').toggleClass('disabled');
-        })
+        });
     </script>
 </body>
 

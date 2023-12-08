@@ -2185,28 +2185,9 @@ section {
     line-height: 0;
 }
 
-.portfolio .portfolio-item .portfolio-info .preview-link:hover,
-.portfolio .portfolio-item .portfolio-info .details-link:hover {
-    color: var(--color-white);
-}
-
 .portfolio .portfolio-item .portfolio-info .details-link {
     right: 14px;
     font-size: 28px;
-}
-
-.portfolio .portfolio-item:hover:before {
-    visibility: visible;
-    opacity: 1;
-}
-
-.portfolio .portfolio-item:hover img {
-    transform: scale(1.2);
-}
-
-.portfolio .portfolio-item:hover .portfolio-info {
-    opacity: 1;
-    inset: auto 10px 0 10px;
 }
 
 /*--------------------------------------------------------------
@@ -3361,6 +3342,7 @@ section {
 
 /* Label */
 .label-btn {
+    width: 140px;
     font-size: 16px;
     color: var(--color-white);
     background: var(--color-primary);
@@ -3370,6 +3352,19 @@ section {
     border: transparent;
     font-family: var(--font-secondary);
     position: absolute;
-    top: 5em;
+    top: 12em;
     right: 5em;
+}
+
+/* order-btn */
+.order-btn {
+    width: 200px;
+    font-size: 16px;
+    color: var(--color-white);
+    background: var(--color-primary);
+    padding: 8px 23px;
+    border-radius: 4px;
+    transition: 0.3s;
+    border: transparent;
+    font-family: var(--font-secondary);
 }
