@@ -175,9 +175,24 @@
                     </div><!-- End Tab Content 2 -->
 
                     <div class="tab-pane" id="tab-3">
-                        <div class="row gy-4">
+                        <div class="row gy-4 border border-5 border-green rounded" style="border-color: var(--color-green);">
+                            <div class="mt-0 bg-white d-flex justify-content-between" style="height: 20%;">
+                                <div class="w-25 d-flex">
+                                    <img class="img-fluid" style="width: 45%" src="{{ asset('/assets/img/logo.png') }}" alt="logo" />
+                                    <img class="img-fluid" style="width: 45%" src="{{ asset('/assets/img/logo2.png') }}" alt="logo" />
+                                </div>
+                                <div class="w-50 d-flex justify-content-center align-items-center">
+                                    <div class="bg-primary w-100" style="height: 5px";></div>
+                                    <div class="bg-green position-absolute rounded-5" style="height: 30px; width: 30px; right: 0;";></div>
+                                    <div class="bg-green position-absolute rounded-5" style="height: 30px; width: 30px; right: 3em;";></div>
+                                    <div class="bg-green position-absolute rounded-5" style="height: 30px; width: 30px; right: 6em;";></div>
+                                    <button class="label-btn" style="top: 13em; right: 0px; width: 160px;">
+                                        Branch Office
+                                    </button>
+                                </div>
+                            </div>
                             <div
-                                class="container-fluid d-flex justify-content-center gap-3 mt-4 bg-primary p-4 rounded py-5">
+                                class="container-fluid d-flex justify-content-center gap-3 bg-primary p-4 py-5" style="height: 80%;">
                                 <div class="row gy-4 d-flex flex-column w-50 justify-content-between">
                                     <h2 class="color-white">ATLANTIS SERVICES INDONESIA<br>(HONG KONG) LIMITED</h2>
                                     <div>
