@@ -1,0 +1,106 @@
+.sidebar {
+    /* Sesuaikan ukuran sidebar sesuai kebutuhan Anda */
+}
+
+@media (max-width: 1450px) {
+    #toggle-filter-btn {
+        z-index: 100;
+        display: flex !important;
+        left: 0 !important;
+        top: 15vh !important;
+    }
+
+    .filter {
+        display: none;
+    }
+
+    /* Tampilkan sidebar saat tombol toggle di klik */
+    .show-filter {
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.103);
+        padding: 0 !important;
+        animation: fadeRight 0.3s ease;
+        display: flex;
+        overflow: scroll;
+        position: fixed;
+        top: 25vh;
+        left: 0;
+        bottom: 0;
+        width: 400px !important;
+        height: 70vh;
+        z-index: 99;
+        /* ... tambahkan properti lain yang diperlukan */
+    }
+    .filter-row{
+        border-radius: 0 !important;
+    }
+
+    .products-container {
+        width: 100% !important;
+    }
+
+    @keyframes fadeRight {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+@media (max-width: 1280px) {
+    /* Tampilkan sidebar saat tombol toggle di klik */
+    .show-filter {
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.103);
+        padding: 0 !important;
+        animation: fadeRight 0.3s ease;
+        display: flex;
+        overflow: scroll;
+        position: fixed;
+        top: 25vh;
+        left: 0;
+        bottom: 0;
+        width: 400px !important;
+        height: 70vh;
+        z-index: 99;
+        /* ... tambahkan properti lain yang diperlukan */
+    }
+    .filter-row{
+        border-radius: 0 !important;
+    }
+
+    @keyframes fadeRight {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    .products{
+        flex-flow: row wrap !important;
+    }
+
+    .products-container {
+        width: 100% !important;
+    }
+
+    .product-item{
+        flex-direction: column !important;
+        width: 48%;
+    }
+
+    .product-detail{
+        width: 100% !important;
+    }
+
+    .product-btn{
+        width: 100% !important;
+        padding-bottom: 0 !important;
+    }
+}

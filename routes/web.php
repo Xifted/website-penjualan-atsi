@@ -24,6 +24,7 @@ Route::get('/change', [LangController::class, 'change'])->name('changeLang');
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/products', [ProductsController::class, 'index']);
 Route::get('/products?category={id}&sort={sort}&min_price={pmin}]&max_price={pmax}', [ProductsController::class, 'index']);
+Route::post('/actionOrders', [HomeController::class, 'actionOrders'])->name('actionOrders');
 
 // Admin Pages
 Route::get('/admin/dashboard', [AdminController::class, 'index'])->middleware('auth.admin');
@@ -39,6 +40,9 @@ Route::get('/admin/categories', [AdminController::class, 'categories'])->middlew
 Route::post('/admin/categories/actionAdd', [AdminController::class, 'actionAddCategory'])->name('actionAddCategory')->middleware('auth.admin');
 Route::post('/admin/categories/actionEdit/{id}', [AdminController::class, 'actionEditCategory'])->middleware('auth.admin');
 Route::get('/admin/categories/delete/{id}', [AdminController::class, 'actionDeleteCategory'])->name('actionDeleteCategory')->middleware('auth.admin');
+
+// Orders
+Route::get('/admin/orders', [AdminController::class, 'orders'])->middleware('auth.admin');
 
 // accounts
 Route::get('/admin/profile/{id}', [AdminController::class, 'profile'])->middleware('auth.admin');

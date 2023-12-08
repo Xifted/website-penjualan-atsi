@@ -181,6 +181,27 @@ class AdminController extends Controller
         return redirect('/admin/categories');
     }
 
+    public function orders()
+    {
+        $orders = DB::table('orders')
+            ->select('*')
+            ->when($_GET['search'] ?? null, function ($query, $search) {
+                return $query->where('company_name', 'LIKE', '%' . $search . '%')->orWhere('pic_name', 'LIKE', "%$search%");
+            })
+            ->get();
+
+        $orderItem = DB::table('orders')
+            ->select('*')
+            ->where('id', '=', $_GET['order_id'] ?? null)
+            ->get();
+
+        // return dd($productItem);
+        return view('admin.orders-list', [
+            'orderItem' => $orderItem,
+            'orders' => $orders
+        ]);
+    }
+
     public function profile($id)
     {
         if (Auth::guard('admin')->user()->admin_id == $id) {

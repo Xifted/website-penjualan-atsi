@@ -21,10 +21,11 @@
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('/assets/img/logo.jpeg') }}">
     <link rel="icon" type="image/png" href="{{ asset('/assets/img/logo.jpeg') }}">
     <title>
-        ATSI - Admin Dashboard
+        ATSI - Orders List
     </title>
-    <!-- Fonts and icons -->
+    <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <!-- Nucleo Icons -->
     <link href="{{ asset('/assets/soft-ui/css/nucleo-icons.css') }}" rel="stylesheet" />
     <link href="{{ asset('/assets/soft-ui/css/nucleo-svg.css') }}" rel="stylesheet" />
@@ -36,13 +37,12 @@
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
-    {{-- Sidebar --}}
     <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 "
         id="sidenav-main">
         <div class="sidenav-header">
             <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
                 aria-hidden="true" id="iconSidenav"></i>
-            <a class="navbar-brand m-0" href="/admin-dashboard">
+            <a class="navbar-brand m-0" href="/admin/dashboard">
                 <img src="{{ asset('/assets/img/logo.png') }}" class="img-fluid navbar-brand-img" alt="main_logo">
                 <img src="{{ asset('/assets/img/logo2.jpg') }}" class="img-fluid navbar-brand-img" alt="main_logo2">
             </a>
@@ -51,7 +51,7 @@
         <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" href="/admin/dashboard">
+                    <a class="nav-link" href="/admin/dashboard">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1"
@@ -78,7 +78,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="/admin/products">
+                    <a class="nav-link" href="/admin/products">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1"
@@ -105,7 +105,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="/admin/categories">
+                    <a class="nav-link" href="/admin/categories">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1"
@@ -132,7 +132,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="/admin/orders">
+                    <a class="nav-link active" href="/admin/orders">
                       <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                         <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                           <title>Orders List</title>
@@ -200,25 +200,20 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
                         <li class="breadcrumb-item text-sm opacity-5 text-dark">Atlantis Services Indonesia</li>
-                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Orders List</li>
                     </ol>
-                    <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+                    <h6 class="font-weight-bolder mb-0">Orders List</h6>
                 </nav>
                 <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
                     <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+                        <div class="input-group">
+                            <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
+                            <input onchange="orderSearch()" id="searchOrder" type="text" class="form-control" placeholder="Type here..." value="{{ $_GET['search'] ?? null}}">
+                        </div>
                     </div>
                     <ul class="navbar-nav  justify-content-end">
-                        <li class="nav-item d-xl-none ps-3 me-3 d-flex align-items-center">
-                            <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
-                                <div class="sidenav-toggler-inner">
-                                    <i class="sidenav-toggler-line"></i>
-                                    <i class="sidenav-toggler-line"></i>
-                                    <i class="sidenav-toggler-line"></i>
-                                </div>
-                            </a>
-                        </li>
                         <li class="nav-item d-flex align-items-center">
-                            <a href="/admin/logout" class="nav-link text-body font-weight-bold px-0">
+                            <a href="/admin-dashboard/logout" class="nav-link text-body font-weight-bold px-0">
                                 <i class="fa fa-user me-sm-1"></i>
                                 @if (Auth::guard('admin')->check())
                                     <span class="d-sm-inline d-none">Logout - {{ Auth::guard('admin')->user()->name }}
@@ -227,6 +222,15 @@
                                     no
                                 @endif
 
+                            </a>
+                        </li>
+                        <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+                            <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                                <div class="sidenav-toggler-inner">
+                                    <i class="sidenav-toggler-line"></i>
+                                    <i class="sidenav-toggler-line"></i>
+                                    <i class="sidenav-toggler-line"></i>
+                                </div>
                             </a>
                         </li>
                         <li class="nav-item px-3 d-flex align-items-center">
@@ -245,8 +249,7 @@
                                     <a class="dropdown-item border-radius-md" href="javascript:;">
                                         <div class="d-flex py-1">
                                             <div class="my-auto">
-                                                <img src="../assets/soft-ui/img/team-2.jpg"
-                                                    class="avatar avatar-sm  me-3 ">
+                                                <img src="../assets/img/team-2.jpg" class="avatar avatar-sm  me-3 ">
                                             </div>
                                             <div class="d-flex flex-column justify-content-center">
                                                 <h6 class="text-sm font-weight-normal mb-1">
@@ -264,7 +267,7 @@
                                     <a class="dropdown-item border-radius-md" href="javascript:;">
                                         <div class="d-flex py-1">
                                             <div class="my-auto">
-                                                <img src="../assets/soft-ui/img/small-logos/logo-spotify.svg"
+                                                <img src="../assets/img/small-logos/logo-spotify.svg"
                                                     class="avatar avatar-sm bg-gradient-dark  me-3 ">
                                             </div>
                                             <div class="d-flex flex-column justify-content-center">
@@ -326,148 +329,167 @@
         <!-- End Navbar -->
         <div class="container-fluid py-4">
             <div class="row">
-                <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4" style="width: 33.33%">
-                    <div class="card">
-                        <div class="card-body p-3">
-                            <div class="row">
-                                <div class="col-8">
-                                    <div class="numbers">
-                                        <p class="text-sm mb-0 text-capitalize font-weight-bold">Category Total</p>
-                                        <h5 class="font-weight-bolder mb-0" id="pendapatan">
-                                            {{ $totalCategory }}
-                                        </h5>
-                                    </div>
-                                </div>
-                                <div class="col-4 text-end">
-                                    <div
-                                        class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                                        <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-12">
+                    <div class="card mb-4">
+                        <div class="card-header pb-0 d-flex justify-content-start">
+                            <h6>Table Orders</h6>
                         </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4" style="width: 33.33%">
-                    <div class="card">
-                        <div class="card-body p-3">
-                            <div class="row">
-                                <div class="col-8">
-                                    <div class="numbers">
-                                        <p class="text-sm mb-0 text-capitalize font-weight-bold">Product Total</p>
-                                        <h5 class="font-weight-bolder mb-0">
-                                            {{ $totalProduct }}
-                                        </h5>
-                                    </div>
-                                </div>
-                                <div class="col-4 text-end">
-                                    <div
-                                        class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                                        <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4" style="width: 33.33%">
-                    <div class="card">
-                        <div class="card-body p-3">
-                            <div class="row">
-                                <div class="col-8">
-                                    <div class="numbers">
-                                        <p class="text-sm mb-0 text-capitalize font-weight-bold">Orders Total</p>
-                                        <h5 class="font-weight-bolder mb-0">
-                                            {{ $totalProduct }}
-                                        </h5>
-                                    </div>
-                                </div>
-                                <div class="col-4 text-end">
-                                    <div
-                                        class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                                        <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-lg-4 mb-lg-0 mb-4">
-                    <div class="card">
-                        <div class="card-body p-3">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="d-flex flex-column h-100">
-                                        <h5 class="font-weight-bolder">Categories List</h5>
-                                        <p class="mb-5">Manage and create categories for the website</p>
-                                        <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto"
-                                            href="/admin/categories">
-                                            Go to the page
-                                            <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-lg-0 mb-4">
-                    <div class="card">
-                        <div class="card-body p-3">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="d-flex flex-column h-100">
-                                        <h5 class="font-weight-bolder">Products List</h5>
-                                        <p class="mb-5">Manage and create products for the website</p>
-                                        <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto"
-                                            href="/admin/products">
-                                            Go to the page
-                                            <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-lg-0 mb-4">
-                    <div class="card">
-                        <div class="card-body p-3">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="d-flex flex-column h-100">
-                                        <h5 class="font-weight-bolder">Orders List</h5>
-                                        <p class="mb-5">Manage and create products for the website</p>
-                                        <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto"
-                                            href="/admin/orders">
-                                            Go to the page
-                                            <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
+                        <div class="card-body px-0 pt-0 pb-2">
+                            <div class="table-responsive p-0">
+                                <table class="table align-items-center mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                Orders ID</th>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                                Company Name</th>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                                PIC Name</th>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                                Service Type</th>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                                Company Phone</th>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                                Phone Number</th>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                                Company Email</th>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                                Company Address</th>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-center">
+                                                Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($orders as $item)
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex px-2 py-1">
+                                                        <div class="d-flex flex-column justify-content-center">
+                                                            <h6 class="mb-0 text-sm ps-2">{{ $item->id }}</h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <h6 class="mb-0 text-sm">{{ $item->company_name }}</h6>
+                                                </td>
+                                                <td>
+                                                    <h6 class="mb-0 text-sm">{{ $item->pic_name }}</h6>
+                                                </td>
+                                                <td>
+                                                    <h6 class="mb-0 text-sm">{{ $item->service_type }}</h6>
+                                                </td>
+                                                <td>
+                                                    <h6 class="mb-0 text-sm">{{ $item->company_phone }}</h6>
+                                                </td>
+                                                <td>
+                                                    <h6 class="mb-0 text-sm">{{ $item->phone_number }}</h6>
+                                                </td>
+                                                <td>
+                                                    <h6 class="mb-0 text-sm">{{ $item->email_company }}</h6>
+                                                </td>
+                                                <td>
+                                                    <h6 class="mb-0 text-sm text-truncate text-justify" style="max-width: 200px;">{{ $item->company_address }}</h6>
+                                                </td>
+                                                <td class="d-flex flex-column gap-2 justify-content-center px-3">
+                                                    <button
+                                                        class="badge badge-sm text-white font-weight-bold text-xs bg-gradient-warning w-100 d-flex justify-content-center border-0"
+                                                        onclick="document.getElementById('modal{{ $item->id }}').style.display='flex'"
+                                                        style="cursor: pointer;">
+                                                        <a href="?order_id={{ $item->id }}"class="w-100 text-white">Details</a>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-4">
-                <footer class="footer pt-3">
-                    <div class="container-fluid">
-                        <div class="row align-items-center justify-content-lg-between">
-                            <div class="col-lg-6 mb-lg-0 mb-4">
-                                <div class="copyright text-center text-sm text-muted text-lg-start">
-                                    PT Atlantis Services Indonesia ©
-                                    <script>
-                                        document.write(new Date().getFullYear())
-                                    </script>
+            {{-- {{$_GET['id_diskon']}} --}}
+            @foreach ($orderItem as $item)
+                <div id="modal"
+                    style="display: {{ $_GET['order_id'] !== null ? 'flex' : 'none' }}; position: fixed; height: 100vw; width:100vw !important; top:0; left:0; background-color: #00000077; z-index: 1000000;">
+                    <div class="d-flex flex-column w-50 bg-white mt-3"
+                        style="margin-left: 25%; border-radius: 10px 10px 10px 10px; overflow:hidden; height:fit-content;">
+                        <header
+                            class="d-flex flex-row-reverse justify-content-between bg-secondary align-items-center">
+                            <button onclick="document.getElementById('modal').style.display='none'"
+                                class="d-flex justify-content-center align-items-center fs-3 bg-success h-100 border-0"
+                                style="width: 85px; cursor: pointer;"><a class="w-100 text-white"
+                                    href="/admin/orders">&times;</a></button>
+                            <h6 class="text-white p-3 pt-4">Detail Order - {{ $item->company_name }}</h6>
+                        </header>
+                            <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                                <h6 class="w-25">Company Name</h6>
+                                <div class="input-group w-75">
+                                    <input type="text" class="form-control" value="{{ $item->company_name }}" disabled>
                                 </div>
+                            </div>
+                            <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                                <h6 class="w-25">PIC Name</h6>
+                                <div class="input-group w-75">
+                                    <input type="text" class="form-control" value="{{ $item->pic_name }}" disabled>
+                                </div>
+                            </div>
+                            <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                                <h6 class="w-25">Service Type</h6>
+                                <div class="input-group w-75">
+                                    <input type="text" class="form-control" value="{{ $item->service_type }}" disabled>
+                                </div>
+                            </div>
+                            <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                                <h6 class="w-25">Company Phone Number</h6>
+                                <div class="input-group w-75">
+                                    <input type="text" class="form-control" value="{{ $item->company_phone }}" disabled>
+                                </div>
+                            </div>
+                            <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                                <h6 class="w-25">Phone Number</h6>
+                                <div class="input-group w-75">
+                                    <input type="text" class="form-control" value="{{ $item->phone_number }}" disabled>
+                                </div>
+                            </div>
+                            <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                                <h6 class="w-25">Company Email</h6>
+                                <div class="input-group w-75">
+                                    <input type="text" class="form-control" value="{{ $item->email_company }}" disabled>
+                                </div>
+                            </div>
+                            <div class="ms-md-auto pe-md-3 d-flex w-100 p-3 pe-5">
+                                <h6 class="w-25">Company Address</h6>
+                                <div class="input-group w-75">
+                                    <textarea class="form-control" disabled>{{ $item->company_address }}</textarea>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            @endforeach
+            <footer class="footer pt-3  ">
+                <div class="container-fluid">
+                    <div class="row align-items-center justify-content-lg-between">
+                        <div class="col-lg-6 mb-lg-0 mb-4">
+                            <div class="copyright text-center text-sm text-muted text-lg-start">
+                                PT Atlantis Services Indonesia ©
+                                <script>
+                                    document.write(new Date().getFullYear())
+                                </script>
                             </div>
                         </div>
                     </div>
-                </footer>
-            </div>
+                </div>
+            </footer>
+        </div>
     </main>
     <div class="fixed-plugin">
         <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
@@ -535,8 +557,7 @@
     <script src="{{ asset('/assets/soft-ui/js/core/popper.min.js') }}"></script>
     <script src="{{ asset('/assets/soft-ui/js/core/bootstrap.min.js') }}"></script>
     <script src="{{ asset('/assets/soft-ui/js/plugins/perfect-scrollbar.min.js') }}"></script>
-    <script src="{{ asset('/assets/soft-ui/js/plugins/smooth-scrollbar.min.js') }}"></script>
-    <script src="{{ asset('/assets/soft-ui/js/plugins/chartjs.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/plugins/smooth-scrollbar.min.js') }}"></script>
     <script>
         var win = navigator.platform.indexOf('Win') > -1;
         if (win && document.querySelector('#sidenav-scrollbar')) {
@@ -550,7 +571,8 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="{{ asset('/assets/soft-ui/js/soft-ui-dashboard.min.js?v=1.0.7') }}"></script>
-    <script src="{{ asset('/js/admin/dashboard.js') }}"></script>
+    {{-- Product list JS --}}
+    <script src="{{ asset('/assets/soft-ui/js/orders-list.js')}}"></script>
 </body>
 
 </html>

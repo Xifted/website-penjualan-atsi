@@ -1,3 +1,11 @@
+// Responsive Filter Container
+const toggleSidebarBtn = document.getElementById('toggle-filter-btn');
+const sidebar = document.querySelector('.filter');
+
+toggleSidebarBtn.addEventListener('click', () => {
+  sidebar.classList.toggle('show-filter');
+});
+
 window.addEventListener("DOMContentLoaded", (event) => {
     // Harga
     let IDRRupiah = new Intl.NumberFormat("id-ID", {

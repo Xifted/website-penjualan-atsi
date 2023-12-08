@@ -38,6 +38,9 @@
 </head>
 
 <body>
+    <!-- ======= Alert ======= -->
+    @include('layouts/contact-alert')
+
     <!-- ======= Header ======= -->
     @include('layouts/navbar')
 
@@ -753,17 +756,17 @@
             </div>
         </section>
         <!-- End Contact Section -->
-        <div id="modal"
+        <div id="modal" class="justify-content-center"
                 style="display: none; position: fixed; height: 100vw; width:100vw !important; top:0; left:0; background-color: #00000077; z-index: 1000000;">
-                <div class="d-flex flex-column w-50 bg-white mt-3"
-                    style="margin-left: 25%; border-radius: 10px 10px 10px 10px; overflow:hidden; height:fit-content;">
-                    <header class="d-flex flex-row-reverse justify-content-between bg-secondary align-items-center">
+                <div class="d-flex flex-column w-75 bg-white mt-3"
+                    style="border-radius: 10px 10px 10px 10px; overflow:hidden; height:fit-content;">
+                    <header class="d-flex flex-row-reverse justify-content-between bg-secondary align-items-center overflow-hidden">
                         <span onclick="document.getElementById('modal').style.display='none'"
-                            class="d-flex justify-content-center align-items-center fs-3 bg-success h-100 text-white"
-                            style="width: 85px; cursor: pointer;">&times;</span>
+                            class="d-flex justify-content-center align-items-center fs-3 bg-success text-white"
+                            style="width: 85px; height: 75px; cursor: pointer;">&times;</span>
                         <h6 class="text-white p-3 pt-4">Order Form</h6>
                     </header>
-                    <form action="{{ route('actionAddProduct') }}" enctype="multipart/form-data" method="POST">
+                    <form action="{{ route('actionOrders') }}" enctype="multipart/form-data" method="POST">
                         <div class="d-flex justify-content-between">
                             <h6 class="p-3 pt-4 w-75">{{ session()->get('locale') == 'en' ? 'If you would like us to contact you, please leave information by filling in the form below' : 'Jika anda ingin kami hubungi, silahkan tinggalkan informasi dengan mengisi form dibawah ini' }}</h6>
                             <div class="d-flex align-items-center justify-content-center w-25">
@@ -804,25 +807,22 @@
                         </div>
                         <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
                             <div class="input-group">
-                                <input type="email" name="phoneNumber" class="form-control"
+                                <input type="email" name="emailCompany" class="form-control"
                                     placeholder="{{ session()->get('locale') == 'en' ? 'Email' : 'Alamat Email' }}" value="" required>
                             </div>
                         </div>
                         <div class="ms-md-auto pe-md-3 d-flex w-100 p-3 pe-5">
                             <div class="input-group">
-                                <textarea name="companyAddress" id="" class="form-control" placeholder="{{ session()->get('locale') == 'en' ? 'Company Address' : 'Alamat Lengkap Perusahaan' }}"></textarea>
+                                <textarea name="companyAddress" class="form-control" placeholder="{{ session()->get('locale') == 'en' ? 'Company Address' : 'Alamat Lengkap Perusahaan' }}"></textarea>
                             </div>
                         </div>
-                        <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                        {{-- <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
                             <div class="input-group">
-                                <select name="categoryName" class="form-select" required>
-                                    <option value="" selected>Choose Category</option>
-                                    @foreach ($categories as $item)
-                                        <option value="{{ $item->category_id }}">{{ $item->category_name }}</option>
-                                    @endforeach
+                                <select name="categoryName" onchange="fetchProvinces()" class="form-select" required>
+                                    <option value="" disabled>{{ session()->get('locale') == 'en' ? 'Country' : 'Negara' }}</option>
                                 </select>
                             </div>
-                        </div>
+                        </div>--}}
                         <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
                             <div class="input-group d-flex justify-content-center">
                                 <button type="submit" class="order-btn"><i class="bi bi-file-earmark-arrow-up color-white"></i>Order Now</button>
