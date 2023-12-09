@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2023 at 02:27 AM
+-- Generation Time: Dec 09, 2023 at 04:58 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.2.4
 
@@ -73,7 +73,7 @@ INSERT INTO `categories` (`category_id`, `category_name`, `category_description`
 (2, 'Besi dan Baja', 'Lorem Ipsum', '2023-05-28 02:46:16', NULL),
 (3, 'Elektronika', 'Lorem Ipsum', '2023-05-28 02:46:22', NULL),
 (4, 'Makanan & Minuman', 'Lorem Ipsum', '2023-05-28 02:46:25', NULL),
-(5, 'Ban', 'Lorem Ipsum', '2023-05-28 02:46:27', NULL),
+(5, 'Ban(Rubber)', 'Lorem Ipsum', '2023-05-28 02:46:27', '2023-09-28 09:50:35'),
 (6, 'Holtikultura', 'Lorem Ipsum', '2023-05-28 02:46:29', NULL),
 (7, 'Pakaian Jadi', 'Lorem Ipsum', '2023-05-28 02:46:31', NULL);
 
@@ -117,6 +117,35 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (5, '2023_05_10_011504_create_admin_table', 1),
 (6, '2023_05_27_132755_create_product_table', 2),
 (7, '2023_05_27_134114_create_category_table', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `company_name` varchar(255) NOT NULL,
+  `pic_name` varchar(255) NOT NULL,
+  `service_type` varchar(255) NOT NULL,
+  `company_phone` varchar(255) NOT NULL,
+  `phone_number` varchar(255) NOT NULL,
+  `email_company` varchar(255) NOT NULL,
+  `company_address` text NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `company_name`, `pic_name`, `service_type`, `company_phone`, `phone_number`, `email_company`, `company_address`, `created_at`, `updated_at`) VALUES
+(1, 'test', 'test', 'test', 'test', 'test', 'test@gmail.com', 'test', '2023-12-07 19:46:35', NULL),
+(2, 'test2', 'test2', 'test2', 'test2', 'test2', 'test2@gmail.com', 'test2', '2023-12-07 19:49:11', NULL),
+(3, 'Test', 'Test', 'Test', 'Test', 'Test', 'Test@gmail.com', 'Test', '2023-12-08 06:08:01', NULL),
+(4, 'Test Company', 'test', 'test service', '081293812', '08123871', 'test@gmail.com', 'test alamat', '2023-12-08 06:25:36', NULL);
 
 -- --------------------------------------------------------
 
@@ -172,11 +201,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `product_image`, `product_name`, `category_id`, `product_description`, `product_price`, `stock`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'Handphone', 3, 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable.', 10000000, 12, NULL, '2023-05-28 20:37:21'),
-(2, NULL, 'Pancake Enak', 4, 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable.', 30000, 12, NULL, '2023-05-28 20:34:23'),
-(3, NULL, 'Ban Mobil', 5, 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable.', 100000, 20, NULL, '2023-05-28 20:37:52'),
-(4, NULL, 'Kue', 4, 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable.', 20000, 10, '2023-05-28 20:32:58', '2023-05-28 23:43:42'),
-(19, 'img/products/ZUSIe81QcowkI9ee59np5Wl1eS6s29lOXZHdXXyY.jpg', 'asdsadas', 3, 'dasdasdasdas', 1212412, 412, '2023-05-28 22:18:41', '2023-05-28 23:16:54');
+(1, 'img/products/ErsudBT47RCnFKJwnGCUla5YhOtkBYqwX8269Oey.jpg', 'Iphone 15', 3, 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable.', 10000000, 12, NULL, '2023-09-28 10:32:05');
 
 -- --------------------------------------------------------
 
@@ -227,6 +252,12 @@ ALTER TABLE `failed_jobs`
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -284,6 +315,12 @@ ALTER TABLE `failed_jobs`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`

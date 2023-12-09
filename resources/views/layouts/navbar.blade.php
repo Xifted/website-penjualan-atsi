@@ -29,9 +29,9 @@
                 <li>
                     <a class="nav-link" href="/#services">{{ session()->get('locale') == 'en' ? 'Our Services' : 'Layanan Kami' }}</a>
                 </li>
-                <li>
+                {{-- <li>
                     <a class="nav-link" href="/#wch">{{ session()->get('locale') == 'en' ? 'Experince' : 'Pengalaman' }}</a>
-                </li>
+                </li> --}}
                 <li>
                     <a class="nav-link" href="/#contact">{{ session()->get('locale') == 'en' ? 'Contact Us' : 'Kontak Kami' }}</a>
                 </li>

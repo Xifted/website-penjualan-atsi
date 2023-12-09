@@ -224,7 +224,7 @@
                             </a>
                         </li>
                         <li class="nav-item d-flex align-items-center">
-                            <a href="/admin-dashboard/logout" class="nav-link text-body font-weight-bold px-0">
+                            <a href="/admin/logout" class="nav-link text-body font-weight-bold px-0">
                                 <i class="fa fa-user me-sm-1"></i>
                                 @if (Auth::guard('admin')->check())
                                     <span class="d-sm-inline d-none">Logout - {{ Auth::guard('admin')->user()->name }}

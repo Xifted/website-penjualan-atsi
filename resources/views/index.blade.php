@@ -75,7 +75,7 @@
                         </a>
                     </li><!-- End Tab 1 Nav -->
 
-                    <li class="nav-item col-lg-2 h-75">
+                    <li class="nav-item col-lg-2" style="height: 73px">
                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
                             <h4 class="text-center m-0">
                                 {{ session()->get('locale') == 'en' ? 'Organization Structure' : 'Struktur Organisasi' }}
@@ -83,17 +83,24 @@
                         </a>
                     </li><!-- End Tab 2 Nav -->
 
-                    <li class="nav-item col-lg-2 h-100">
+                    <li class="nav-item col-lg-2" style="height: 73px">
                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+                            <h4 class="text-center m-0">
+                                {{ session()->get('locale') == 'en' ? 'Our Values' : 'Nilai-Nilai Perusahaan' }}</h4>
+                        </a>
+                    </li><!-- End Tab 3 Nav -->
+
+                    <li class="nav-item col-lg-2 h-100">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
                             <h4 class="text-center m-0">
                                 {{ session()->get('locale') == 'en' ? 'Branch Office' : 'Kantor Cabang' }}</h4>
                         </a>
-                    </li><!-- End Tab 3 Nav -->
+                    </li><!-- End Tab 4 Nav -->
                 </ul>
 
                 <div class="tab-content">
 
-                    <div class="tab-pane active show w" id="tab-1">
+                    <div class="tab-pane active show" id="tab-1">
                         <div class="row gy-4">
                             <img src="{{ asset('/assets/img/about-us/about-us.png') }}" class="img-fluid">
                             <div class="container bg-white w-75 rounded-2 rounded p-0 position-absolute bottom-0 start-50 translate-middle-x mb-5"
@@ -159,9 +166,6 @@
                                     class="langToggleBtn changeLangBtn px-4 btn btn-primary rounded-pill fs-4 fw-bold position-absolute end-0 me-5 {{ session()->get('locale') == 'en' ? 'disabled' : '' }}"
                                     style="top: -3em; border: transparent; background-color: #52749F;">ENGLISH</button>
                             </div>
-                            <button class="label-btn">
-                                About Us
-                            </button>
                         </div>
                     </div><!-- End Tab Content 1 -->
 
@@ -174,35 +178,227 @@
                         </div>
                     </div><!-- End Tab Content 2 -->
 
-                    <div class="tab-pane" id="tab-3">
-                        <div class="row gy-4 border border-5 border-green rounded" style="border-color: var(--color-green);">
+                    <div class="tab-pane mt-5" id="tab-3">
+                        <div class="row gy-4">
+                            <div class="container about position-relative"
+                                style="background: center / cover no-repeat url('{{ asset('/assets/img/experience-bg.png') }}')">
+                                <div class="container" data-aos="fade-up">
+                                    <div class="section-header">
+                                        <button
+                                            class="btn text-btn changeLangBtn langToggleBtn {{ session()->get('locale') == 'en' ? 'disabled' : '' }}"
+                                            style="border: transparent">
+                                            <img src="{{ asset('/assets/img/language-btn/en.png') }}"
+                                                style="height: 7em">
+                                        </button>
+                                        <button
+                                            class="btn text-btn changeLangBtn langToggleBtn {{ session()->get('locale') == 'id' ? 'disabled' : '' }}"
+                                            style="border: transparent">
+                                            <img src="{{ asset('/assets/img/language-btn/id.png') }}"
+                                                style="height: 7em">
+                                        </button>
+                                    </div>
+
+                                    <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
+                                        <div
+                                            class="wch-columns col-lg-5 order-{{ session()->get('locale') == 'en' ? '2' : '1' }}">
+                                            <div class="about-img mt-0">
+                                                {{-- <img src="{{ asset('/assets/img/about.jpg')}}" class="img-fluid" alt="" /> --}}
+                                                <div
+                                                    style="width: 400px; height: 560px; background: center no-repeat url('{{ asset('/assets/img/about-us/our-values.jpg') }}'); background-size: cover;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="wch-columns col-lg-7 order-{{ session()->get('locale') == 'en' ? '1' : '2' }}">
+                                            <!-- Tab Content -->
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade show active" id="tab1">
+                                                    <div
+                                                        class="d-flex {{ session()->get('locale') == 'en' ? 'justify-content-end' : '' }} align-items-center mt-4">
+                                                        <i class="bi bi-check2" style="color: var(--color-green)"></i>
+                                                        <h4 style="color: var(--color-primary)"
+                                                            class="en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
+                                                            Impartiality</h4>
+                                                        <h4 style="color: var(--color-primary)"
+                                                            class="id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
+                                                            Ketidakberpihakan</h4>
+                                                    </div>
+                                                    <p
+                                                        class="en text-end {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
+                                                        We always put our clients first. We are committed to act fairly
+                                                        and responsibly in
+                                                        every interaction with our customer, partners and employees. Our
+                                                        belief is that
+                                                        impartiality is the key to building trust and maintaining good
+                                                        relationships with
+                                                        all parties involved. Our commitment to excellence is what sets
+                                                        us apart from the
+                                                        rest.
+                                                    </p>
+                                                    <p
+                                                        class="id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
+                                                        Selalu memperhatikan ketidakberpihakan dalam aspek bisnis. ATSI
+                                                        berkomitmen untuk
+                                                        selalu bertindak secara adil, bertanggung jawab atas
+                                                        ketidakberpihakan secara
+                                                        objektif dan transparan dalam setiap interaksi dengan pelanggan,
+                                                        mitra dan karyawan.
+                                                        ATSI percaya bahwa ketidakberpihakan adalah kunci untuk
+                                                        membangun kepercayaan dan
+                                                        menjaga hubungan yang baik dengan semua pihak yang terlibat.
+                                                    </p>
+                                                </div>
+                                                <div class="tab-pane fade show active" id="tab1">
+                                                    <div
+                                                        class="d-flex {{ session()->get('locale') == 'en' ? 'justify-content-end' : '' }} align-items-center mt-4">
+                                                        <i class="bi bi-check2" style="color: var(--color-green)"></i>
+                                                        <h4 style="color: var(--color-primary)"
+                                                            class="en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
+                                                            Credibility
+                                                        </h4>
+                                                        <h4 style="color: var(--color-primary)"
+                                                            class="id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
+                                                            Kredibilitas
+                                                        </h4>
+                                                    </div>
+                                                    <p
+                                                        class="en text-end {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
+                                                        We always go above and beyond to serve our clients and provide
+                                                        them with the best.
+                                                        Strive to produce services with the highest standards and
+                                                        implement SOP with detail
+                                                        in every process, upholding the value of service quality is our
+                                                        principle of
+                                                        conduct.
+                                                    </p>
+                                                    <p
+                                                        class="id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
+                                                        Selalu melayani dan memberikan yang terbaik untuk klien,
+                                                        berusaha semaksimal mungkin
+                                                        dalam menghasilkan pelayanan dengan standar yang tinggi, dan
+                                                        ATSI menerapkan SOP
+                                                        dengan detail di setiap prosesnya dengan menjunjung tinggi nilai
+                                                        kualitas pelayanan.
+                                                    </p>
+                                                </div>
+                                                <div class="tab-pane fade show active" id="tab1">
+                                                    <div
+                                                        class="d-flex {{ session()->get('locale') == 'en' ? 'justify-content-end' : '' }} align-items-center mt-4">
+                                                        <i class="bi bi-check2" style="color: var(--color-green)"></i>
+                                                        <h4 style="color: var(--color-primary)"
+                                                            class="en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
+                                                            Integrity</h4>
+                                                        <h4 style="color: var(--color-primary)"
+                                                            class="id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
+                                                            Integritas</h4>
+                                                    </div>
+                                                    <p
+                                                        class="en text-end {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
+                                                        ATSI is a company that values integrity in every aspect of its
+                                                        business. We believe
+                                                        that integrity is the key of success in upholding the
+                                                        customer's, partner's and
+                                                        employees' trust. ATSI always strive to meet high ethical
+                                                        standards in every action,
+                                                        to aim to be a great company in the industry.
+                                                    </p>
+                                                    <p
+                                                        class="id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
+                                                        Selalu berkomitmen untuk bertindak dengan jujur dan transparan
+                                                        dalam aspek bisnis.
+                                                        ATSI percaya bahwa integritas adalah kunci untuk membangun
+                                                        kepercayaan dengan
+                                                        pelanggan, mitra dan karyawan. ATSI selalu berusaha untuk
+                                                        memenuhi standar etika
+                                                        yang tinggi dalam setiap tindakan yang kemi lakukan dan berusaha
+                                                        untuk menjadi
+                                                        perusahaan yang baik dalam industri.
+                                                    </p>
+                                                </div>
+                                                <div class="tab-pane fade show active" id="tab1">
+                                                    <div
+                                                        class="d-flex {{ session()->get('locale') == 'en' ? 'justify-content-end' : '' }} align-items-center mt-4">
+                                                        <i class="bi bi-check2" style="color: var(--color-green)"></i>
+                                                        <h4 style="color: var(--color-primary)"
+                                                            class="en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
+                                                            Professionalism</h4>
+                                                        <h4 style="color: var(--color-primary)"
+                                                            class="id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
+                                                            Profesionalisme</h4>
+                                                    </div>
+                                                    <p
+                                                        class="en text-end {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
+                                                        ATSI is a professional inspection company which is trustworthy,
+                                                        dedicated and
+                                                        disciplined. In ATSI we are committed to respect clients and
+                                                        taking full
+                                                        responsibility for achieving the common goals. ATSI is always
+                                                        adaptive and
+                                                        responsive to changes in the times innovationg to make
+                                                        improvements in all areas by
+                                                        demonstrating the best results. We continue to develop our
+                                                        abilities to improve
+                                                        superior services. Thank you for choosing ATSI as your business
+                                                        partner.
+                                                    </p>
+                                                    <p
+                                                        class="id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
+                                                        Jujur dan berdedikasi dalam dislipin kerja. Setia menghormati
+                                                        klien dan bertanggung
+                                                        jawab penuh untuk tercapainya tujuan bersama. Sebagai inspektor
+                                                        yang profesional,
+                                                        ATSI selalu adaptif, peka menghadapi perubahan zaman dan
+                                                        berinovasi agar dapat
+                                                        melakukan perbaikan pada semua area dengan menunjukan hasil
+                                                        terbaik. ATSI terus
+                                                        mengembangkan kemampuan untuk meningkatkan layanan yang lebih
+                                                        unggul.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End wch Section -->
+
+                        </div>
+                    </div><!-- End Tab Content 3 -->
+
+                    <div class="tab-pane mt-5" id="tab-4">
+                        <div class="row gy-4 border border-5 border-green rounded"
+                            style="border-color: var(--color-green);">
                             <div class="mt-0 bg-white d-flex justify-content-between" style="height: 20%;">
                                 <div class="w-25 d-flex">
-                                    <img class="img-fluid" style="width: 45%" src="{{ asset('/assets/img/logo.png') }}" alt="logo" />
-                                    <img class="img-fluid" style="width: 45%" src="{{ asset('/assets/img/logo2.png') }}" alt="logo" />
+                                    <img class="img-fluid" style="width: 45%"
+                                        src="{{ asset('/assets/img/logo.png') }}" alt="logo" />
+                                    <img class="img-fluid" style="width: 45%"
+                                        src="{{ asset('/assets/img/logo2.png') }}" alt="logo" />
                                 </div>
                                 <div class="w-50 d-flex justify-content-center align-items-center">
                                     <div class="bg-primary w-100" style="height: 5px";></div>
-                                    <div class="bg-green position-absolute rounded-5" style="height: 30px; width: 30px; right: 0;";></div>
-                                    <div class="bg-green position-absolute rounded-5" style="height: 30px; width: 30px; right: 3em;";></div>
-                                    <div class="bg-green position-absolute rounded-5" style="height: 30px; width: 30px; right: 6em;";></div>
-                                    <button class="label-btn" style="top: 13em; right: 0px; width: 160px;">
-                                        Branch Office
-                                    </button>
+                                    <div class="bg-green position-absolute rounded-5"
+                                        style="height: 30px; width: 30px; right: 0;";></div>
+                                    <div class="bg-green position-absolute rounded-5"
+                                        style="height: 30px; width: 30px; right: 3em;";></div>
+                                    <div class="bg-green position-absolute rounded-5"
+                                        style="height: 30px; width: 30px; right: 6em;";></div>
                                 </div>
                             </div>
-                            <div
-                                class="container-fluid d-flex justify-content-center gap-3 bg-primary p-4 py-5" style="height: 80%;">
+                            <div class="container-fluid d-flex justify-content-center gap-3 bg-primary p-4 py-5"
+                                style="height: 80%;">
                                 <div class="row gy-4 d-flex flex-column w-50 justify-content-between">
                                     <h2 class="color-white">ATLANTIS SERVICES INDONESIA<br>(HONG KONG) LIMITED</h2>
                                     <div>
                                         <p class="color-white">
-                                            <strong>{{ session()->get('locale') == 'en' ? 'Location:' : 'Lokasi:' }}
+                                            <strong>{{ session()->get('locale') == 'en' ? 'Location:' : 'Alamat:' }}
                                             </strong>UNIT 2302, 23/F, NEW WORLD TOWER 1, 18 QUEEN'S ROAD CENTRAL,
-                                            CENTRAL, HONG KONG.</p>
+                                            CENTRAL, HONG KONG.
+                                        </p>
                                         <p class="color-white">
                                             <strong>{{ session()->get('locale') == 'en' ? 'Phone:' : 'Telepon:' }}
-                                            </strong>(+852) 60725630</p>
+                                            </strong>(+852) 60725630
+                                        </p>
                                         <p class="color-white"><strong>Fax: </strong>(+852) 26683288</p>
                                     </div>
                                     <div class="d-flex justify-content-between">
@@ -220,13 +416,15 @@
                                     <h2 class="color-white">ATLANTIS SERVICES INDONESIA<br>(XIAMEN) LIMITED</h2>\
                                     <div>
                                         <p class="color-white">
-                                            <strong>{{ session()->get('locale') == 'en' ? 'Location:' : 'Lokasi:' }}
+                                            <strong>{{ session()->get('locale') == 'en' ? 'Location:' : 'Alamat:' }}
                                             </strong>FREE TRADE TIMES SQUARE, Unit 211-2, No.35 Xiangxing 4 Road, (Free
                                             Trade Zone), XIAMEN AREA OF CHINA (FUJIAN) PILOT FREE TRADE ZONE, XIAMEN,
-                                            CHINA.</p>
+                                            CHINA.
+                                        </p>
                                         <p class="color-white">
                                             <strong>{{ session()->get('locale') == 'en' ? 'Phone:' : 'Telepon:' }}
-                                            </strong>(+86 592) 5662136</p>
+                                            </strong>(+86 592) 5662136
+                                        </p>
                                         <p class="color-white"><strong>Fax: </strong>(+86 592) 5662138</p>
                                     </div>
                                     <div class="d-flex flex-row-reverse justify-content-between">
@@ -243,12 +441,12 @@
 
                             </div>
                         </div>
-                    </div><!-- End Tab Content 3 -->
+                    </div><!-- End Tab Content 4 -->
 
                 </div>
 
             </div>
-        </section><!-- End Features Section -->
+        </section><!-- End About us Section -->
 
         <!-- ======= Services Section ======= -->
         <section id="services" class="services"
@@ -573,146 +771,6 @@
         </section>
         <!-- End Services Section -->
 
-        <!-- ======= wch Section ======= -->
-        <section id="wch" class="about position-relative"
-            style="background: center / cover no-repeat url('{{ asset('/assets/img/experience-bg.png') }}')">
-            <div class="container" data-aos="fade-up">
-                <div class="section-header">
-                    <button
-                        class="btn text-btn changeLangBtn langToggleBtn {{ session()->get('locale') == 'en' ? 'disabled' : '' }}"
-                        style="border: transparent">
-                        <img src="{{ asset('/assets/img/language-btn/en.png') }}" style="height: 7em">
-                    </button>
-                    <button
-                        class="btn text-btn changeLangBtn langToggleBtn {{ session()->get('locale') == 'id' ? 'disabled' : '' }}"
-                        style="border: transparent">
-                        <img src="{{ asset('/assets/img/language-btn/id.png') }}" style="height: 7em">
-                    </button>
-                </div>
-
-                <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
-                    <div class="wch-columns col-lg-5 order-{{ session()->get('locale') == 'en' ? '2' : '1' }}">
-                        <div class="about-img mt-0">
-                            {{-- <img src="{{ asset('/assets/img/about.jpg')}}" class="img-fluid" alt="" /> --}}
-                            <div
-                                style="width: 400px; height: 560px; background: center no-repeat url('{{ asset('/assets/img/wch.jpg') }}'); background-size: cover;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="wch-columns col-lg-7 order-{{ session()->get('locale') == 'en' ? '1' : '2' }}">
-                        <!-- Tab Content -->
-                        <div class="tab-content">
-                            <div class="tab-pane fade show active" id="tab1">
-                                <div
-                                    class="d-flex {{ session()->get('locale') == 'en' ? 'justify-content-end' : '' }} align-items-center mt-4">
-                                    <i class="bi bi-check2" style="color: var(--color-green)"></i>
-                                    <h4 style="color: var(--color-primary)"
-                                        class="en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
-                                        Impartiality</h4>
-                                    <h4 style="color: var(--color-primary)"
-                                        class="id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
-                                        Ketidakberpihakan</h4>
-                                </div>
-                                <p class="en text-end {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
-                                    We always put our clients first. We are committed to act fairly and responsibly in
-                                    every interaction with our customer, partners and employees. Our belief is that
-                                    impartiality is the key to building trust and maintaining good relationships with
-                                    all parties involved. Our commitment to excellence is what sets us apart from the
-                                    rest.
-                                </p>
-                                <p class="id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
-                                    Selalu memperhatikan ketidakberpihakan dalam aspek bisnis. ATSI berkomitmen untuk
-                                    selalu bertindak secara adil, bertanggung jawab atas ketidakberpihakan secara
-                                    objektif dan transparan dalam setiap interaksi dengan pelanggan, mitra dan karyawan.
-                                    ATSI percaya bahwa ketidakberpihakan adalah kunci untuk membangun kepercayaan dan
-                                    menjaga hubungan yang baik dengan semua pihak yang terlibat.
-                                </p>
-                            </div>
-                            <div class="tab-pane fade show active" id="tab1">
-                                <div
-                                    class="d-flex {{ session()->get('locale') == 'en' ? 'justify-content-end' : '' }} align-items-center mt-4">
-                                    <i class="bi bi-check2" style="color: var(--color-green)"></i>
-                                    <h4 style="color: var(--color-primary)"
-                                        class="en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
-                                        Credibility
-                                    </h4>
-                                    <h4 style="color: var(--color-primary)"
-                                        class="id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
-                                        Kredibilitas
-                                    </h4>
-                                </div>
-                                <p class="en text-end {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
-                                    We always go above and beyond to serve our clients and provide them with the best.
-                                    Strive to produce services with the highest standards and implement SOP with detail
-                                    in every process, upholding the value of service quality is our principle of
-                                    conduct.
-                                </p>
-                                <p class="id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
-                                    Selalu melayani dan memberikan yang terbaik untuk klien, berusaha semaksimal mungkin
-                                    dalam menghasilkan pelayanan dengan standar yang tinggi, dan ATSI menerapkan SOP
-                                    dengan detail di setiap prosesnya dengan menjunjung tinggi nilai kualitas pelayanan.
-                                </p>
-                            </div>
-                            <div class="tab-pane fade show active" id="tab1">
-                                <div
-                                    class="d-flex {{ session()->get('locale') == 'en' ? 'justify-content-end' : '' }} align-items-center mt-4">
-                                    <i class="bi bi-check2" style="color: var(--color-green)"></i>
-                                    <h4 style="color: var(--color-primary)"
-                                        class="en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
-                                        Integrity</h4>
-                                    <h4 style="color: var(--color-primary)"
-                                        class="id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
-                                        Integritas</h4>
-                                </div>
-                                <p class="en text-end {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
-                                    ATSI is a company that values integrity in every aspect of its business. We believe
-                                    that integrity is the key of success in upholding the customer's, partner's and
-                                    employees' trust. ATSI always strive to meet high ethical standards in every action,
-                                    to aim to be a great company in the industry.
-                                </p>
-                                <p class="id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
-                                    Selalu berkomitmen untuk bertindak dengan jujur dan transparan dalam aspek bisnis.
-                                    ATSI percaya bahwa integritas adalah kunci untuk membangun kepercayaan dengan
-                                    pelanggan, mitra dan karyawan. ATSI selalu berusaha untuk memenuhi standar etika
-                                    yang tinggi dalam setiap tindakan yang kemi lakukan dan berusaha untuk menjadi
-                                    perusahaan yang baik dalam industri.
-                                </p>
-                            </div>
-                            <div class="tab-pane fade show active" id="tab1">
-                                <div
-                                    class="d-flex {{ session()->get('locale') == 'en' ? 'justify-content-end' : '' }} align-items-center mt-4">
-                                    <i class="bi bi-check2" style="color: var(--color-green)"></i>
-                                    <h4 style="color: var(--color-primary)"
-                                        class="en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
-                                        Professionalism</h4>
-                                    <h4 style="color: var(--color-primary)"
-                                        class="id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
-                                        Profesionalisme</h4>
-                                </div>
-                                <p class="en text-end {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
-                                    ATSI is a professional inspection company which is trustworthy, dedicated and
-                                    disciplined. In ATSI we are committed to respect clients and taking full
-                                    responsibility for achieving the common goals. ATSI is always adaptive and
-                                    responsive to changes in the times innovationg to make improvements in all areas by
-                                    demonstrating the best results. We continue to develop our abilities to improve
-                                    superior services. Thank you for choosing ATSI as your business partner.
-                                </p>
-                                <p class="id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
-                                    Jujur dan berdedikasi dalam dislipin kerja. Setia menghormati klien dan bertanggung
-                                    jawab penuh untuk tercapainya tujuan bersama. Sebagai inspektor yang profesional,
-                                    ATSI selalu adaptif, peka menghadapi perubahan zaman dan berinovasi agar dapat
-                                    melakukan perbaikan pada semua area dengan menunjukan hasil terbaik. ATSI terus
-                                    mengembangkan kemampuan untuk meningkatkan layanan yang lebih unggul.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="label-btn" style="top: 5em !important">Experience</button>
-        </section>
-        <!-- End wch Section -->
-
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact vh-100 d-flex flex-column justify-content-end position-relative"
             style="background: center / cover no-repeat url('{{ asset('/assets/img/contact-bg.png') }}')">
@@ -730,7 +788,7 @@
                             <div class="info-item d-flex">
                                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                                 <div>
-                                    <h4>{{ session()->get('locale') == 'en' ? 'Location:' : 'Lokasi:' }}</h4>
+                                    <h4>{{ session()->get('locale') == 'en' ? 'Location:' : 'Alamat:' }}</h4>
                                     <p>Jl. Iskandar Muda Raya No.7 | Kebayoran Lama Selatan, Kebayoran Lama | Kota Adm.
                                         Jakarta Selatan | DKI Jakarta - 12241</p>
                                 </div>
@@ -749,15 +807,19 @@
                             <div class="info-item d-flex">
                                 <i class="bi bi-phone flex-shrink-0"></i>
                                 <div>
-                                    <h4>{{ session()->get('locale') == 'en' ? 'For Any Requests, Contact:' : 'Untuk Setiap Permintaan Hubungi:' }}</h4>
+                                    <h4>{{ session()->get('locale') == 'en' ? 'For Any Requests, Contact:' : 'Untuk Setiap Permintaan Hubungi:' }}
+                                    </h4>
                                     <p>Phone: (+62) 2127099176</p>
                                     <p>Mobile: <a href="tel:+6288708874455">(+62) 88708874455</a></p>
-                                    <p>WhatsApp me: <a href="http://wa.me/6288708874455" target="_blank" rel="noopener noreferrer">http://wa.me/6288708874455</a></p>
+                                    <p>WhatsApp me: <a href="http://wa.me/6288708874455" target="_blank"
+                                            rel="noopener noreferrer">http://wa.me/6288708874455</a></p>
                                 </div>
                             </div>
                             <!-- End Info Item -->
                             <div class="info-item d-flex justify-content-center">
-                                <button onclick="document.getElementById('modal').style.display='flex'" class="order-btn position-relative"><i class="bi bi-file-earmark-arrow-up color-white"></i>Order Now</button>
+                                <button onclick="document.getElementById('modal').style.display='flex'"
+                                    class="order-btn position-relative"><i
+                                        class="bi bi-file-earmark-arrow-up color-white"></i>Order Now</button>
                             </div>
                             <!-- End Info Item -->
                         </div>
@@ -774,80 +836,93 @@
         </section>
         <!-- End Contact Section -->
         <div id="modal" class="justify-content-center"
-                style="display: none; position: fixed; height: 100vw; width:100vw !important; top:0; left:0; background-color: #00000077; z-index: 1000000;">
-                <div class="d-flex flex-column w-75 bg-white mt-3"
-                    style="border-radius: 10px 10px 10px 10px; overflow:hidden; height:fit-content;">
-                    <header class="d-flex flex-row-reverse justify-content-between bg-primary align-items-center overflow-hidden">
-                        <span onclick="document.getElementById('modal').style.display='none'"
-                            class="d-flex justify-content-center align-items-center fs-3 bg-green text-white"
-                            style="width: 85px; height: 75px; cursor: pointer;">&times;</span>
-                        <h5 class="text-white p-3 pt-4">Order Form</h5>
-                    </header>
-                    <form action="{{ route('actionOrders') }}" enctype="multipart/form-data" method="POST">
-                        <div class="d-flex justify-content-between align-items-end">
-                            <h6 class="p-3 pt-4" style="width: 80%">{{ session()->get('locale') == 'en' ? 'If you would like us to contact you, please leave information by filling in the form below' : 'Jika anda ingin kami hubungi, silahkan tinggalkan informasi dengan mengisi form dibawah ini' }}</h6>
-                            <div class="d-flex align-items-center justify-content-center pr-3" style="width: 17%">
-                                <img class="img-fluid" style="width: 70px" src="{{ asset('/assets/img/logo.png') }}" alt="logo" />
-                                <img class="img-fluid" style="width: 100px" src="{{ asset('/assets/img/logo2.png') }}" alt="logo" />
-                            </div>
+            style="display: none; position: fixed; height: 100vw; width:100vw !important; top:0; left:0; background-color: #00000077; z-index: 1000000;">
+            <div class="d-flex flex-column w-75 bg-white mt-3"
+                style="border-radius: 10px 10px 10px 10px; overflow:hidden; height:fit-content;">
+                <header
+                    class="d-flex flex-row-reverse justify-content-between bg-primary align-items-center overflow-hidden">
+                    <span onclick="document.getElementById('modal').style.display='none'"
+                        class="d-flex justify-content-center align-items-center fs-3 bg-green text-white"
+                        style="width: 85px; height: 75px; cursor: pointer;">&times;</span>
+                    <h5 class="text-white p-3 pt-4">Order Form</h5>
+                </header>
+                <form action="{{ route('actionOrders') }}" enctype="multipart/form-data" method="POST">
+                    <div class="d-flex justify-content-between align-items-end">
+                        <h6 class="p-3 pt-4" style="width: 80%">
+                            {{ session()->get('locale') == 'en' ? 'If you would like us to contact you, please leave information by filling in the form below' : 'Jika anda ingin kami hubungi, silahkan tinggalkan informasi dengan mengisi form dibawah ini' }}
+                        </h6>
+                        <div class="d-flex align-items-center justify-content-center pr-3" style="width: 17%">
+                            <img class="img-fluid" style="width: 70px" src="{{ asset('/assets/img/logo.png') }}"
+                                alt="logo" />
+                            <img class="img-fluid" style="width: 100px" src="{{ asset('/assets/img/logo2.png') }}"
+                                alt="logo" />
                         </div>
-                        @csrf
-                        <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
-                            <div class="input-group">
-                                <input type="text" name="companyName" class="form-control"
-                                    placeholder="{{ session()->get('locale') == 'en' ? 'Company Name' : 'Nama Perusahaan' }}" value="" required>
-                            </div>
+                    </div>
+                    @csrf
+                    <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                        <div class="input-group">
+                            <input type="text" name="companyName" class="form-control"
+                                placeholder="{{ session()->get('locale') == 'en' ? 'Company Name' : 'Nama Perusahaan' }}"
+                                value="" required>
                         </div>
-                        <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
-                            <div class="input-group">
-                                <input type="text" name="picName" class="form-control"
-                                    placeholder="{{ session()->get('locale') == 'en' ? 'PIC Name' : 'Nama PIC' }}" value="" required>
-                            </div>
+                    </div>
+                    <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                        <div class="input-group">
+                            <input type="text" name="picName" class="form-control"
+                                placeholder="{{ session()->get('locale') == 'en' ? 'PIC Name' : 'Nama PIC' }}"
+                                value="" required>
                         </div>
-                        <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
-                            <div class="input-group">
-                                <input type="text" name="serviceType" class="form-control"
-                                    placeholder="{{ session()->get('locale') == 'en' ? 'Type of Services' : 'Jenis Jasa yang Dibutuhkan' }}" value="" required>
-                            </div>
+                    </div>
+                    <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                        <div class="input-group">
+                            <input type="text" name="serviceType" class="form-control"
+                                placeholder="{{ session()->get('locale') == 'en' ? 'Type of Services' : 'Jenis Jasa yang Dibutuhkan' }}"
+                                value="" required>
                         </div>
-                        <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
-                            <div class="input-group">
-                                <input type="text" name="companyPhone" class="form-control"
-                                    placeholder="{{ session()->get('locale') == 'en' ? 'Company Phone Number' : 'No. Telp Perusahaan' }}" value="" required>
-                            </div>
+                    </div>
+                    <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                        <div class="input-group">
+                            <input type="text" name="companyPhone" class="form-control"
+                                placeholder="{{ session()->get('locale') == 'en' ? 'Company Phone Number' : 'No. Telp Perusahaan' }}"
+                                value="" required>
                         </div>
-                        <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
-                            <div class="input-group">
-                                <input type="text" name="phoneNumber" class="form-control"
-                                    placeholder="{{ session()->get('locale') == 'en' ? 'Phone Number/WhatsApp' : 'No. Handphone/WhatsApp' }}" value="" required>
-                            </div>
+                    </div>
+                    <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                        <div class="input-group">
+                            <input type="text" name="phoneNumber" class="form-control"
+                                placeholder="{{ session()->get('locale') == 'en' ? 'Phone Number/WhatsApp' : 'No. Handphone/WhatsApp' }}"
+                                value="" required>
                         </div>
-                        <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
-                            <div class="input-group">
-                                <input type="email" name="emailCompany" class="form-control"
-                                    placeholder="{{ session()->get('locale') == 'en' ? 'Email' : 'Alamat Email' }}" value="" required>
-                            </div>
+                    </div>
+                    <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                        <div class="input-group">
+                            <input type="email" name="emailCompany" class="form-control"
+                                placeholder="{{ session()->get('locale') == 'en' ? 'Email' : 'Alamat Email' }}"
+                                value="" required>
                         </div>
-                        <div class="ms-md-auto pe-md-3 d-flex w-100 p-3 pe-5">
-                            <div class="input-group">
-                                <textarea name="companyAddress" class="form-control" placeholder="{{ session()->get('locale') == 'en' ? 'Company Address' : 'Alamat Lengkap Perusahaan' }}"></textarea>
-                            </div>
+                    </div>
+                    <div class="ms-md-auto pe-md-3 d-flex w-100 p-3 pe-5">
+                        <div class="input-group">
+                            <textarea name="companyAddress" class="form-control"
+                                placeholder="{{ session()->get('locale') == 'en' ? 'Company Address' : 'Alamat Lengkap Perusahaan' }}"></textarea>
                         </div>
-                        {{-- <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                    </div>
+                    {{-- <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
                             <div class="input-group">
                                 <select name="categoryName" onchange="fetchProvinces()" class="form-select" required>
                                     <option value="" disabled>{{ session()->get('locale') == 'en' ? 'Country' : 'Negara' }}</option>
                                 </select>
                             </div>
-                        </div>--}}
-                        <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
-                            <div class="input-group d-flex justify-content-center">
-                                <button type="submit" class="order-btn"><i class="bi bi-file-earmark-arrow-up color-white"></i>Order Now</button>
-                            </div>
+                        </div> --}}
+                    <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                        <div class="input-group d-flex justify-content-center">
+                            <button type="submit" class="order-btn"><i
+                                    class="bi bi-file-earmark-arrow-up color-white"></i>Order Now</button>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
+        </div>
 
         <!-- ======= Thank You Page ======= -->
         <section class="min-vh-100 d-flex flex-column justify-content-center align-items-center position-relative"

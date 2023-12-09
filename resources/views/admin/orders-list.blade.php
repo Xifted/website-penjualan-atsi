@@ -213,7 +213,7 @@
                     </div>
                     <ul class="navbar-nav  justify-content-end">
                         <li class="nav-item d-flex align-items-center">
-                            <a href="/admin-dashboard/logout" class="nav-link text-body font-weight-bold px-0">
+                            <a href="/admin/logout" class="nav-link text-body font-weight-bold px-0">
                                 <i class="fa fa-user me-sm-1"></i>
                                 @if (Auth::guard('admin')->check())
                                     <span class="d-sm-inline d-none">Logout - {{ Auth::guard('admin')->user()->name }}
@@ -364,6 +364,9 @@
                                                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                                 Company Address</th>
                                             <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                                Created At</th>
+                                            <th
                                                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-center">
                                                 Action</th>
                                         </tr>
@@ -398,6 +401,9 @@
                                                 </td>
                                                 <td>
                                                     <h6 class="mb-0 text-sm text-truncate text-justify" style="max-width: 200px;">{{ $item->company_address }}</h6>
+                                                </td>
+                                                <td>
+                                                    <h6 class="mb-0 text-sm">{{ $item->created_at }}</h6>
                                                 </td>
                                                 <td class="d-flex flex-column gap-2 justify-content-center px-3">
                                                     <button
@@ -470,6 +476,12 @@
                                 <h6 class="w-25">Company Address</h6>
                                 <div class="input-group w-75">
                                     <textarea class="form-control" disabled>{{ $item->company_address }}</textarea>
+                                </div>
+                            </div>
+                            <div class="ms-md-auto pe-md-3 d-flex align-items-center w-100 p-3 pe-5">
+                                <h6 class="w-25">Created At</h6>
+                                <div class="input-group w-75">
+                                    <input type="text" class="form-control" value="{{ $item->created_at }}" disabled>
                                 </div>
                             </div>
                     </div>

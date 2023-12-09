@@ -9,7 +9,7 @@
                             <img class="img-fluid" src="{{ asset('/assets/img/logo2-transparent.png') }}" alt="logo" />
                         </div>
                         <p class="mt-3">
-                            <strong>{{ session()->get('locale') == 'en' ? 'Address:' : 'Lokasi:' }}</strong> Jl. Iskandar Muda Raya No.7 | Kebayoran Lama Selatan, Kebayoran
+                            <strong>{{ session()->get('locale') == 'en' ? 'Address:' : 'Alamat:' }}</strong> Jl. Iskandar Muda Raya No.7 | Kebayoran Lama Selatan, Kebayoran
                             Lama | Kota Adm. Jakarta Selatan | DKI Jakarta - 12241<br />
                             <strong>{{ session()->get('locale') == 'en' ? 'Phone:' : 'Telepon:' }}</strong> (+62) 2127099176<br />
                             <strong>Email:</strong> customerservice@atsi.co.id<br />
