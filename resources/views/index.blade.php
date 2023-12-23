@@ -391,7 +391,7 @@
                                     <h2 class="color-white">ATLANTIS SERVICES INDONESIA<br>(HONG KONG) LIMITED</h2>
                                     <div>
                                         <p class="color-white">
-                                            <strong>{{ session()->get('locale') == 'en' ? 'Location:' : 'Alamat:' }}
+                                            <strong>{{ session()->get('locale') == 'en' ? 'Address:' : 'Alamat:' }}
                                             </strong>UNIT 2302, 23/F, NEW WORLD TOWER 1, 18 QUEEN'S ROAD CENTRAL,
                                             CENTRAL, HONG KONG.
                                         </p>
@@ -416,7 +416,7 @@
                                     <h2 class="color-white">ATLANTIS SERVICES INDONESIA<br>(XIAMEN) LIMITED</h2>\
                                     <div>
                                         <p class="color-white">
-                                            <strong>{{ session()->get('locale') == 'en' ? 'Location:' : 'Alamat:' }}
+                                            <strong>{{ session()->get('locale') == 'en' ? 'Address:' : 'Alamat:' }}
                                             </strong>FREE TRADE TIMES SQUARE, Unit 211-2, No.35 Xiangxing 4 Road, (Free
                                             Trade Zone), XIAMEN AREA OF CHINA (FUJIAN) PILOT FREE TRADE ZONE, XIAMEN,
                                             CHINA.
@@ -788,7 +788,7 @@
                             <div class="info-item d-flex">
                                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                                 <div>
-                                    <h4>{{ session()->get('locale') == 'en' ? 'Location:' : 'Alamat:' }}</h4>
+                                    <h4>{{ session()->get('locale') == 'en' ? 'Address:' : 'Alamat:' }}</h4>
                                     <p>Jl. Iskandar Muda Raya No.7 | Kebayoran Lama Selatan, Kebayoran Lama | Kota Adm.
                                         Jakarta Selatan | DKI Jakarta - 12241</p>
                                 </div>
