@@ -1,0 +1,8 @@
+@media screen and (max-width: 767px) {
+    #branch-paragraph h2 {
+        font-size: 18px;
+    }
+    #branch-paragraph p {
+        font-size: 12px;
+    }
+}

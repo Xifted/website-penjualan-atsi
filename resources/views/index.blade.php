@@ -364,6 +364,8 @@
                     </div><!-- End Tab Content 3 -->
 
                     <div class="tab-pane mt-5" id="tab-4">
+                        {{-- Branch Stylesheet --}}
+                        <link href="{{ asset('/assets/css/cp/branch.css') }}" rel="stylesheet">
                         <div class="row gy-4 border border-5 border-green rounded"
                             style="border-color: var(--color-green);">
                             <div class="mt-0 bg-white d-flex justify-content-between" style="height: 20%;">
@@ -383,59 +385,61 @@
                                         style="height: 30px; width: 30px; right: 6em;";></div>
                                 </div>
                             </div>
-                            <div class="container-fluid d-flex justify-content-center gap-3 bg-primary p-4 py-5"
+                            <div id="branch-paragraph"
+                                class="container-fluid row row-cols-2 g-3 gy-md-5 bg-primary px-4 py-5"
                                 style="height: 80%;">
-                                <div class="row gy-4 d-flex flex-column w-50 justify-content-between">
-                                    <h2 class="color-white">ATLANTIS SERVICES INDONESIA<br>(HONG KONG) LIMITED</h2>
-                                    <div>
-                                        <p class="color-white">
-                                            <strong>{{ session()->get('locale') == 'en' ? 'Address:' : 'Alamat:' }}
-                                            </strong>UNIT 2302, 23/F, NEW WORLD TOWER 1, 18 QUEEN'S ROAD CENTRAL,
-                                            CENTRAL, HONG KONG.
-                                        </p>
-                                        <p class="color-white">
-                                            <strong>{{ session()->get('locale') == 'en' ? 'Phone:' : 'Telepon:' }}
-                                            </strong>(+852) 60725630
-                                        </p>
-                                        <p class="color-white"><strong>Fax: </strong>(+852) 26683288</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <img src="assets/img/about-us/hk-1.jpg" alt="office" class="img fluid"
-                                            style="width: 44%">
-                                        <div class="d-flex flex-column justify-content-between" style="width: 55%">
-                                            <img src="assets/img/about-us/hk-2.jpg" alt="office" class="img fluid"
-                                                style="height: 49%">
-                                            <img src="assets/img/about-us/hk-3.jpg" alt="office" class="img fluid"
-                                                style="height: 49%">
-                                        </div>
+                                {{-- <div class="row gy-2 d-flex flex-column w-50 justify-content-between"> --}}
+                                <h2 class="color-white">ATLANTIS SERVICES INDONESIA<br>(HONG KONG) LIMITED</h2>
+                                <h2 class="color-white">ATLANTIS SERVICES INDONESIA<br>(XIAMEN) LIMITED</h2>
+                                <div>
+                                    <p class="color-white">
+                                        <strong>{{ session()->get('locale') == 'en' ? 'Address:' : 'Alamat:' }}
+                                        </strong>UNIT 2302, 23/F, NEW WORLD TOWER 1, 18 QUEEN'S ROAD CENTRAL,
+                                        CENTRAL, HONG KONG.
+                                    </p>
+                                    <p class="color-white">
+                                        <strong>{{ session()->get('locale') == 'en' ? 'Phone:' : 'Telepon:' }}
+                                        </strong>(+852) 60725630
+                                    </p>
+                                    <p class="color-white"><strong>Fax: </strong>(+852) 26683288</p>
+                                </div>
+                                {{-- </div> --}}
+                                {{-- <div class="row gy-2 d-flex flex-column w-50 justify-content-between"> --}}
+                                <div>
+                                    <p class="color-white">
+                                        <strong>{{ session()->get('locale') == 'en' ? 'Address:' : 'Alamat:' }}
+                                        </strong>FREE TRADE TIMES SQUARE, Unit 211-2, No.35 Xiangxing 4 Road, (Free
+                                        Trade Zone), XIAMEN AREA OF CHINA (FUJIAN) PILOT FREE TRADE ZONE, XIAMEN,
+                                        CHINA.
+                                    </p>
+                                    <p class="color-white">
+                                        <strong>{{ session()->get('locale') == 'en' ? 'Phone:' : 'Telepon:' }}
+                                        </strong>(+86 592) 5662136
+                                    </p>
+                                    <p class="color-white"><strong>Fax: </strong>(+86 592) 5662138</p>
+                                </div>
+
+                                <div class="d-flex justify-content-between">
+                                    <img src="assets/img/about-us/hk-1.jpg" alt="office" class="img fluid"
+                                        style="width: 44%">
+                                    <div class="d-flex flex-column justify-content-between" style="width: 55%">
+                                        <img src="assets/img/about-us/hk-2.jpg" alt="office" class="img fluid"
+                                            style="height: 49%">
+                                        <img src="assets/img/about-us/hk-3.jpg" alt="office" class="img fluid"
+                                            style="height: 49%">
                                     </div>
                                 </div>
-                                <div class="row gy-4 d-flex flex-column w-50 justify-content-between">
-                                    <h2 class="color-white">ATLANTIS SERVICES INDONESIA<br>(XIAMEN) LIMITED</h2>\
-                                    <div>
-                                        <p class="color-white">
-                                            <strong>{{ session()->get('locale') == 'en' ? 'Address:' : 'Alamat:' }}
-                                            </strong>FREE TRADE TIMES SQUARE, Unit 211-2, No.35 Xiangxing 4 Road, (Free
-                                            Trade Zone), XIAMEN AREA OF CHINA (FUJIAN) PILOT FREE TRADE ZONE, XIAMEN,
-                                            CHINA.
-                                        </p>
-                                        <p class="color-white">
-                                            <strong>{{ session()->get('locale') == 'en' ? 'Phone:' : 'Telepon:' }}
-                                            </strong>(+86 592) 5662136
-                                        </p>
-                                        <p class="color-white"><strong>Fax: </strong>(+86 592) 5662138</p>
-                                    </div>
-                                    <div class="d-flex flex-row-reverse justify-content-between">
-                                        <img src="assets/img/about-us/xm-3.jpg" alt="office" class="img fluid"
-                                            style="width: 44%">
-                                        <div class="d-flex flex-column justify-content-between" style="width: 55%">
-                                            <img src="assets/img/about-us/xm-1.jpg" alt="office" class="img fluid"
-                                                style="height: 49%">
-                                            <img src="assets/img/about-us/xm-2.jpg" alt="office" class="img fluid"
-                                                style="height: 49%">
-                                        </div>
+                                <div class="d-flex flex-row-reverse justify-content-between">
+                                    <img src="assets/img/about-us/xm-3.jpg" alt="office" class="img fluid"
+                                        style="width: 44%">
+                                    <div class="d-flex flex-column justify-content-between" style="width: 55%">
+                                        <img src="assets/img/about-us/xm-1.jpg" alt="office" class="img fluid"
+                                            style="height: 49%">
+                                        <img src="assets/img/about-us/xm-2.jpg" alt="office" class="img fluid"
+                                            style="height: 49%">
                                     </div>
                                 </div>
+                                {{-- </div> --}}
 
                             </div>
                         </div>
