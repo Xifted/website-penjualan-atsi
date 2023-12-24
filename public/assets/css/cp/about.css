@@ -1,0 +1,66 @@
+#about-container {
+    padding: 8em 0 2em;
+    display: flex;
+    align-items: end;
+}
+
+#about-lang-btns {
+    bottom: calc(100% + 10px);
+    width: 100%;
+    padding: 0 1em;
+}
+
+.about-lang-btn {
+    border: transparent;
+}
+
+#about-head {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+    .about-three-button {
+        height: 12px;
+        width: 12px;
+    }
+    .about-title {
+        font-size: 14px;
+    }
+    .about-paragraph,
+    .about-lang-btn {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .about-three-button {
+        height: 18px;
+        width: 18px;
+    }
+    .about-title {
+        font-size: 20px;
+    }
+    .about-paragraph,
+    .about-lang-btn {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #about-container {
+        height: 75vh;
+    }
+    .about-three-button {
+        height: 24px;
+        width: 24px;
+    }
+    .about-title {
+        font-size: 28px;
+    }
+    .about-paragraph,
+    .about-lang-btn {
+        font-size: 18px;
+    }
+}

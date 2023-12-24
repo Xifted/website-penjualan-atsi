@@ -65,7 +65,6 @@
         <!-- ======= about Section ======= -->
         <section id="about" class="features d-flex justify-content-center">
             <div class="container" style="margin-inline: 0; padding-inline: 0;" data-aos="fade-up">
-
                 <ul class="nav nav-tabs row gy-4 d-flex justify-content-evenly">
 
                     <li class="nav-item col-lg-2 h-100">
@@ -99,36 +98,37 @@
                 </ul>
 
                 <div class="tab-content">
-
                     <div class="tab-pane active show" id="tab-1">
-                        <div class="row gy-4">
-                            <img src="{{ asset('/assets/img/about-us/about-us.png') }}" class="img-fluid">
-                            <div class="container bg-white w-75 rounded-2 rounded p-0 position-absolute bottom-0 start-50 translate-middle-x mb-5"
+                        {{-- About Us Stylesheet --}}
+                        <link href="{{ asset('/assets/css/cp/about.css') }}" rel="stylesheet">
+                        <div id="about-container"
+                            style="background: top / auto 100% no-repeat url('{{ asset('/assets/img/about-us/about-us.png') }}') fixed">
+                            {{-- <img src="{{ asset('/assets/img/about-us/about-us.png') }}" class="img-fluid"> --}}
+                            <div id="about-content"
+                                class="container bg-white w-75 rounded-2 rounded p-0 position-relative"
                                 data-aos="fade-up">
-                                <div class="position-relative text-center p-1 rounded-top"
+                                <div id="about-head" class="position-relative text-center p-2 rounded-top"
                                     style="background-color: #DCD6D6">
-                                    <div
-                                        class="position-absolute top-50 ms-2 translate-middle-y d-flex flex-row gap-2 fs-5 fw-semibold">
-                                        <div
-                                            style="height: 20px; width: 20px; border-radius: 100%; background-color: #EE6A5E;">
+                                    <div class="d-flex flex-row gap-2 fs-5 fw-semibold">
+                                        <div class="about-three-button rounded-circle"
+                                            style="background-color: #EE6A5E;">
                                         </div>
-                                        <div
-                                            style="height: 20px; width: 20px; border-radius: 100%; background-color: #F6BD4E;">
+                                        <div class="about-three-button rounded-circle"
+                                            style="background-color: #F6BD4E;">
                                         </div>
-                                        <div
-                                            style="height: 20px; width: 20px; border-radius: 100%; background-color: #62C455;">
+                                        <div class="about-three-button rounded-circle"
+                                            style="background-color: #62C455;">
                                         </div>
                                     </div>
                                     <h3
-                                        class="fs-3 fw-bold en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
-                                        THE
-                                        INSIGHT OF OUR SURVEY SERVICES</h3>
+                                        class="about-title m-0 p-0 fw-bold en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
+                                        THE INSIGHT OF OUR SURVEY SERVICES</h3>
                                     <h3
-                                        class="fs-3 fw-bold id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
+                                        class="about-title m-0 p-0 fw-bold id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
                                         KEUNGGULAN JASA SURVEY KAMI</h3>
                                 </div>
                                 <p
-                                    class="text-wrap p-3 en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
+                                    class="about-paragraph text-wrap p-3 en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
                                     PT. ATLANTIS
                                     SERVICES INDONESIA (ATSI) is a national company that
                                     was established in 2007. Accredited ISO 17020 and ISO 27001. Focus in field of
@@ -145,7 +145,7 @@
                                     Goverment
                                     Regulation</p>
                                 <p
-                                    class="text-wrap p-3 id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
+                                    class="about-paragraph text-wrap p-3 id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
                                     PT. ATLANTIS
                                     SERVICES INDONESIA (ATSI) merupakan perusahaan nasional
                                     yang berdiri pada tahun 2007. Terakreditasi ISO 17020 dan ISO 27001. Berfokus dalam
@@ -159,12 +159,15 @@
                                     produk
                                     akhir/barang
                                     jadi/barang konsumsi (Consumers Goods) dan Pekerjaan Regulasi Pemerintah (VPTI)</p>
-                                <button
-                                    class="langToggleBtn changeLangBtn px-4 btn btn-primary rounded-pill fs-4 fw-bold position-absolute start-0 ms-5 {{ session()->get('locale') == 'id' ? 'disabled' : '' }}"
-                                    style="top: -3em; border: transparent; background-color: #52A347;">INDONESIA</button>
-                                <button
-                                    class="langToggleBtn changeLangBtn px-4 btn btn-primary rounded-pill fs-4 fw-bold position-absolute end-0 me-5 {{ session()->get('locale') == 'en' ? 'disabled' : '' }}"
-                                    style="top: -3em; border: transparent; background-color: #52749F;">ENGLISH</button>
+                                <div id="about-lang-btns"
+                                    class="position-absolute d-flex flex-row justify-content-between">
+                                    <button
+                                        class="langToggleBtn changeLangBtn about-lang-btn px-4 btn btn-primary rounded-pill fw-bold {{ session()->get('locale') == 'id' ? 'disabled' : '' }}"
+                                        style="background-color: #52A347;">INDONESIA</button>
+                                    <button
+                                        class="langToggleBtn changeLangBtn about-lang-btn px-4 btn btn-primary rounded-pill fw-bold {{ session()->get('locale') == 'en' ? 'disabled' : '' }}"
+                                        style="background-color: #52749F;">ENGLISH</button>
+                                </div>
                             </div>
                         </div>
                     </div><!-- End Tab Content 1 -->
