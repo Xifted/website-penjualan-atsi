@@ -1,0 +1,23 @@
+#thank-img,
+#thank-paragraph {
+    width: 100vw;
+}
+#thank-paragraph {
+    background-color: rgb(100, 100, 100);
+}
+
+@media screen and (min-width: 768px) {
+    #thank-img,
+    #thank-paragraph {
+        width: 75vw;
+    }
+    #thank-paragraph span {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #thank-paragraph span {
+        font-size: 34px;
+    }
+}

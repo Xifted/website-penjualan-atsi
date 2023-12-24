@@ -929,11 +929,12 @@
         <!-- ======= Thank You Page ======= -->
         <section class="min-vh-100 d-flex flex-column justify-content-center align-items-center position-relative"
             style="background: center / cover no-repeat url('{{ asset('/assets/img/thankyou-bg.png') }}')">
-            <img src="{{ asset('/assets/img/thankyou-fg.png') }}" class="w-75">
-            <div class="top-50 left-0 translate-middle-y w-75 text-center p-3"
-                style="background-color: rgb(100, 100, 100)">
+            {{-- About Us Stylesheet --}}
+            <link href="{{ asset('/assets/css/cp/thank.css') }}" rel="stylesheet">
+            <img id="thank-img" src="{{ asset('/assets/img/thankyou-fg.png') }}">
+            <div id="thank-paragraph" class="text-center p-3">
                 <span
-                    class="fw-bold text-light h1">{{ session()->get('locale') == 'en' ? 'Thank You For Choosing ATSI As Your Business Partner' : 'Terima Kasih Telah Memilih ATSI Sebagai Mitra Bisnis Anda' }}</span>
+                    class="fw-bold text-light">{{ session()->get('locale') == 'en' ? 'Thank You For Choosing ATSI As Your Business Partner' : 'Terima Kasih Telah Memilih ATSI Sebagai Mitra Bisnis Anda' }}</span>
             </div>
         </section>
         <!-- End Thank You Page -->
