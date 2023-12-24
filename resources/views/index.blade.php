@@ -844,10 +844,10 @@
         </section>
         <!-- End Contact Section -->
 
-        <div id="modal" class="justify-content-center"
-            style="display: none; position: fixed; height: 100vw; width:100vw !important; top:0; left:0; background-color: #00000077; z-index: 1000000;">
-            <div class="d-flex flex-column w-75 bg-white mt-3"
-                style="border-radius: 10px 10px 10px 10px; overflow:hidden; height:fit-content;">
+        {{-- Contact Stylesheet --}}
+        <link href="{{ asset('/assets/css/cp/modal.css') }}" rel="stylesheet">
+        <div id="modal" class="justify-content-center">
+            <div id="modal-form" class="d-flex flex-column w-100 bg-white rounded">
                 <header
                     class="d-flex flex-row-reverse justify-content-between bg-primary align-items-center overflow-hidden">
                     <span onclick="document.getElementById('modal').style.display='none'"
@@ -856,11 +856,12 @@
                     <h5 class="text-white p-3 pt-4">Order Form</h5>
                 </header>
                 <form action="{{ route('actionOrders') }}" enctype="multipart/form-data" method="POST">
-                    <div class="d-flex justify-content-between align-items-end">
-                        <h6 class="p-3 pt-4" style="width: 80%">
+                    <div class="row row-cols-md-2 p-4 align-items-center">
+                        <h6 class="col-md order-last order-md-first text-center text-md-start">
                             {{ session()->get('locale') == 'en' ? 'If you would like us to contact you, please leave information by filling in the form below' : 'Jika anda ingin kami hubungi, silahkan tinggalkan informasi dengan mengisi form dibawah ini' }}
                         </h6>
-                        <div class="d-flex align-items-center justify-content-center pr-3" style="width: 17%">
+                        <div
+                            class="col-md order-first order-md-last mx-auto d-flex align-items-center justify-content-center">
                             <img class="img-fluid" style="width: 70px" src="{{ asset('/assets/img/logo.png') }}"
                                 alt="logo" />
                             <img class="img-fluid" style="width: 100px" src="{{ asset('/assets/img/logo2.png') }}"
