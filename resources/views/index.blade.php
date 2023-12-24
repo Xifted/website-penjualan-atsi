@@ -65,16 +65,15 @@
         <!-- ======= about Section ======= -->
         <section id="about" class="features d-flex justify-content-center">
             <div class="container" style="margin-inline: 0; padding-inline: 0;" data-aos="fade-up">
-                <ul class="nav nav-tabs row gy-4 d-flex justify-content-evenly">
-
-                    <li class="nav-item col-lg-2 h-100">
+                <ul class="nav nav-tabs row gy-2 d-flex justify-content-evenly">
+                    <li class="nav-item col-lg-3 h-100">
                         <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
                             <h4 class="text-center m-0">
                                 {{ session()->get('locale') == 'en' ? 'About Us' : 'Tentang Kami' }}</h4>
                         </a>
                     </li><!-- End Tab 1 Nav -->
 
-                    <li class="nav-item col-lg-2" style="height: 73px">
+                    <li class="nav-item col-lg-3" style="height: 73px">
                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
                             <h4 class="text-center m-0">
                                 {{ session()->get('locale') == 'en' ? 'Organization Structure' : 'Struktur Organisasi' }}
@@ -82,14 +81,14 @@
                         </a>
                     </li><!-- End Tab 2 Nav -->
 
-                    <li class="nav-item col-lg-2" style="height: 73px">
+                    <li class="nav-item col-lg-3" style="height: 73px">
                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
                             <h4 class="text-center m-0">
                                 {{ session()->get('locale') == 'en' ? 'Our Values' : 'Nilai-Nilai Perusahaan' }}</h4>
                         </a>
                     </li><!-- End Tab 3 Nav -->
 
-                    <li class="nav-item col-lg-2 h-100">
+                    <li class="nav-item col-lg-3 h-100">
                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
                             <h4 class="text-center m-0">
                                 {{ session()->get('locale') == 'en' ? 'Branch Office' : 'Kantor Cabang' }}</h4>
@@ -102,7 +101,7 @@
                         {{-- About Us Stylesheet --}}
                         <link href="{{ asset('/assets/css/cp/about.css') }}" rel="stylesheet">
                         <div id="about-container"
-                            style="background: top / auto 100% no-repeat url('{{ asset('/assets/img/about-us/about-us.png') }}') fixed">
+                            style="background: left / cover no-repeat url('{{ asset('/assets/img/about-us/about-us.png') }}') fixed">
                             {{-- <img src="{{ asset('/assets/img/about-us/about-us.png') }}" class="img-fluid"> --}}
                             <div id="about-content"
                                 class="container bg-white w-75 rounded-2 rounded p-0 position-relative"
@@ -181,43 +180,39 @@
                         </div>
                     </div><!-- End Tab Content 2 -->
 
-                    <div class="tab-pane mt-5" id="tab-3">
+                    <div class="tab-pane" id="tab-3">
                         <div class="row gy-4">
-                            <div class="container about position-relative"
-                                style="background: center / cover no-repeat url('{{ asset('/assets/img/experience-bg.png') }}')">
+                            {{-- About Us Stylesheet --}}
+                            <link href="{{ asset('/assets/css/cp/nilai-perusahaan.css') }}" rel="stylesheet">
+                            <div class="container about position-relative pb-2"
+                                style="background: top / cover no-repeat url('{{ asset('/assets/img/experience-bg.png') }}')">
                                 <div class="container" data-aos="fade-up">
                                     <div class="section-header">
                                         <button
-                                            class="btn text-btn changeLangBtn langToggleBtn {{ session()->get('locale') == 'en' ? 'disabled' : '' }}"
+                                            class="wch-lang-btn btn text-btn changeLangBtn langToggleBtn {{ session()->get('locale') == 'en' ? 'disabled' : '' }}"
                                             style="border: transparent">
-                                            <img src="{{ asset('/assets/img/language-btn/en.png') }}"
-                                                style="height: 7em">
+                                            <img src="{{ asset('/assets/img/language-btn/en.png') }}">
                                         </button>
                                         <button
-                                            class="btn text-btn changeLangBtn langToggleBtn {{ session()->get('locale') == 'id' ? 'disabled' : '' }}"
+                                            class="wch-lang-btn btn text-btn changeLangBtn langToggleBtn {{ session()->get('locale') == 'id' ? 'disabled' : '' }}"
                                             style="border: transparent">
-                                            <img src="{{ asset('/assets/img/language-btn/id.png') }}"
-                                                style="height: 7em">
+                                            <img src="{{ asset('/assets/img/language-btn/id.png') }}">
                                         </button>
                                     </div>
 
-                                    <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
-                                        <div
-                                            class="wch-columns col-lg-5 order-{{ session()->get('locale') == 'en' ? '2' : '1' }}">
-                                            <div class="about-img mt-0">
-                                                {{-- <img src="{{ asset('/assets/img/about.jpg')}}" class="img-fluid" alt="" /> --}}
-                                                <div
-                                                    style="width: 400px; height: 560px; background: center no-repeat url('{{ asset('/assets/img/about-us/our-values.jpg') }}'); background-size: cover;">
-                                                </div>
-                                            </div>
+                                    <div class="row g-4 g-md-5" data-aos="fade-up" data-aos-delay="200">
+                                        <div id="wch-img"
+                                            class="wch-columns text-center col-md-5 order-md-{{ session()->get('locale') == 'en' ? 'last' : 'first' }}">
+                                            <img src="{{ asset('/assets/img/about-us/our-values.jpg') }}"
+                                                class="img-fluid mx-auto" alt="" />
                                         </div>
-                                        <div
-                                            class="wch-columns col-lg-7 order-{{ session()->get('locale') == 'en' ? '1' : '2' }}">
+                                        <div id="wch-paragraph"
+                                            class="wch-columns col-md-7 mt-0 order-md-{{ session()->get('locale') == 'en' ? 'first' : 'last' }}">
                                             <!-- Tab Content -->
-                                            <div class="tab-content">
+                                            <div class="tab-content row row-cols-2 row-cols-md-1">
                                                 <div class="tab-pane fade show active" id="tab1">
                                                     <div
-                                                        class="d-flex {{ session()->get('locale') == 'en' ? 'justify-content-end' : '' }} align-items-center mt-4">
+                                                        class="d-flex {{ session()->get('locale') == 'en' ? 'justify-content-md-end' : '' }} align-items-center mt-4">
                                                         <i class="bi bi-check2" style="color: var(--color-green)"></i>
                                                         <h4 style="color: var(--color-primary)"
                                                             class="en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
@@ -227,7 +222,7 @@
                                                             Ketidakberpihakan</h4>
                                                     </div>
                                                     <p
-                                                        class="en text-end {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
+                                                        class="en text-md-end {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
                                                         We always put our clients first. We are committed to act fairly
                                                         and responsibly in
                                                         every interaction with our customer, partners and employees. Our
@@ -253,7 +248,7 @@
                                                 </div>
                                                 <div class="tab-pane fade show active" id="tab1">
                                                     <div
-                                                        class="d-flex {{ session()->get('locale') == 'en' ? 'justify-content-end' : '' }} align-items-center mt-4">
+                                                        class="d-flex {{ session()->get('locale') == 'en' ? 'justify-content-md-end' : '' }} align-items-center mt-4">
                                                         <i class="bi bi-check2" style="color: var(--color-green)"></i>
                                                         <h4 style="color: var(--color-primary)"
                                                             class="en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
@@ -265,7 +260,7 @@
                                                         </h4>
                                                     </div>
                                                     <p
-                                                        class="en text-end {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
+                                                        class="en text-md-end {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
                                                         We always go above and beyond to serve our clients and provide
                                                         them with the best.
                                                         Strive to produce services with the highest standards and
@@ -286,7 +281,7 @@
                                                 </div>
                                                 <div class="tab-pane fade show active" id="tab1">
                                                     <div
-                                                        class="d-flex {{ session()->get('locale') == 'en' ? 'justify-content-end' : '' }} align-items-center mt-4">
+                                                        class="d-flex {{ session()->get('locale') == 'en' ? 'justify-content-md-end' : '' }} align-items-center mt-4">
                                                         <i class="bi bi-check2" style="color: var(--color-green)"></i>
                                                         <h4 style="color: var(--color-primary)"
                                                             class="en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
@@ -296,7 +291,7 @@
                                                             Integritas</h4>
                                                     </div>
                                                     <p
-                                                        class="en text-end {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
+                                                        class="en text-md-end {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
                                                         ATSI is a company that values integrity in every aspect of its
                                                         business. We believe
                                                         that integrity is the key of success in upholding the
@@ -320,7 +315,7 @@
                                                 </div>
                                                 <div class="tab-pane fade show active" id="tab1">
                                                     <div
-                                                        class="d-flex {{ session()->get('locale') == 'en' ? 'justify-content-end' : '' }} align-items-center mt-4">
+                                                        class="d-flex {{ session()->get('locale') == 'en' ? 'justify-content-md-end' : '' }} align-items-center mt-4">
                                                         <i class="bi bi-check2" style="color: var(--color-green)"></i>
                                                         <h4 style="color: var(--color-primary)"
                                                             class="en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
@@ -330,7 +325,7 @@
                                                             Profesionalisme</h4>
                                                     </div>
                                                     <p
-                                                        class="en text-end {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
+                                                        class="en text-md-end {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
                                                         ATSI is a professional inspection company which is trustworthy,
                                                         dedicated and
                                                         disciplined. In ATSI we are committed to respect clients and
@@ -977,7 +972,7 @@
             fetch(`${url}?lang=${lastLang}&prev=${window.location.hash.replace('#', '')}`);
             $('.en').toggleClass(['active', 'hidden']);
             $('.id').toggleClass(['active', 'hidden']);
-            $('.wch-columns').toggleClass(['order-1', 'order-2']);
+            $('.wch-columns').toggleClass(['order-md-first', 'order-md-last']);
             $('.wch-columns .d-flex').toggleClass('justify-content-end')
             // $('.wch-columns p').toggleClass('text-end')
             $('.langToggleBtn').toggleClass('disabled');

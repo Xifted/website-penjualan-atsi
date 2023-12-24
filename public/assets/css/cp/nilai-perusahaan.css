@@ -1,0 +1,49 @@
+#wch-paragraph h4 {
+    margin: 0;
+}
+
+#wch-paragraph p {
+    margin-top: 1em;
+}
+
+.wch-lang-btn img {
+    height: 7em;
+}
+
+@media screen and (max-width: 767px) {
+    #wch-img img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border: 2px solid var(--color-primary);
+        padding: 3px;
+        border-radius: 100%;
+    }
+    .wch-lang-btn img {
+        height: 4em;
+    }
+    #wch-paragraph h4 {
+        font-size: 14px;
+    }
+    #wch-paragraph p {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #wch-paragraph h4 {
+        font-size: 20px;
+    }
+    #wch-paragraph p {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #wch-paragraph h4 {
+        font-size: 24px;
+    }
+    #wch-paragraph p {
+        font-size: 16px;
+    }
+}
