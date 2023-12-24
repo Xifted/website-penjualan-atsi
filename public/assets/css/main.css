@@ -727,7 +727,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    height: 100vh;
+    /* height: 100vh; */
     /* padding: 140px 0 60px 0; */
 }
 
@@ -1646,7 +1646,6 @@ section {
 
 .features .tab-pane h3 {
     font-weight: 600;
-    font-size: 36px;
     color: var(--color-secondary);
 }
 
