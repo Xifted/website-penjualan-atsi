@@ -774,13 +774,16 @@
         <!-- End Services Section -->
 
         <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact vh-100 d-flex flex-column justify-content-end position-relative"
+        <section id="contact" class="contact min-vh-100 position-relative"
             style="background: center / cover no-repeat url('{{ asset('/assets/img/contact-bg.png') }}')">
-            <button class="label-btn" style="top: 5em !important">Contact Us</button>
-
+            {{-- Contact Stylesheet --}}
+            <link href="{{ asset('/assets/css/cp/contact.css') }}" rel="stylesheet">
+            <div class="container d-flex flex-row-reverse pb-5">
+                <button class="label-btn" style="top: 5em !important">Contact Us</button>
+            </div>
             <div class="container">
-                <div class="row gy-6 gx-lg-5 d-flex justify-content-between">
-                    <div class="col-lg-5">
+                <div class="row g-3">
+                    <div id="contact-info" class="col-lg-5">
                         <div class="info bg-white rounded">
                             <h3>{{ session()->get('locale') == 'en' ? 'Get In Touch' : 'Hubungi Kami' }}</h3>
                             <p>
@@ -791,7 +794,8 @@
                                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                                 <div>
                                     <h4>{{ session()->get('locale') == 'en' ? 'Address:' : 'Alamat:' }}</h4>
-                                    <p>Jl. Iskandar Muda Raya No.7 | Kebayoran Lama Selatan, Kebayoran Lama | Kota Adm.
+                                    <p>Jl. Iskandar Muda Raya No.7 | Kebayoran Lama Selatan, Kebayoran Lama | Kota
+                                        Adm.
                                         Jakarta Selatan | DKI Jakarta - 12241</p>
                                 </div>
                             </div>
@@ -817,11 +821,13 @@
                                             rel="noopener noreferrer">http://wa.me/6288708874455</a></p>
                                 </div>
                             </div>
+
                             <!-- End Info Item -->
                             <div class="info-item d-flex justify-content-center">
                                 <button onclick="document.getElementById('modal').style.display='flex'"
-                                    class="order-btn position-relative"><i
-                                        class="bi bi-file-earmark-arrow-up color-white"></i>Order Now</button>
+                                    class="order-btn position-relative">
+                                    <i class="bi bi-file-earmark-arrow-up color-white"></i>Order Now
+                                </button>
                             </div>
                             <!-- End Info Item -->
                         </div>
@@ -837,6 +843,7 @@
             </div>
         </section>
         <!-- End Contact Section -->
+
         <div id="modal" class="justify-content-center"
             style="display: none; position: fixed; height: 100vw; width:100vw !important; top:0; left:0; background-color: #00000077; z-index: 1000000;">
             <div class="d-flex flex-column w-75 bg-white mt-3"

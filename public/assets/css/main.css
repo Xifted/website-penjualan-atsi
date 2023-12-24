@@ -3350,9 +3350,6 @@ section {
     transition: 0.3s;
     border: transparent;
     font-family: var(--font-secondary);
-    position: absolute;
-    top: 12em;
-    right: 5em;
 }
 
 /* order-btn */
