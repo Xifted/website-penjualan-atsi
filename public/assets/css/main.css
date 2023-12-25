@@ -793,44 +793,39 @@ section {
 .hero .carousel-control-prev {
     justify-content: start;
 }
-
-@media (min-width: 640px) {
-    .hero .carousel-control-prev {
-        padding-left: 15px;
-    }
-}
-
 .hero .carousel-control-next {
     justify-content: end;
-}
-
-@media (min-width: 640px) {
-    .hero .carousel-control-next {
-        padding-right: 15px;
-    }
 }
 
 .hero .carousel-control-next-icon,
 .hero .carousel-control-prev-icon {
     background: none;
-    font-size: 26px;
+    font-size: 8px;
+    width: 30px;
+    height: 30px;
     line-height: 0;
     background: rgba(var(--color-secondary-rgb), 0.4);
     color: rgba(var(--color-white-rgb), 0.98);
     border-radius: 50px;
-    width: 54px;
-    height: 54px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.hero .carousel-control-next-icon {
-    padding-left: 3px;
-}
+@media (min-width: 640px) {
+    .hero .carousel-control-prev {
+        padding-left: 15px;
+    }
+    .hero .carousel-control-next {
+        padding-right: 15px;
+    }
 
-.hero .carousel-control-prev-icon {
-    padding-right: 3px;
+    .hero .carousel-control-next-icon,
+    .hero .carousel-control-prev-icon {
+        width: 54px;
+        height: 54px;
+        font-size: 24px;
+    }
 }
 
 .hero .carousel-control-prev,
