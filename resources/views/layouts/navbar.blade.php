@@ -50,12 +50,12 @@
                         </option>
                     </select>
                 </li>
+                <li>
+                    <a class="btn-getstarted m-3 mt-md-0 scrollto mx-md-auto"
+                        href="#">{{ session()->get('locale') == 'en' ? 'Get Started' : 'Gabung Sekarang' }}</a>
+                </li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle d-none"></i>
         </nav>
-        <!-- .navbar -->
-
-        <a class="btn-getstarted scrollto"
-            href="#">{{ session()->get('locale') == 'en' ? 'Get Started' : 'Gabung Sekarang' }}</a>
     </div>
 </header>
