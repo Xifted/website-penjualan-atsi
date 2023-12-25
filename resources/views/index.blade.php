@@ -97,7 +97,7 @@
                 </ul>
 
                 <div class="tab-content">
-                    <div class="tab-pane active show" id="tab-1">
+                    <div class="tab-pane mt-5 active show" id="tab-1">
                         {{-- About Us Stylesheet --}}
                         <link href="{{ asset('/assets/css/cp/about.css') }}" rel="stylesheet">
                         <div id="about-container"
@@ -171,7 +171,7 @@
                         </div>
                     </div><!-- End Tab Content 1 -->
 
-                    <div class="tab-pane" id="tab-2">
+                    <div class="tab-pane mt-5" id="tab-2">
                         <div class="row gy-4">
                             <div class="container">
                                 <img class="img-fluid" src="assets/img/about-us/organization-structure.jpg"
@@ -180,7 +180,7 @@
                         </div>
                     </div><!-- End Tab Content 2 -->
 
-                    <div class="tab-pane" id="tab-3">
+                    <div class="tab-pane mt-5" id="tab-3">
                         <div class="row gy-4">
                             {{-- About Us Stylesheet --}}
                             <link href="{{ asset('/assets/css/cp/nilai-perusahaan.css') }}" rel="stylesheet">
