@@ -461,11 +461,11 @@
                 </div>
 
                 <div class="row gy-5 d-flex justify-content-center">
-                    <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="col-xl-4 col-md-6 col-10" data-aos="zoom-in" data-aos-delay="200">
                         <div class="service-item changeLangBtn">
                             <div class="img">
                                 <div
-                                    style="height: 290px; background: center no-repeat url('{{ asset('/assets/img/services/service-1.jpg') }}'); background-size: cover;">
+                                    style="background: center no-repeat url('{{ asset('/assets/img/services/service-1.jpg') }}'); background-size: cover;">
                                 </div>
                             </div>
                             <div class="details en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
@@ -477,25 +477,22 @@
                                 </a>
 
                                 <ol class="list-group list-group-numbered">
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Factory Assessment and Audit
                                     </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Workshop and Warehouse Inspection
                                     </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Production Inspection
                                         <ol class="list-group">
-                                            <li class="list-group-item border-0 text-start mb-0 py-0"
-                                                style="font-size: 14px">
+                                            <li class="list-group-item border-0 text-start mb-0 py-0">
                                                 - Initial Check
                                             </li>
-                                            <li class="list-group-item border-0 text-start mb-0 py-0"
-                                                style="font-size: 14px">
+                                            <li class="list-group-item border-0 text-start mb-0 py-0">
                                                 - During Production Inspection and
                                             </li>
-                                            <li class="list-group-item border-0 text-start mb-0 py-0"
-                                                style="font-size: 14px">
+                                            <li class="list-group-item border-0 text-start mb-0 py-0">
                                                 - Final Random Inspection
                                             </li>
                                         </ol>
@@ -512,25 +509,22 @@
                                 </a>
 
                                 <ol class="list-group list-group-numbered">
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Penilaian dan Audit Pabrik
                                     </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Pemeriksaan Bengkel dan Gudang
                                     </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Inspeksi Produksi
                                         <ol class="list-group">
-                                            <li class="list-group-item border-0 text-start mb-0 py-0"
-                                                style="font-size: 14px">
+                                            <li class="list-group-item border-0 text-start mb-0 py-0">
                                                 - Pemeriksaan Awal
                                             </li>
-                                            <li class="list-group-item border-0 text-start mb-0 py-0"
-                                                style="font-size: 14px">
+                                            <li class="list-group-item border-0 text-start mb-0 py-0">
                                                 - Selama Inspeksi Produksi dan
                                             </li>
-                                            <li class="list-group-item border-0 text-start mb-0 py-0"
-                                                style="font-size: 14px">
+                                            <li class="list-group-item border-0 text-start mb-0 py-0">
                                                 - Inspeksi Acak Akhir
                                             </li>
                                         </ol>
@@ -541,11 +535,11 @@
                     </div>
                     <!-- End Service Item -->
 
-                    <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="col-xl-4 col-md-6 col-10" data-aos="zoom-in" data-aos-delay="300">
                         <div class="service-item changeLangBtn">
                             <div class="img">
                                 <div
-                                    style="height: 290px; background: center no-repeat url('{{ asset('/assets/img/services/service-2.jpg') }}'); background-size: cover;">
+                                    style="background: center no-repeat url('{{ asset('/assets/img/services/service-2.jpg') }}'); background-size: cover;">
                                 </div>
                             </div>
                             <div class="details en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
@@ -556,13 +550,13 @@
                                     <h3>Export Product Inspection</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Product/Goods Quantity and Quality Check
                                     </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Supervision of Stuffing (Container)
                                     </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Loading Supervision (Ship)
                                     </li>
                                 </ol>
@@ -576,13 +570,13 @@
                                     <h3>Pemeriksaan Ekspor Produk/Barang</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Pemeriksaan Kuantitas dan Kualitas Produk/Barang
                                     </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Pengawasan Pengisian (masuk ke kontainer)
                                     </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Pengawasan Pemuatan (masuk ke Kapal)
                                     </li>
                                 </ol>
@@ -591,11 +585,11 @@
                     </div>
                     <!-- End Service Item -->
 
-                    <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="col-xl-4 col-md-6 col-10" data-aos="zoom-in" data-aos-delay="400">
                         <div class="service-item changeLangBtn">
                             <div class="img">
                                 <div
-                                    style="height: 290px; background: center no-repeat url('{{ asset('/assets/img/services/service-3.jpg') }}'); background-size: cover;">
+                                    style="background: center no-repeat url('{{ asset('/assets/img/services/service-3.jpg') }}'); background-size: cover;">
                                 </div>
                             </div>
                             <div class="details en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
@@ -606,13 +600,13 @@
                                     <h3>Import Product Inspection Services</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Unloading Supervision (Ship)
                                     </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Unstuffing (Containers)
                                     </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Inspection of Quantity, Quality and Condition of Products/Goods
                                     </li>
                                 </ol>
@@ -626,13 +620,13 @@
                                     <h3>Pemeriksaan Impor Produk/Barang</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Pengawasan Bongkar Muat (dari Kapal)
                                     </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Pengawasan Unstuffing (dari Kontainer)
                                     </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Pemeriksaan Kuantitas, Kualitas dan Kondisi Produk/Barang
                                     </li>
                                 </ol>
@@ -641,11 +635,11 @@
                     </div>
                     <!-- End Service Item -->
 
-                    <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="col-xl-4 col-md-6 col-10" data-aos="zoom-in" data-aos-delay="500">
                         <div class="service-item changeLangBtn">
                             <div class="img">
                                 <div
-                                    style="height: 290px; background: center no-repeat url('{{ asset('/assets/img/services/service-4.jpg') }}'); background-size: cover;">
+                                    style="background: center no-repeat url('{{ asset('/assets/img/services/service-4.jpg') }}'); background-size: cover;">
                                 </div>
                             </div>
                             <div class="details en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
@@ -656,10 +650,10 @@
                                     <h3>Cargo Insurance Services</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Product Loss and Damage Survey
                                     </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Claim Adjustment
                                     </li>
                                 </ol>
@@ -673,10 +667,10 @@
                                     <h3>Inspeksi Cargo Insurance</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Survei Kerugian dan Kerusakan Produk
                                     </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Penyesuaian Klaim
                                     </li>
                                 </ol>
@@ -685,11 +679,11 @@
                     </div>
                     <!-- End Service Item -->
 
-                    <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="col-xl-4 col-md-6 col-10" data-aos="zoom-in" data-aos-delay="600">
                         <div class="service-item changeLangBtn">
                             <div class="img">
                                 <div
-                                    style="height: 290px; background: center no-repeat url('{{ asset('/assets/img/services/service-5.jpg') }}'); background-size: cover;">
+                                    style="background: center no-repeat url('{{ asset('/assets/img/services/service-5.jpg') }}'); background-size: cover;">
                                 </div>
                             </div>
                             <div class="details en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
@@ -700,10 +694,10 @@
                                     <h3>International Standard Product Quality Asurance Service</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Quantity and Quality Inspection According To Agreement (ANZI, ASTM and JIS)
                                     </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Take Samples For Laboratory Analysis
                                     </li>
                                 </ol>
@@ -717,10 +711,10 @@
                                     <h3>Standar Internasional Mutu Produk/Barang</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Pemeriksaan Kuantitas dan Kualitas Sesuai Kesepakatan (ANZI, ASTM dan JIS)
                                     </li>
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Pengambilan Sampel Untuk Analisa Laboratorium
                                     </li>
                                 </ol>
@@ -728,11 +722,11 @@
                         </div>
                     </div>
                     <!-- End Service Item -->
-                    <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="col-xl-4 col-md-6 col-10" data-aos="zoom-in" data-aos-delay="600">
                         <div class="service-item changeLangBtn">
                             <div class="img">
                                 <div
-                                    style="height: 290px; background: center no-repeat url('{{ asset('/assets/img/services/service-6.jpg') }}'); background-size: cover;">
+                                    style="background: center no-repeat url('{{ asset('/assets/img/services/service-6.jpg') }}'); background-size: cover;">
                                 </div>
                             </div>
                             <div class="details en {{ session()->get('locale') == 'en' ? 'active' : 'hidden' }}">
@@ -743,7 +737,7 @@
                                     <h3>Import Technical Tracebility Verification Services (VPTI)</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         To Ensure Compliance Between Imported Goods and Documents Accordingly To The
                                         Aplicable Regulations From The Ministry of Trade of The Republic of Indonesia
                                     </li>
@@ -758,7 +752,7 @@
                                     <h3>VPTI (Verifikasi Penelusuran Teknis Impor) Services</h3>
                                 </a>
                                 <ol class="list-group list-group-numbered">
-                                    <li class="list-group-item border-0 text-start mb-0 py-0" style="font-size: 14px">
+                                    <li class="list-group-item border-0 text-start mb-0 py-0">
                                         Memastikan Kesesuaian Antara Dokumen dan Barang Yang Diimpor Dengan Mengikuti
                                         Regulasi Dari Kementrian Perdagangan Republik Indonesia Yang Berlaku. Barang
                                         dan/atau Negara Tujuan.

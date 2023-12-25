@@ -1704,7 +1704,7 @@ section {
 .services .details {
     padding: 50px 30px;
     margin: -100px 30px 0 30px;
-    height: 400px;
+    min-height: 400px;
     transition: all ease-in-out 0.3s;
     background: var(--color-white);
     position: relative;
@@ -1715,23 +1715,74 @@ section {
     z-index: 3;
 }
 
-.hidden {
-    display: none;
-}
-
 .services .details::after {
     content: "";
-    height: 400px;
+    height: 100%;
     width: 100%;
     transition: all ease-in-out 0.3s;
-    background: var(--color-white);
     position: absolute;
+    z-index: -1;
     background: rgba(var(--color-white-rgb), 0.9);
     border-radius: 8px;
-    box-shadow: 0px 0 25px rgba(var(--color-black-rgb), 0.1);
     z-index: -1;
     bottom: 1em;
     left: 1em;
+}
+
+.services .details h3 {
+    color: var(--color-default);
+    font-weight: 700;
+    margin: 10px 0 15px 0;
+    transition: ease-in-out 0.3s;
+}
+
+.services .details p {
+    line-height: 24px;
+    margin-bottom: 0;
+}
+
+.services .service-item .img div {
+    height: 290px;
+}
+
+@media screen and (max-width: 767px) {
+    .services .section-header h2 {
+        font-size: 24px;
+    }
+    .services .details h3 {
+        font-size: 18px;
+    }
+    .services .details p,
+    .services .details li {
+        font-size: 10px;
+    }
+    .services .details {
+        min-height: 250px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .services .section-header h2 {
+        font-size: 28px;
+    }
+    .services .details h3 {
+        font-size: 20px;
+    }
+    .services .details p,
+    .services .details li {
+        font-size: 14px;
+    }
+    .services .details {
+        min-height: 370px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .services .section-header h2 {
+        font-size: 34px;
+    }
+}
+
+.hidden {
+    display: none;
 }
 
 .services .details .icon {
@@ -1751,20 +1802,6 @@ section {
     top: -36px;
     left: calc(50% - 36px);
     border: 6px solid var(--color-white);
-}
-
-.services .details h3 {
-    color: var(--color-default);
-    font-weight: 700;
-    margin: 10px 0 15px 0;
-    font-size: 22px;
-    transition: ease-in-out 0.3s;
-}
-
-.services .details p {
-    line-height: 24px;
-    font-size: 14px;
-    margin-bottom: 0;
 }
 
 .services .service-item:hover .details h3 {
