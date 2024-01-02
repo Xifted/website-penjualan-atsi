@@ -237,6 +237,11 @@ section {
     z-index: 997;
 }
 
+.header .navbar-container {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+}
+
 .header.sticked {
     background: var(--color-white);
     box-shadow: 0px 2px 20px rgba(var(--color-secondary-rgb), 0.1);
@@ -259,6 +264,10 @@ section {
     font-weight: 500;
 }
 
+.header select {
+    max-width: 300px;
+}
+
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
     font-size: 16px;
@@ -268,6 +277,8 @@ section {
     border-radius: 4px;
     transition: 0.3s;
     font-family: var(--font-secondary);
+    max-width: 300px;
+    width: 100%;
 }
 
 .header .btn-getstarted:hover,
