@@ -10,16 +10,25 @@ use Illuminate\Support\Facades\Storage;
 
 class ProductsController extends Controller
 {
-    function index(Request $request) {
+    function index(Request $request)
+    {
 
         $products = DB::table('products')
-                        ->select('products.*', 'category_name')
-                        ->join('categories', 'products.category_id', '=', 'categories.category_id')
-                        ->when($_GET['category'] ?? null, function ($query, $category) {return $query->where('products.category_id', $category);})
-                        ->when($_GET['sort'] ?? null, function ($query, $sort) {return $query->orderBy('products.product_price', $sort);})
-                        ->when($_GET['min_price'] ?? null, function ($query, $pMin) {return $query->where('products.product_price', '>=', $pMin);})
-                        ->when($_GET['max_price'] ?? null, function ($query, $pMax) {return $query->where('products.product_price', '<=', $pMax);})
-                        ->get();
+            ->select('products.*', 'category_name')
+            ->join('categories', 'products.category_id', '=', 'categories.category_id')
+            ->when($_GET['category'] ?? null, function ($query, $category) {
+                return $query->where('products.category_id', $category);
+            })
+            ->when($_GET['sort'] ?? null, function ($query, $sort) {
+                return $query->orderBy('products.product_price', $sort);
+            })
+            ->when($_GET['min_price'] ?? null, function ($query, $pMin) {
+                return $query->where('products.product_price', '>=', $pMin);
+            })
+            ->when($_GET['max_price'] ?? null, function ($query, $pMax) {
+                return $query->where('products.product_price', '<=', $pMax);
+            })
+            ->get();
         $categories = Categories::all();
         $currentCategory = Categories::find($_GET['category'] ?? null);
         $currentURL = $request->url();
@@ -34,7 +43,7 @@ class ProductsController extends Controller
             'categories' => $categories,
             'currentCategory' => $currentCategory,
             'currentURL' => $currentURL
-        ],);
+        ], );
     }
 
     // function category($id, Request $request){
