@@ -1751,7 +1751,14 @@ section {
     height: 290px;
 }
 
+.carousel-img {
+    height: 100vh;
+}
 @media screen and (max-width: 767px) {
+    .carousel-img {
+        height: 320px;
+        max-height: 100vh;
+    }
     .services .section-header h2 {
         font-size: 24px;
     }
