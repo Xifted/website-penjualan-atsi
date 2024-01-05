@@ -142,7 +142,7 @@
                                     Products/Finished Goods/Consumer Goods and Import Verification Program (VPTI) Work
                                     of
                                     Goverment
-                                    Regulation</p>
+                                    Regulation.</p>
                                 <p
                                     class="about-paragraph text-wrap p-3 id {{ session()->get('locale') == 'id' ? 'active' : 'hidden' }}">
                                     PT. ATLANTIS
@@ -157,7 +157,7 @@
                                     bahan baku dan/atau bahan pembantu, produk setengah jadi (Intermediate Goods),
                                     produk
                                     akhir/barang
-                                    jadi/barang konsumsi (Consumers Goods) dan Pekerjaan Regulasi Pemerintah (VPTI)</p>
+                                    jadi/barang konsumsi (Consumers Goods) dan Pekerjaan Regulasi Pemerintah (VPTI).</p>
                                 <div id="about-lang-btns"
                                     class="position-absolute d-flex flex-row justify-content-between">
                                     <button
