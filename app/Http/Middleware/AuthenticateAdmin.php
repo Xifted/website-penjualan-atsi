@@ -19,9 +19,9 @@ class AuthenticateAdmin extends Middleware
     {
         // $cekAdmin = \App\Models\Admin::where('username', $request->username)->first();
         // Log::info('check = '.Auth::guard('admin')->check());
-        if(!Auth::guard('admin')->check()){
-            return route('loginAdmin');
+        if (Auth::guard('admin')->check()) {
+            return $next($request);
         }
-        return $next($request);
+        return redirect()->route('loginAdmin');
     }
 }
