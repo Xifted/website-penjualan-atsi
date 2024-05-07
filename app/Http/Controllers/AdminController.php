@@ -188,6 +188,7 @@ class AdminController extends Controller
             ->when($_GET['search'] ?? null, function ($query, $search) {
                 return $query->where('company_name', 'LIKE', '%' . $search . '%')->orWhere('pic_name', 'LIKE', "%$search%");
             })
+            ->orderBy('created_at', 'DESC')
             ->get();
 
         $orderItem = DB::table('orders')
